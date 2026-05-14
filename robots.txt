@@ -50,5 +50,5 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# Sitemap (will be added in the next push)
-# Sitemap: https://gogreenpainters.com/sitemap.xml
+# Sitemap
+Sitemap: https://gogreenpainters.com/sitemap.xml
