@@ -7,10 +7,17 @@ Builds:
   /services/interior-painting/index.html
   /services/deck-staining/index.html
   /services/custom-murals/index.html
+  /grand-rapids/cascade/index.html
+  /grand-rapids/forest-hills/index.html
+  /grand-rapids/ada/index.html
+  /grand-rapids/east-grand-rapids/index.html
 
 Each page reuses the LocalBusiness JSON-LD from the homepage (same @id) plus a page-specific
 Service, FAQPage, BreadcrumbList, and WebPage node — so every URL is its own valid local-SEO
 citation while staying NAP-consistent with the home page.
+
+Neighborhood pages override Service.areaServed with the specific city + an `area_served`
+config key. Pages also override the related-links heading via `related_heading`.
 
 To rebuild: `python3 build_pages.py` from the repo root.
 """
@@ -279,6 +286,268 @@ PAGES = [
             ("Exterior Painting", "/services/exterior-painting/"),
         ],
     },
+
+    # ============================================================
+    # NEIGHBORHOOD PAGES
+    # Cedar-siding expertise is the through-line for Cascade,
+    # Forest Hills, and Ada. EGR leans on mixed materials.
+    # ============================================================
+    {
+        "slug": "grand-rapids/cascade/",
+        "title": "House Painters in Cascade, MI | Cedar Siding Specialists | Go Green College Painters",
+        "description": "Owner-operated exterior and interior painting in Cascade, Michigan. Cedar siding specialists with tannin-blocking prep, premium primer, and finishes built to last. Free estimates from Go Green College Painters.",
+        "h1": "House Painters in Cascade, Michigan",
+        "hero_img": "/exterior-after.jpg",
+        "service_name": "House Painting in Cascade, Michigan",
+        "service_desc": "Owner-operated exterior and interior house painting in Cascade, MI. Specializing in cedar siding repaints — tannin-blocking primer, two coats of premium acrylic, and the prep work that makes paint last in Michigan weather.",
+        "service_image": f"{SITE}/exterior-painting.jpg",
+        "area_served": {
+            "@type": "City", "name": "Cascade",
+            "containedInPlace": {"@type": "AdministrativeArea", "name": "Kent County, Michigan"},
+        },
+        "breadcrumb": [("Home", "/"), ("Service Areas", "/#service-areas"), ("Cascade", "/grand-rapids/cascade/")],
+        "lead": "Cascade is one of our most-painted areas. The executive ranches, contemporaries, and French country homes along the Forest Hills corridor mean a lot of cedar shake, cedar lap, and cedar trim — surfaces that punish painters who skip prep. We do the prep correctly the first time, with the right primer for cedar's tannins and the right paint for Michigan winters.",
+        "sections": [
+            ("Why Cascade homeowners hire Go Green", """
+                <ul>
+                  <li><strong>Owner-operated.</strong> Jackson and Evelyn do every job themselves. No revolving crews of summer hires.</li>
+                  <li><strong>Cedar specialists.</strong> We understand tannin bleed-through, knot priming, and the cure schedule cedar needs in Michigan's freeze-thaw climate.</li>
+                  <li><strong>Fully insured.</strong> Full liability insurance on every project — proof available on request.</li>
+                  <li><strong>Honest, fixed-price estimates.</strong> Free, no-obligation, written quotes. No vague hourly billing.</li>
+                  <li><strong>Show up and finish.</strong> We don't disappear mid-project to chase another job.</li>
+                </ul>
+            """),
+            ("Cedar siding in Cascade — what we do differently", """
+                <p>Cedar is beautiful and durable but it's also one of the most demanding surfaces to paint. Cascade has more cedar siding than almost any other Grand Rapids-area neighborhood, and we see the same failure modes every spring:</p>
+                <ul>
+                  <li><strong>Tannin bleed-through</strong> — pinkish or yellow stains rising through fresh paint. We block this with a stain-killing primer (oil-based or pigmented shellac) on bare cedar.</li>
+                  <li><strong>Failed paint on south- and west-facing walls</strong> — UV and freeze-thaw delamination. We strip back to a sound substrate before recoating.</li>
+                  <li><strong>Mildew in shaded north-side cedar</strong> — common in wooded Cascade lots. We use a mildewcide wash before painting.</li>
+                  <li><strong>Knots bleeding sap</strong> — knots get individually spot-primed with a shellac-based primer.</li>
+                </ul>
+                <p>For homes where the cedar grain matters more than a smooth painted finish, semi-transparent or solid-color stain is often a better choice than paint. We'll give you an honest recommendation during the estimate.</p>
+            """),
+            ("Common Cascade home types we paint", """
+                <p>Most of the Cascade work we do falls into a few categories — each with its own prep approach:</p>
+                <ul>
+                  <li><strong>Executive ranches (1970s–1990s)</strong> with cedar lap or cedar shake siding, often with brick or stone accents. Long horizontal runs need careful color planning to avoid lap marks.</li>
+                  <li><strong>Contemporary / modern</strong> homes with mixed siding (cedar + stucco + metal). Each material gets its own prep and paint system.</li>
+                  <li><strong>French country and traditional</strong> two-stories with cedar trim, dormers, and detail elements. Trim color is usually the make-or-break.</li>
+                  <li><strong>Newer Forest Hills builds</strong> (2000s+) with engineered cedar or composite siding — different prep requirements than real cedar.</li>
+                </ul>
+            """),
+            ("What painting a Cascade home costs", """
+                <p>Cascade home values run higher than the Grand Rapids average — currently around $512K — and the exterior painting cost reflects the size and complexity of these homes. Most Cascade exterior repaints fall in the <strong>$5,000 to $9,000</strong> range, with larger or more detailed homes running higher. Interior whole-home repaints typically run <strong>$5,000 to $10,000</strong>.</p>
+                <p>Cedar work and multi-story scaffolding access add to cost vs. simpler vinyl siding jobs — but they're also why the result lasts longer when done correctly.</p>
+                <p>Every Cascade estimate is free and fixed-price after a walk-through.</p>
+            """),
+        ],
+        "faqs": [
+            ("Do you specialize in cedar siding?", "Yes. Cedar is one of our most-painted surfaces — common in Cascade, Forest Hills, and Ada. We use tannin-blocking primer on bare cedar, spot-prime knots with shellac, and follow up with two coats of premium acrylic exterior paint (Sherwin-Williams Duration or Benjamin Moore Aura Exterior). Cedar prep is more involved than vinyl or fiber-cement, which is why a lot of painters skip it — we don't."),
+            ("Should I paint or stain my cedar siding?", "Both are valid. Stain (semi-transparent or solid) lets the cedar grain show through and ages more gracefully — fewer flake-and-peel failures over time. Paint gives more color flexibility and a uniform finish but needs more thorough prep and recoats sooner. We'll give you an honest recommendation based on the cedar's current state during the estimate."),
+            ("How much does it cost to paint a Cascade home?", "Most Cascade exterior repaints run $5,000 to $9,000 depending on home size, story count, accessibility, and siding type. Interior whole-home repaints typically run $5,000 to $10,000. Cedar siding is at the higher end because of the prep involved. Every estimate is free and fixed-price."),
+            ("What zip codes do you serve in Cascade?", "Primarily 49301 (Cascade Township) and the Forest Hills areas of 49506 and 49546. We serve all of Greater Grand Rapids — call us if you're unsure whether your address is in range."),
+            ("When can you start a Cascade exterior repaint?", "Our exterior painting season runs roughly May through mid-October when surface temps are above 50°F overnight. Most Cascade projects book 2–6 weeks out depending on the season; reach out earlier for spring or fall slots, which fill fastest."),
+            ("Do you handle multi-story Cascade homes?", "Yes. We carry the ladders and access equipment for two- and three-story exteriors with standard rooflines. For complex multi-story dormer work or homes requiring scaffolding rentals, we'll include the rental in the fixed-price estimate."),
+        ],
+        "related": [
+            ("Forest Hills", "/grand-rapids/forest-hills/"),
+            ("Ada", "/grand-rapids/ada/"),
+            ("East Grand Rapids", "/grand-rapids/east-grand-rapids/"),
+            ("Exterior Painting Services", "/services/exterior-painting/"),
+        ],
+        "related_heading": "Other Service Areas",
+    },
+
+    {
+        "slug": "grand-rapids/forest-hills/",
+        "title": "House Painters in Forest Hills, MI | Cedar Siding Specialists | Go Green College Painters",
+        "description": "Owner-operated house painting in the Forest Hills area of Greater Grand Rapids. Cedar siding specialists, interior repaints, and custom mural work. Free estimates from Go Green College Painters.",
+        "h1": "House Painters in Forest Hills, Michigan",
+        "hero_img": "/exterior-after.jpg",
+        "service_name": "House Painting in the Forest Hills Area, Michigan",
+        "service_desc": "Owner-operated exterior and interior house painting in the Forest Hills area of Greater Grand Rapids. Cedar siding expertise, premium paints, owner-on-every-job. Free estimates.",
+        "service_image": f"{SITE}/exterior-painting.jpg",
+        "area_served": {
+            "@type": "City", "name": "Forest Hills",
+            "containedInPlace": {"@type": "AdministrativeArea", "name": "Kent County, Michigan"},
+        },
+        "breadcrumb": [("Home", "/"), ("Service Areas", "/#service-areas"), ("Forest Hills", "/grand-rapids/forest-hills/")],
+        "lead": "The Forest Hills area — Forest Hills Northern, Central, and Eastern school zones spanning Cascade, Ada, and Eastern Kent County — is one of our core service areas. Mostly settled, family-focused homes with a heavy concentration of cedar-sided traditional and craftsman builds. Same prep philosophy as Cascade: do it right or don't bother.",
+        "sections": [
+            ("Why Forest Hills homeowners choose Go Green", """
+                <ul>
+                  <li><strong>Owner-operated.</strong> Jackson (MSU) and Evelyn (Wayne State) do every job themselves — no rotating crews of summer hires who'll be gone by August.</li>
+                  <li><strong>Reliable scheduling.</strong> We show up on the day we said we would, and we don't disappear mid-project.</li>
+                  <li><strong>Cedar siding expertise.</strong> Same prep approach as Cascade — tannin-blocking primer, knot priming, two coats of premium acrylic.</li>
+                  <li><strong>Fully insured.</strong> Full liability coverage on every project.</li>
+                  <li><strong>Family-business honest pricing.</strong> Free fixed-price estimates with no upsell games.</li>
+                </ul>
+            """),
+            ("Cedar siding in Forest Hills — same playbook as Cascade", """
+                <p>The Forest Hills school-zone neighborhoods share Cascade's heavy use of cedar siding, especially in homes built between the 1970s and early 2000s. The cedar prep approach is identical:</p>
+                <ul>
+                  <li><strong>Stain-killing primer on bare cedar</strong> to block tannin bleed-through before topcoats go on.</li>
+                  <li><strong>Spot-prime knots with shellac</strong> so sap doesn't bleed through the finish coat.</li>
+                  <li><strong>Mildewcide wash on north-facing and shaded walls</strong> before painting.</li>
+                  <li><strong>Strip back to a sound substrate</strong> wherever paint is failing, especially south- and west-facing exposures.</li>
+                </ul>
+                <p>If your cedar is in good shape but the grain still reads through your current paint, a semi-transparent or solid-color stain is often a better finish than another coat of paint.</p>
+            """),
+            ("Interior painting for Forest Hills families", """
+                <p>A lot of our Forest Hills work is interior repaints in family homes — refreshing rooms after years of life, prepping for resale, or transforming a builder-grade interior into something with more character. Common projects include:</p>
+                <ul>
+                  <li>Whole-home repaints (3 to 7 days for an average Forest Hills home)</li>
+                  <li>Kitchen cabinet refinishing (4 to 6 days for a typical kitchen)</li>
+                  <li>Kids' room mural work — Evelyn's specialty</li>
+                  <li>Ceiling repaints (popcorn-ceiling refresh, vaulted ceilings)</li>
+                  <li>Trim and door enamel work</li>
+                </ul>
+            """),
+            ("What painting in Forest Hills costs", """
+                <p>Forest Hills home values average around $450K — a step below Cascade but with substantial homes. Most exterior repaints in the Forest Hills area run <strong>$4,500 to $8,500</strong>; interior whole-home repaints typically run <strong>$5,000 to $9,000</strong>; cabinet refinishing runs <strong>$2,500 to $5,500</strong>. Every quote is free and fixed-price after a walk-through.</p>
+            """),
+        ],
+        "faqs": [
+            ("What zip codes do you serve in the Forest Hills area?", "We serve 49301 (Cascade portion), 49546 (Forest Hills proper), and the eastern parts of 49506. If you're in the Forest Hills Northern, Central, or Eastern school district, you're in our service area."),
+            ("Do you handle Forest Hills cedar siding repaints?", "Yes — cedar is one of our most-painted surfaces. We use tannin-blocking primer on bare cedar, spot-prime knots with shellac, and apply two coats of premium acrylic exterior paint. Cedar requires more prep than most surfaces, and we don't skip it."),
+            ("How long does a Forest Hills exterior repaint take?", "Most Forest Hills exterior repaints take 4 to 7 days from start to finish, depending on home size, story count, and prep needs. Weather can extend the timeline — exterior paint needs surface temps above 50°F and dry conditions."),
+            ("Can you do interior painting in winter?", "Yes — interior is a year-round service. Many Forest Hills families schedule interior work in fall and winter so the house is ready for summer. We use low-odor interior paints so rooms are usable quickly after we finish."),
+            ("Do you offer cabinet refinishing in Forest Hills?", "Yes. Cabinet refinishing is a specialty — we remove and label every door and drawer, scuff-sand, prime with a bonding primer, and apply two coats of cabinet-grade enamel. A typical Forest Hills kitchen takes 4–6 days and runs $2,500–$5,500."),
+            ("Will Evelyn paint a mural in my kid's room?", "Yes — kids' rooms and nurseries are one of our most-requested mural categories. Evelyn is an Industrial Design student at Wayne State University and a lifelong illustrator. We start with a free design consultation and sketches before any paint goes on the wall."),
+        ],
+        "related": [
+            ("Cascade", "/grand-rapids/cascade/"),
+            ("Ada", "/grand-rapids/ada/"),
+            ("East Grand Rapids", "/grand-rapids/east-grand-rapids/"),
+            ("Interior Painting Services", "/services/interior-painting/"),
+        ],
+        "related_heading": "Other Service Areas",
+    },
+
+    {
+        "slug": "grand-rapids/ada/",
+        "title": "House Painters in Ada, MI | Cedar Siding Specialists | Go Green College Painters",
+        "description": "Owner-operated house painting in Ada, Michigan. Cedar siding specialists serving Ada Township and Ada Village. Free, fixed-price estimates from Go Green College Painters.",
+        "h1": "House Painters in Ada, Michigan",
+        "hero_img": "/exterior-after.jpg",
+        "service_name": "House Painting in Ada, Michigan",
+        "service_desc": "Owner-operated exterior and interior house painting in Ada, MI. Cedar siding repaints, premium primers and finishes, owner-on-every-job. Free estimates.",
+        "service_image": f"{SITE}/exterior-painting.jpg",
+        "area_served": {
+            "@type": "City", "name": "Ada",
+            "containedInPlace": {"@type": "AdministrativeArea", "name": "Kent County, Michigan"},
+        },
+        "breadcrumb": [("Home", "/"), ("Service Areas", "/#service-areas"), ("Ada", "/grand-rapids/ada/")],
+        "lead": "Ada Township sits just east of Grand Rapids — home to Amway HQ, the redeveloped Ada Village downtown, and some of the most cedar-heavy homes in the region. We paint exteriors, interiors, decks, and cabinets across Ada with the same owner-operated approach we use in Cascade and Forest Hills.",
+        "sections": [
+            ("Why Ada homeowners hire Go Green", """
+                <ul>
+                  <li><strong>Owner-on-every-job.</strong> No subcontractors, no rotating summer crews. Jackson and Evelyn do the work themselves.</li>
+                  <li><strong>Cedar siding craft.</strong> Tannin-blocking primer, knot priming, two coats of premium acrylic — the prep most painters skip.</li>
+                  <li><strong>Fully insured</strong> with proof of insurance on request.</li>
+                  <li><strong>Fixed-price written estimates.</strong> No hourly meter, no surprise add-ons.</li>
+                  <li><strong>Local college family.</strong> Jackson at Michigan State, Evelyn at Wayne State — we're invested in doing this right and earning repeat business.</li>
+                </ul>
+            """),
+            ("Cedar in Ada — the prep matters more than the paint", """
+                <p>Ada has a lot of cedar shake, cedar lap, and cedar accent work — especially in the older Ada Village neighborhoods, the larger executive homes near Bostwick Lake, and the wooded properties south of Fulton. Cedar repaint failures are usually a prep problem, not a paint problem:</p>
+                <ul>
+                  <li><strong>Tannins bleed through topcoats</strong> without a stain-killing primer — we use oil-based or pigmented shellac on bare cedar.</li>
+                  <li><strong>Knots ooze sap</strong> through fresh paint within a season unless individually shellac-primed.</li>
+                  <li><strong>South- and west-facing walls fail first</strong> from UV — we strip back to a sound substrate where needed.</li>
+                  <li><strong>Shaded north-side cedar grows mildew</strong> — washed off with a mildewcide before painting.</li>
+                </ul>
+                <p>If the cedar grain is still attractive, a semi-transparent or solid-color stain often wears better than another coat of paint. We'll be honest about which option suits your specific home.</p>
+            """),
+            ("Common Ada home types we paint", """
+                <ul>
+                  <li><strong>Ada Village area homes</strong> — older two-stories and 1.5-stories, often with cedar trim and brick or stone accents.</li>
+                  <li><strong>Executive homes near Bostwick Lake and Honey Creek</strong> — large cedar-sided builds requiring multi-day prep.</li>
+                  <li><strong>Newer subdivisions</strong> in 49301 — fiber-cement and engineered siding with cedar accent elements.</li>
+                  <li><strong>Wooded estates</strong> south of Fulton — mature trees mean more mildew prep on shaded exposures.</li>
+                </ul>
+            """),
+            ("What painting in Ada costs", """
+                <p>Ada home values track closely with Cascade — substantial homes that take substantial prep. Typical Ada exterior repaints run <strong>$5,000 to $9,000</strong>; whole-home interior repaints run <strong>$5,000 to $10,000</strong>; cabinet refinishing runs <strong>$2,500 to $6,000</strong>. Every quote is free and fixed-price after a walk-through.</p>
+            """),
+        ],
+        "faqs": [
+            ("Do you paint cedar homes in Ada?", "Yes — cedar is one of our most-painted surfaces, and Ada has a high concentration of cedar siding. We use tannin-blocking primer on bare cedar, individually spot-prime knots, and apply two coats of premium acrylic. Cedar prep is more involved than vinyl or fiber-cement; we don't skip it."),
+            ("What zip codes do you serve in Ada?", "Primarily 49301 (Ada Township, shared with Cascade). We serve all of Greater Grand Rapids — call if you're unsure whether your address is in range."),
+            ("How much does an Ada exterior repaint cost?", "Most Ada exterior repaints run $5,000 to $9,000, depending on home size, story count, accessibility, and the amount of cedar prep needed. Every estimate is free and fixed-price after a walk-through."),
+            ("Should I stain my cedar instead of repainting it?", "Often, yes — especially if the cedar is in good shape and the grain still reads as attractive. Stain wears more gracefully than paint and is easier to refresh in 4–6 years without scraping. We'll give you an honest recommendation during the estimate."),
+            ("When is the best time to schedule an Ada exterior project?", "Late May through mid-October is the prime exterior paint window — we need surface temperatures above 50°F overnight and dry weather for 24–48 hours after each coat. Late spring and early fall are the most popular slots; book 4–6 weeks ahead."),
+            ("Can you do interior cabinet painting in Ada?", "Yes. Cabinet refinishing is a specialty — we remove and label every door and drawer, scuff-sand, prime with a bonding primer, and apply two coats of cabinet-grade enamel. A typical Ada kitchen takes 4–6 days."),
+        ],
+        "related": [
+            ("Cascade", "/grand-rapids/cascade/"),
+            ("Forest Hills", "/grand-rapids/forest-hills/"),
+            ("East Grand Rapids", "/grand-rapids/east-grand-rapids/"),
+            ("Exterior Painting Services", "/services/exterior-painting/"),
+        ],
+        "related_heading": "Other Service Areas",
+    },
+
+    {
+        "slug": "grand-rapids/east-grand-rapids/",
+        "title": "House Painters in East Grand Rapids, MI | Go Green College Painters",
+        "description": "Owner-operated house painters serving East Grand Rapids, Michigan. Reeds Lake area exteriors, interior repaints, cabinet refinishing, and custom mural work. Free estimates.",
+        "h1": "House Painters in East Grand Rapids, Michigan",
+        "hero_img": "/exterior-after.jpg",
+        "service_name": "House Painting in East Grand Rapids, Michigan",
+        "service_desc": "Owner-operated exterior and interior house painting in East Grand Rapids (EGR), MI. Established-home prep, cedar where it appears, premium finishes, and owner-on-every-job. Free estimates.",
+        "service_image": f"{SITE}/exterior-painting.jpg",
+        "area_served": {
+            "@type": "City", "name": "East Grand Rapids",
+            "containedInPlace": {"@type": "AdministrativeArea", "name": "Kent County, Michigan"},
+        },
+        "breadcrumb": [("Home", "/"), ("Service Areas", "/#service-areas"), ("East Grand Rapids", "/grand-rapids/east-grand-rapids/")],
+        "lead": "East Grand Rapids is older, denser, and more walkable than Cascade or Ada — and the homes reflect it. Most EGR homes are established 1920s-1950s builds (brick, stucco, clapboard, and some cedar) plus newer custom homes near Reeds Lake. The painting work here is detail-heavy: lots of trim, period-correct color planning, and prep work that respects original substrates.",
+        "sections": [
+            ("Why East Grand Rapids homeowners choose Go Green", """
+                <ul>
+                  <li><strong>Owner-operated.</strong> Jackson and Evelyn do every job themselves — no crews of strangers in your home.</li>
+                  <li><strong>Established-home experience.</strong> Older homes need more careful prep — flaking paint, layered repaints, plaster repair on interiors. We move slowly and respect the original substrate.</li>
+                  <li><strong>Detail-focused.</strong> Hand-cut lines, careful trim work, period-correct color planning if you want it.</li>
+                  <li><strong>Fully insured.</strong> Full liability insurance on every project.</li>
+                  <li><strong>Honest, fixed-price estimates.</strong> Free, written quotes — no hourly mystery.</li>
+                </ul>
+            """),
+            ("Common EGR home types we paint", """
+                <ul>
+                  <li><strong>1920s–1940s clapboard and brick two-stories</strong> around Wealthy and Lake Drive — typically need careful scraping, spot-priming, and trim-color decisions.</li>
+                  <li><strong>Mid-century ranches and split-levels</strong> with mixed brick, wood, and aluminum siding — each material gets its own prep system.</li>
+                  <li><strong>Reeds Lake-area custom homes</strong> — newer cedar, stone, and stucco builds with extensive trim detail.</li>
+                  <li><strong>Older interiors</strong> with plaster walls, original trim, and period color palettes — repaints that need to respect what's already there.</li>
+                </ul>
+            """),
+            ("Cedar siding in EGR — present but less common", """
+                <p>Cedar is less ubiquitous in EGR than in Cascade or Ada, but you'll still find it on newer Reeds Lake-area custom builds and on some 1970s-era homes near Breton and Lake Drive. When we see cedar, we apply the same prep playbook: tannin-blocking primer, knot spot-priming, premium acrylic topcoats. Stain is also a valid option for cedar in EGR — we'll walk through both at the estimate.</p>
+            """),
+            ("Interior work in EGR homes", """
+                <p>A lot of our EGR work is interior — refreshing established homes, prepping for resale, or transforming a dated palette. Older plaster walls in EGR homes often need patching and priming before the topcoat goes on, and original trim is usually worth saving rather than replacing. Cabinet refinishing is also popular — most EGR kitchens have solid-wood cabinets worth refinishing instead of replacing.</p>
+            """),
+            ("What painting in EGR costs", """
+                <p>East Grand Rapids home values average around $500K with substantial variation between older established homes and newer Reeds Lake custom builds. Most EGR exterior repaints run <strong>$4,500 to $8,500</strong>, with detail-heavy 1920s homes at the higher end. Interior whole-home repaints typically run <strong>$5,000 to $9,500</strong>. Cabinet refinishing runs <strong>$2,500 to $6,000</strong>.</p>
+            """),
+        ],
+        "faqs": [
+            ("What zip code do you serve in East Grand Rapids?", "Primarily 49506 — the EGR city limits plus the eastern edge of Grand Rapids. If you're south of Lake Drive, north of Burton, east of Plymouth, you're squarely in our service area."),
+            ("Can you paint older EGR homes?", "Yes — established 1920s–1950s homes are a significant portion of our EGR work. Older homes need more careful prep (scraping flaking paint without damaging substrate, spot-priming patched plaster, color-matching original trim) and we slow down to respect that."),
+            ("Do you do period-correct color planning for older EGR homes?", "If you want it — Evelyn (Industrial Design student at Wayne State) is happy to advise on palettes that respect the era of your home. We can also work from a color you've already chosen."),
+            ("How much does an EGR exterior repaint cost?", "Most EGR exterior repaints run $4,500 to $8,500 depending on home size and detail level. Older homes with extensive trim and prep needs run at the higher end; simpler ranch and split-level homes run lower. Every estimate is free and fixed-price."),
+            ("Can you repaint EGR cabinets?", "Yes. Most EGR kitchens have real wood cabinets that are perfect candidates for refinishing — much cheaper than replacement, and results look factory-applied when done right. Typical EGR kitchen runs $2,500–$6,000."),
+            ("Do you do murals or accent walls in EGR homes?", "Yes — Evelyn does custom hand-painted murals for kids' rooms, dining rooms, and accent walls. We've done several EGR projects including the bathroom-with-yellow-stripe-accent-and-blue-vanity featured on our murals page."),
+        ],
+        "related": [
+            ("Cascade", "/grand-rapids/cascade/"),
+            ("Forest Hills", "/grand-rapids/forest-hills/"),
+            ("Ada", "/grand-rapids/ada/"),
+            ("Interior Painting Services", "/services/interior-painting/"),
+        ],
+        "related_heading": "Other Service Areas",
+    },
 ]
 
 # -------- shared template --------
@@ -393,10 +662,10 @@ def render_sections_html(sections):
       </div>""")
     return "\n".join(parts)
 
-def render_related_html(related):
+def render_related_html(related, heading="Related Services"):
     items = "".join([f'<li><a href="{url}">{html_lib.escape(name)}</a></li>' for name, url in related])
     return f"""      <div class="related-services">
-        <h2>Related Services</h2>
+        <h2>{html_lib.escape(heading)}</h2>
         <ul>{items}</ul>
       </div>"""
 
@@ -441,10 +710,10 @@ def build_jsonld(page):
             "description": page["service_desc"],
             "image": page["service_image"],
             "provider": {"@id": BUSINESS_ID},
-            "areaServed": {
+            "areaServed": page.get("area_served", {
                 "@type": "City", "name": "Grand Rapids",
                 "containedInPlace": {"@type": "State", "name": "Michigan"},
-            },
+            }),
             "url": canonical,
         },
         {
@@ -507,7 +776,7 @@ def build_page(page):
 
     sections_html = render_sections_html(page["sections"])
     faq_html = render_faq_html(page["faqs"])
-    related_html = render_related_html(page["related"])
+    related_html = render_related_html(page["related"], page.get("related_heading", "Related Services"))
 
     main = f"""  <main class="page-main">
     <div class="container">
