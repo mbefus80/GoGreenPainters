@@ -658,7 +658,8 @@ NAV_HTML = """  <nav>
       <li><a href="/services/deck-staining/">Deck Staining</a></li>
       <li><a href="/services/custom-murals/">Murals</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#contact" class="nav-cta">Free Quote</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Free Quote</a></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -684,13 +685,14 @@ FOOTER_HTML = """  <footer>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Company</h4>
         <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
           <li><a href="tel:+16162642119">(616) 264-2119</a></li>
           <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
-          <li><a href="/blog/">Blog</a></li>
           <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
-          <li><a href="/#contact">Free Quote</a></li>
         </ul>
       </div>
     </div>
@@ -1121,6 +1123,269 @@ def build_blog_index(posts):
 </html>
 """
 
+# -------- standalone pages: About & Contact --------
+def build_about_page():
+    canonical = f"{SITE}/about/"
+    jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            LOCAL_BUSINESS,
+            {
+                "@type": "Person", "@id": f"{SITE}/#jackson",
+                "name": "Jackson Befus", "jobTitle": "Co-Owner & Project Manager",
+                "worksFor": {"@id": BUSINESS_ID}, "alumniOf": "Michigan State University",
+                "description": "Co-founder of Go Green College Painters. Studies Communications and Entrepreneurship at Michigan State University. Manages project operations and client relations.",
+            },
+            {
+                "@type": "Person", "@id": f"{SITE}/#evelyn",
+                "name": "Evelyn Befus", "jobTitle": "Co-Owner & Creative Director",
+                "worksFor": {"@id": BUSINESS_ID}, "alumniOf": "Wayne State University",
+                "description": "Co-founder of Go Green College Painters. Studies Industrial Design at Wayne State University. Lifelong illustrator who leads the company's custom mural and creative design work.",
+            },
+            {
+                "@type": "AboutPage",
+                "@id": f"{canonical}#webpage",
+                "url": canonical,
+                "name": "About Go Green College Painters",
+                "description": "Go Green College Painters is a student-owned, owner-operated painting company in Greater Grand Rapids, MI, founded in 2024 by siblings Jackson and Evelyn Befus.",
+                "isPartOf": {"@id": f"{SITE}/#website"},
+                "about": {"@id": BUSINESS_ID},
+                "breadcrumb": {"@id": f"{canonical}#breadcrumb"},
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{canonical}#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                    {"@type": "ListItem", "position": 2, "name": "About", "item": canonical},
+                ],
+            },
+        ],
+    }, indent=2)
+    head = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Go Green College Painters | Student-Owned Painters in Grand Rapids, MI</title>
+  <meta name="description" content="Go Green College Painters is a student-owned, owner-operated painting company in Greater Grand Rapids, MI. Meet founders Jackson and Evelyn Befus and learn how we work." />
+  <link rel="canonical" href="{canonical}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Go Green College Painters" />
+  <meta property="og:description" content="Student-owned, owner-operated painting company in Greater Grand Rapids. Meet founders Jackson and Evelyn Befus." />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:image" content="{SITE}/jackson-photo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Grand Rapids, Michigan" />
+  <link rel="preload" as="image" href="/exterior-after.jpg" />
+  <script type="application/ld+json">
+{jsonld}
+  </script>
+{FONT_LINKS}
+</head>
+<body>"""
+    hero = """  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.6) 100%), url('/exterior-after.jpg');">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">About</span></nav>
+      <h1>About Go Green College Painters</h1>
+      <p class="lead">A student-owned, owner-operated painting company serving Greater Grand Rapids — built one project at a time by a brother-and-sister team putting themselves through college.</p>
+      <a href="/contact/" class="btn-primary">Get a Free Estimate</a>
+    </div>
+  </section>"""
+    main = """  <main class="page-main">
+    <div class="container">
+      <div class="page-section">
+        <h2>Who We Are</h2>
+        <p>Go Green College Painters was founded in 2024 by siblings Jackson and Evelyn Befus. We're a student-owned, owner-operated painting company — which means the two people who quote your job are the same two people who show up, prep, paint, and clean up. No subcontractors, no rotating crews of summer hires, no salesperson handing your project to strangers.</p>
+        <p>We serve Greater Grand Rapids, Michigan, with a focus on the cedar-sided neighborhoods of the east side — Cascade, Forest Hills, Ada, and East Grand Rapids — handling exterior painting, interior painting, deck staining, and custom murals.</p>
+      </div>
+
+      <div class="page-section">
+        <h2>Meet the Founders</h2>
+        <div class="about-founder">
+          <img src="/jackson-photo.jpg" alt="Jackson Befus, Co-Owner of Go Green College Painters" loading="lazy" />
+          <div>
+            <h3>Jackson Befus &mdash; Co-Owner &amp; Project Manager</h3>
+            <p>Jackson co-founded Go Green College Painters in 2024 while studying Communications and Entrepreneurship at Michigan State University. His love for painting started unexpectedly &mdash; a summer spent restoring his dad's vintage 36-foot sailboat sparked a real passion for the craft. Since then he's led the team through interior and exterior projects of every size, residential and commercial, with a simple commitment: show up on time and get the job done right.</p>
+          </div>
+        </div>
+        <div class="about-founder">
+          <img src="/evelyn-photo.jpg" alt="Evelyn Befus, Co-Owner of Go Green College Painters" loading="lazy" />
+          <div>
+            <h3>Evelyn Befus &mdash; Co-Owner &amp; Creative Director</h3>
+            <p>Evelyn studies Industrial Design at Wayne State University, and her passion for art and painting goes back as far as she can remember &mdash; illustrating, painting, and creating have always been at the heart of who she is. Go Green has given her the chance not only to pay for college, but to bring a creative eye to projects that start as simple one-color refreshes. If you have a vision for a children's space, a dining room, or a mural, Evelyn can bring it to life.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <h2>Why "Go Green"?</h2>
+        <p>The name is a nod to Michigan State University &mdash; Jackson's school, and the Spartan green that goes with it. It's a bit of hometown pride baked into the brand.</p>
+      </div>
+
+      <div class="page-section">
+        <h2>How We Work</h2>
+        <ul>
+          <li><strong>Owner-operated.</strong> Jackson and Evelyn personally do every job. The people who quote it are the people who paint it.</li>
+          <li><strong>Fully insured.</strong> Full liability insurance on every project, with proof available on request.</li>
+          <li><strong>Free, fixed-price estimates.</strong> We walk the property, identify the prep that's actually needed, and give you a written number that doesn't change unless the scope does.</li>
+          <li><strong>Real prep.</strong> The difference between paint that lasts and paint that fails is prep work &mdash; and we don't skip it.</li>
+          <li><strong>Satisfaction guaranteed.</strong> If something isn't right, we make it right.</li>
+        </ul>
+      </div>
+
+      <div class="related-services">
+        <h2>Explore</h2>
+        <ul><li><a href="/services/exterior-painting/">Exterior Painting</a></li><li><a href="/services/interior-painting/">Interior Painting</a></li><li><a href="/services/custom-murals/">Custom Murals</a></li><li><a href="/contact/">Contact Us</a></li></ul>
+      </div>
+    </div>
+  </main>
+
+  <div id="cta-banner">
+    <div class="container">
+      <h2>Let's Talk About Your Project</h2>
+      <p>Free, no-obligation estimates &mdash; serving Greater Grand Rapids.</p>
+      <a href="/contact/" class="btn-dark">Get My Free Quote</a>
+    </div>
+  </div>"""
+    return f"{head}\n{NAV_HTML}\n{hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+
+
+CONTACT_FORM_HTML = """        <form class="contact-form" action="https://forms.zohopublic.com/jackgogreen1/form/WebsiteContact/formperma/8Js26cdu-6qrbCBK5668ufHpo_DCyQw8r5azScg3bV8/htmlRecords/submit" name="form" id="zoho-contact-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+          <input type="hidden" name="zf_referrer_name" value="" />
+          <input type="hidden" name="zf_redirect_url" value="" />
+          <input type="hidden" name="zc_gad" value="" />
+          <h3>Tell Us About Your Project</h3>
+          <div class="form-row">
+            <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="Name_First" maxlength="255" placeholder="Jane" required /></div>
+            <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="Name_Last" maxlength="255" placeholder="Smith" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="Email" maxlength="255" placeholder="jane@email.com" /></div>
+            <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="PhoneNumber_countrycode" maxlength="20" placeholder="(616) 555-5555" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="address">Street Address</label><input type="text" id="address" name="Address_AddressLine1" maxlength="255" placeholder="123 Main St" /></div>
+            <div class="form-group"><label for="zip">Zip Code</label><input type="text" id="zip" name="Address_ZipCode" maxlength="255" placeholder="49503" /></div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="Dropdown">
+              <option value="-Select-">Select a service...</option>
+              <option value="Exterior Painting">Exterior Painting</option>
+              <option value="Interior Painting">Interior Painting</option>
+              <option value="Deck Staining">Deck Staining</option>
+              <option value="Custom Designs">Custom Designs</option>
+              <option value="Multiple Services">Multiple Services</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Project Details</label><textarea id="message" name="MultiLine" maxlength="65535" placeholder="Tell us about your project — size, colors in mind, timeline, etc."></textarea></div>
+          <button type="submit" class="form-submit">Send My Request &rarr;</button>
+        </form>"""
+
+def build_contact_page():
+    canonical = f"{SITE}/contact/"
+    faqs = [
+        ("How do I get a free painting estimate in Grand Rapids?", "Fill out the form on this page or call (616) 264-2119. We respond within 24 hours to schedule a walk-through, then provide a free, fixed-price written estimate — no pressure, no obligation."),
+        ("What areas do you serve?", "Go Green College Painters serves Greater Grand Rapids, Michigan and surrounding communities, with a focus on Cascade, Forest Hills, Ada, and East Grand Rapids. Not sure if you're in range? Call us — we're happy to travel for the right project."),
+        ("How soon can you start my project?", "It depends on the season. Exterior projects book fastest in spring and fall; interior work is more flexible year-round. Most projects start within 2–6 weeks of the estimate. Reach out early for spring and fall exterior slots."),
+        ("Do you charge for estimates?", "No. Every estimate is free, fixed-price, and provided in writing. The number we quote doesn't change unless the scope of the project changes."),
+    ]
+    jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            LOCAL_BUSINESS,
+            {
+                "@type": "ContactPage",
+                "@id": f"{canonical}#webpage",
+                "url": canonical,
+                "name": "Contact Go Green College Painters",
+                "description": "Contact Go Green College Painters for a free, fixed-price painting estimate in Greater Grand Rapids, MI. Call (616) 264-2119 or use the project form.",
+                "isPartOf": {"@id": f"{SITE}/#website"},
+                "about": {"@id": BUSINESS_ID},
+                "breadcrumb": {"@id": f"{canonical}#breadcrumb"},
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{canonical}#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                    {"@type": "ListItem", "position": 2, "name": "Contact", "item": canonical},
+                ],
+            },
+            {
+                "@type": "FAQPage",
+                "@id": f"{canonical}#faq",
+                "mainEntity": [
+                    {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                    for q, a in faqs
+                ],
+            },
+        ],
+    }, indent=2)
+    faq_html = render_faq_html(faqs)
+    head = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Go Green College Painters | Free Painting Estimates in Grand Rapids, MI</title>
+  <meta name="description" content="Contact Go Green College Painters for a free, fixed-price painting estimate in Greater Grand Rapids, MI. Call (616) 264-2119 or fill out the project form." />
+  <link rel="canonical" href="{canonical}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Go Green College Painters" />
+  <meta property="og:description" content="Free, fixed-price painting estimates in Greater Grand Rapids. Call (616) 264-2119." />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:image" content="{SITE}/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Grand Rapids, Michigan" />
+  <script type="application/ld+json">
+{jsonld}
+  </script>
+{FONT_LINKS}
+</head>
+<body>"""
+    hero = """  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.88) 0%, rgba(0,0,0,0.7) 100%), url('/hero-bg.jpg'); min-height: 320px;">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">Contact</span></nav>
+      <h1>Contact Go Green College Painters</h1>
+      <p class="lead">Free, fixed-price estimates across Greater Grand Rapids. We respond within 24 hours.</p>
+    </div>
+  </section>"""
+    main = f"""  <main class="page-main">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--green-dark);font-size:1.55rem;border-bottom:3px solid var(--gold);padding-bottom:10px;margin-bottom:18px;">Get In Touch</h2>
+          <p style="font-size:1rem;color:#444;line-height:1.8;margin-bottom:8px;">Fill out the form or call <a href="tel:+16162642119" style="color:var(--green-mid);font-weight:600;">(616) 264-2119</a>. We respond within 24 hours with a free, no-obligation estimate &mdash; no pressure, no commitment.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+              <div class="contact-item-text"><strong>Phone</strong><span><a href="tel:+16162642119">(616) 264-2119</a></span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+              <div class="contact-item-text"><strong>Email</strong><span><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+              <div class="contact-item-text"><strong>Service Area</strong><span>Greater Grand Rapids, MI</span></div>
+            </div>
+          </div>
+        </div>
+{CONTACT_FORM_HTML}
+      </div>
+
+      <div class="page-faq" style="margin-top:64px;">
+        <h2>Common Questions</h2>
+{faq_html}
+      </div>
+    </div>
+  </main>"""
+    return f"{head}\n{NAV_HTML}\n{hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+
 # -------- write pages --------
 written = []
 for page in PAGES:
@@ -1130,6 +1395,14 @@ for page in PAGES:
     with open(path, "w") as f:
         f.write(html_out)
     written.append((path, len(html_out)))
+
+# -------- write About & Contact --------
+for slug, builder in [("about/", build_about_page), ("contact/", build_contact_page)]:
+    os.makedirs(slug, exist_ok=True)
+    html_out = builder()
+    with open(slug + "index.html", "w") as f:
+        f.write(html_out)
+    written.append((slug + "index.html", len(html_out)))
 
 # -------- write blog --------
 for post in BLOG_POSTS:

@@ -447,3 +447,22 @@ a.service-card:hover .service-link { color: var(--gold); }
 .blog-card p {
   font-size: 0.92rem; color: #555; line-height: 1.65; margin-bottom: 14px;
 }
+
+/* About page founder blocks */
+.about-founder {
+  display: grid; grid-template-columns: 200px 1fr; gap: 24px;
+  align-items: start; margin-bottom: 28px;
+}
+.about-founder img {
+  width: 200px; height: 200px; object-fit: cover;
+  border-radius: 12px; box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+}
+.about-founder h3 {
+  font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700;
+  color: var(--green-dark); margin-bottom: 10px;
+}
+.about-founder p { font-size: 1rem; color: #444; line-height: 1.8; }
+@media (max-width: 600px) {
+  .about-founder { grid-template-columns: 1fr; }
+  .about-founder img { width: 100%; height: 260px; }
+}
