@@ -38,8 +38,9 @@
       --text-dark:   #1a1a1a;
     }
 
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,79,57,0.97); display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 64px; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: box-shadow 0.3s; }
+    /* NAV — scoped to the main site nav (direct child of body) so the
+       in-page breadcrumb <nav class="breadcrumb"> doesn't inherit position:fixed */
+    body > nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,79,57,0.97); display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 64px; box-shadow: 0 2px 12px rgba(0,0,0,0.25); transition: box-shadow 0.3s; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
     .nav-logo img { height: 40px; }
     .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }

@@ -7,33 +7,37 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=()
 
-# Long cache for static assets (filenames are content-stable; if we ever need to bust we can rename)
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
+# CSS & JS: stable filenames that change often. Must NOT be immutable —
+# immutable caused browsers to serve a months-old styles.css forever.
+# Always revalidate; cache-busting is handled by the ?v= query param in the HTML.
 /*.css
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.js
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
-/*.woff
-  Cache-Control: public, max-age=31536000, immutable
+# Images & fonts: change rarely, but filenames are stable so NOT immutable.
+# One-week cache, then revalidate (cheap 304 if unchanged).
+/*.jpg
+  Cache-Control: public, max-age=604800
+
+/*.jpeg
+  Cache-Control: public, max-age=604800
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/*.webp
+  Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=604800
 
 /*.woff2
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=604800
+
+/*.woff
+  Cache-Control: public, max-age=604800
 
 # HTML pages — short cache so updates roll out quickly
 /*.html

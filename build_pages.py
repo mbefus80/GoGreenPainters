@@ -994,10 +994,14 @@ GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
     gtag('config', 'G-R6ZG6CC6M6');
   </script>"""
 
-FONT_LINKS = GA_SNIPPET + """
+# Bump CSS_VERSION whenever styles.css changes — busts browser caches via the ?v= query.
+# (Belt-and-suspenders with the must-revalidate header in _headers.)
+CSS_VERSION = "20260514"
+
+FONT_LINKS = GA_SNIPPET + f"""
   <link rel="preload" href="/fonts/oswald.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/styles.css" />"""
+  <link rel="stylesheet" href="/styles.css?v={CSS_VERSION}" />"""
 
 def fmt_date(iso):
     dt = datetime.datetime.strptime(iso, "%Y-%m-%d")
