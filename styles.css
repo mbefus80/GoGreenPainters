@@ -333,3 +333,26 @@ a.service-card .service-link {
   text-transform: uppercase;
 }
 a.service-card:hover .service-link { color: var(--gold); }
+
+/* Recent project grid (subpages) */
+.project-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  margin-top: 18px;
+}
+.project-grid figure {
+  background: var(--gray-light); border-radius: 8px; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.project-grid img {
+  width: 100%; height: 320px; object-fit: cover; display: block;
+}
+.project-grid figcaption {
+  text-align: center; padding: 10px;
+  font-family: 'Oswald', sans-serif; font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--green-dark); background: var(--white);
+}
+@media (max-width: 600px) {
+  .project-grid { grid-template-columns: 1fr; }
+  .project-grid img { height: 280px; }
+}

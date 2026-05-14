@@ -7,7 +7,6 @@ Builds:
   /services/interior-painting/index.html
   /services/deck-staining/index.html
   /services/custom-murals/index.html
-  /eco-friendly-painting/index.html
 
 Each page reuses the LocalBusiness JSON-LD from the homepage (same @id) plus a page-specific
 Service, FAQPage, BreadcrumbList, and WebPage node — so every URL is its own valid local-SEO
@@ -86,7 +85,6 @@ PAGES = [
             """),
             ("Paint We Recommend for Grand Rapids Homes", """
                 <p>Grand Rapids exteriors take a beating — humid summers, freeze-thaw winters, and UV that fades cheaper paint within a few seasons. We use 100% acrylic premium exterior paints from <strong>Sherwin-Williams</strong> (Duration, Emerald) and <strong>Benjamin Moore</strong> (Aura Exterior, Regal Select). A typical exterior repaint with these paints lasts 8 to 12 years on properly prepped siding.</p>
-                <p>If indoor or outdoor air quality is a priority, we can use <a href="/eco-friendly-painting/">low-VOC and zero-VOC paint options</a>.</p>
             """),
             ("When to Paint Your Exterior in Michigan", """
                 <p>The Grand Rapids exterior paint season runs roughly <strong>May through mid-October</strong>. We need surface temperatures above 50&deg;F, low overnight humidity, and 24-48 hours of dry weather after each coat. Late spring and early fall are our most-booked windows because the temperature swings are gentlest on fresh paint.</p>
@@ -102,22 +100,21 @@ PAGES = [
             ("Do you pressure wash and prep before painting?", "Yes. Every exterior project starts with a full pressure wash, scraping of loose paint, sanding, caulking, and spot priming as needed. Prep is what makes paint last in Michigan's climate — we won't skip it."),
             ("Do you do siding repairs and carpentry?", "We handle minor siding repairs, board replacement, and rotted-wood patching as part of a normal exterior repaint. For major structural work we'll refer you to a trusted carpenter and coordinate the paint after."),
             ("How much does exterior house painting cost in Grand Rapids?", "Exterior house painting in Grand Rapids typically ranges from $3,000 to $7,000 for a one- or two-story home, depending on siding type and condition, prep work, height, and accessibility. We provide a free, fixed-price written estimate after a walk-through."),
-            ("Can I use eco-friendly paint on my exterior?", "Yes. Several premium exterior lines (including Benjamin Moore Aura Exterior) have very low VOCs. See our eco-friendly painting page for details on options and how they perform in Michigan weather."),
         ],
         "related": [
             ("Interior Painting", "/services/interior-painting/"),
             ("Deck Staining", "/services/deck-staining/"),
-            ("Eco-Friendly Painting", "/eco-friendly-painting/"),
+            ("Custom Murals", "/services/custom-murals/"),
         ],
     },
     {
         "slug": "services/interior-painting/",
         "title": "Interior House Painting in Grand Rapids, MI | Go Green College Painters",
-        "description": "Owner-operated interior painting in Grand Rapids, MI — walls, ceilings, trim, and cabinets. Full furniture and floor protection, clean lines, zero mess. Low-VOC options available. Free estimates.",
+        "description": "Owner-operated interior painting in Grand Rapids, MI — walls, ceilings, trim, and cabinets. Full furniture and floor protection, clean lines, zero mess. Free estimates.",
         "h1": "Interior Painting in Grand Rapids, MI",
         "hero_img": "/interior-after.jpg",
         "service_name": "Interior House Painting",
-        "service_desc": "Interior painting in Grand Rapids — single rooms or whole homes — including walls, ceilings, trim, doors, and cabinet refinishing. Full furniture and floor protection. Low-VOC options available.",
+        "service_desc": "Interior painting in Grand Rapids — single rooms or whole homes — including walls, ceilings, trim, doors, and cabinet refinishing. Full furniture and floor protection.",
         "service_image": f"{SITE}/interior-painting.jpg",
         "breadcrumb": [("Home", "/"), ("Services", "/#services"), ("Interior Painting", "/services/interior-painting/")],
         "lead": "Owner-operated interior painting for Grand Rapids homes — walls, ceilings, trim, doors, accent walls, and kitchen cabinets. We move and protect your furniture, drop-cloth every floor, cut clean lines without tape lines, and leave the house cleaner than we found it.",
@@ -142,22 +139,18 @@ PAGES = [
                 <p>A single-room repaint usually takes <strong>1 to 2 days</strong>. A whole-home interior repaint typically takes <strong>3 to 7 days</strong> depending on square footage, ceiling height, and trim work.</p>
                 <p>Interior painting in Grand Rapids generally runs <strong>$700 to $1,700 per room</strong> and <strong>$4,700 to $8,500 for a whole-home repaint</strong>. We provide a fixed-price estimate after walking the space — no surprises.</p>
             """),
-            ("Low-VOC & Kid-Safe Options", """
-                <p>Indoor air quality matters, especially in bedrooms and kids' rooms. We're called Go Green for a reason — we stock and recommend low-VOC and zero-VOC paint lines including <strong>Benjamin Moore Natura</strong> (zero VOC, zero emissions, Greenguard Gold certified) and <strong>Sherwin-Williams Harmony</strong> (zero VOC, helps reduce indoor odors). See <a href="/eco-friendly-painting/">our eco-friendly painting page</a> for the full rundown.</p>
-            """),
         ],
         "faqs": [
             ("How long does interior painting take per room?", "A single average-sized bedroom or living room typically takes 1 to 2 days from prep to cleanup. Kitchens, bathrooms with tile and fixtures, and rooms with extensive trim take longer. Whole-home repaints usually run 3 to 7 days."),
             ("Do you move and protect furniture?", "Yes. We move furniture to the center of each room (or out of the room when needed), drop-cloth floors, and mask trim, outlets, and switches. Everything goes back exactly where we found it at the end."),
-            ("What paint brands do you use for interiors?", "Our default interior lines are Sherwin-Williams Cashmere, Emerald Interior, and Benjamin Moore Regal Select / Aura. For low-VOC and kid-friendly rooms we recommend Benjamin Moore Natura (zero VOC) or Sherwin-Williams Harmony (zero VOC)."),
+            ("What paint brands do you use for interiors?", "Our default interior lines are Sherwin-Williams Cashmere, Emerald Interior, and Benjamin Moore Regal Select / Aura — all premium acrylic latex paints designed for smooth coverage, durability, and easy cleaning."),
             ("Can you paint kitchen cabinets?", "Yes. Cabinet refinishing is a major specialty — we remove and label every door and drawer, scuff-sand, prime with a bonding primer, and apply two coats of cabinet-grade enamel. A typical kitchen takes 4 to 6 days for a result that looks factory-applied."),
             ("How much does interior painting cost in Grand Rapids?", "Interior painting in Grand Rapids generally runs $700 to $1,700 per room and $4,700 to $8,500 for a whole-house repaint, depending on square footage, ceiling height, prep work, and trim. Every estimate is free and fixed-price."),
-            ("Do you offer low-VOC or eco-friendly paint?", "Yes — we stock and recommend low-VOC and zero-VOC lines for any interior project. Just request eco-friendly paint when booking and we'll recommend specific products that match your color choices."),
-            ("How soon can my room be used after painting?", "With modern low-VOC interior paint, rooms are typically usable within 4-6 hours of the last coat and fully cured within 1-2 weeks. We let you know what to expect on each project."),
+            ("How soon can my room be used after painting?", "With modern interior latex paint, rooms are typically usable within 4-6 hours of the last coat and fully cured within 1-2 weeks. We let you know what to expect on each project."),
         ],
         "related": [
             ("Custom Murals & Accent Walls", "/services/custom-murals/"),
-            ("Eco-Friendly Painting", "/eco-friendly-painting/"),
+            ("Deck Staining", "/services/deck-staining/"),
             ("Exterior Painting", "/services/exterior-painting/"),
         ],
     },
@@ -257,73 +250,32 @@ PAGES = [
             ("Why Hand-Painted Matters", """
                 <p>Wall decals peel. Wallpaper murals show seams. Printed murals fade and can't be touched up. A hand-painted mural is a one-of-a-kind piece of art on your wall — it lasts decades, can be cleaned, and can be touched up later if a hand inevitably finds it. Evelyn has been illustrating since childhood and brings real fine-art technique to every project.</p>
             """),
+            ("Recent Project: Bathroom Refresh with Custom Stripe Accent", """
+                <p>This bathroom started as a builder-grade tan-walled space with a dark stained vanity. We transformed it into a bright, intentional design with a custom hand-painted vertical stripe accent treatment in soft yellow and a refinished cabinet in a fresh blue — a great example of how mural and custom-design work can completely reshape a small room without major renovation.</p>
+                <div class="project-grid">
+                  <figure>
+                    <img src="/bathroom-before.jpg" alt="Bathroom before custom mural and cabinet refinishing, Grand Rapids" loading="lazy" />
+                    <figcaption>Before</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="/bathroom-after.jpg" alt="Bathroom after custom yellow stripe wall treatment and blue cabinet refinishing by Go Green College Painters, Grand Rapids MI" loading="lazy" />
+                    <figcaption>After</figcaption>
+                  </figure>
+                </div>
+            """),
         ],
         "faqs": [
             ("How much does a custom mural cost in Grand Rapids?", "Custom murals typically run $400-$1,200 for small accent murals, $1,200-$3,500 for full feature walls, and $3,500+ for large or highly detailed commercial murals. Pricing depends on size, complexity, and detail. Every quote is free after a concept sketch is approved."),
             ("How long does it take to paint a custom mural?", "Small accent murals take 1-2 days. Full feature walls take 3-5 days. Large or commercial murals take 5-10 days. The design phase (consultation and sketch approval) typically adds 3-7 days before painting starts."),
             ("Can I choose my own custom design?", "Absolutely — that's the whole point. We start with a free consultation, sketch concepts based on your ideas and any reference imagery you love, and refine until the design is exactly right before any paint goes on the wall."),
             ("How long will the mural last?", "Hand-painted murals on properly prepped walls last for decades. We use the same premium interior paints we use on the rest of the house, with an optional matte sealer for high-traffic areas. Murals can be touched up easily if scuffed."),
-            ("Do you do murals for kids' rooms and nurseries?", "Yes — this is one of our most popular mural categories. Evelyn specializes in playful, story-driven designs for children's spaces. We use low-VOC, kid-safe paints for nurseries and kids' rooms."),
+            ("Do you do murals for kids' rooms and nurseries?", "Yes — this is one of our most popular mural categories. Evelyn specializes in playful, story-driven designs for children's spaces, from nursery scenes to whimsical character art for older kids."),
             ("Do you paint commercial murals?", "Yes. We do branded murals, logo illustrations, restaurant feature walls, lobby murals, and exterior commercial murals across Grand Rapids. Commercial projects include a written design brief and fixed-price quote."),
             ("Are you the actual artist, or do you outsource?", "Evelyn personally designs and paints every mural — she's an Industrial Design student at Wayne State University and a lifelong illustrator. Jackson assists with wall prep, transfer, and finishing. No subcontractors."),
         ],
         "related": [
             ("Interior Painting", "/services/interior-painting/"),
-            ("Eco-Friendly Painting", "/eco-friendly-painting/"),
-            ("Exterior Painting", "/services/exterior-painting/"),
-        ],
-    },
-    {
-        "slug": "eco-friendly-painting/",
-        "title": "Eco-Friendly & Low-VOC Painting in Grand Rapids, MI | Go Green Painters",
-        "description": "Low-VOC and zero-VOC painting in Grand Rapids, MI. Benjamin Moore Natura, Sherwin-Williams Harmony, and ECOS Paints for healthier indoor air. Lead-safe practices for older Grand Rapids homes. Free estimates.",
-        "h1": "Eco-Friendly & Low-VOC Painting in Grand Rapids, MI",
-        "hero_img": "/interior-painting.jpg",
-        "service_name": "Eco-Friendly and Low-VOC Painting",
-        "service_desc": "Low-VOC and zero-VOC interior painting in Grand Rapids using Benjamin Moore Natura, Sherwin-Williams Harmony, and ECOS Paints. Lead-safe practices for pre-1978 homes. Improves indoor air quality and is safer for kids, pets, and people with asthma or chemical sensitivities.",
-        "service_image": f"{SITE}/interior-painting.jpg",
-        "breadcrumb": [("Home", "/"), ("Eco-Friendly Painting", "/eco-friendly-painting/")],
-        "lead": "We're called Go Green for a reason. We paint Grand Rapids homes with low-VOC and zero-VOC paint options that protect indoor air quality — safer for kids, pets, pregnant homeowners, people with asthma, and anyone who'd rather not breathe paint fumes for a week. We also follow EPA RRP lead-safe work practices on pre-1978 homes including Heritage Hill, East Hills, and other older Grand Rapids neighborhoods.",
-        "sections": [
-            ("What Are VOCs and Why Do They Matter?", """
-                <p>VOCs — volatile organic compounds — are the chemicals that off-gas from drying paint and create that strong &quot;new paint smell.&quot; They can irritate eyes and lungs, trigger asthma and migraines, and linger in indoor air for weeks. Kids, pregnant women, pets, and people with chemical sensitivities are the most affected. Modern low-VOC and zero-VOC paints solve most of this without compromising performance.</p>
-            """),
-            ("Low-VOC vs Zero-VOC Paint", """
-                <ul>
-                  <li><strong>Standard paint</strong> — 150-380 g/L VOC. Strong smell, multi-week off-gassing.</li>
-                  <li><strong>Low-VOC paint</strong> — under 50 g/L. Mild smell, much faster off-gassing.</li>
-                  <li><strong>Zero-VOC paint</strong> — under 5 g/L. Virtually no smell, safe for rooms used the same day.</li>
-                </ul>
-                <p>For most homes we recommend zero-VOC interior paint. The performance is now equal to or better than standard paint and the cost difference is usually under 10%.</p>
-            """),
-            ("Eco-Friendly Paint Brands We Use", """
-                <ul>
-                  <li><strong>Benjamin Moore Natura</strong> — Zero VOC, zero emissions, Greenguard Gold certified, asthma-and-allergy friendly. Our default for nurseries and kids' rooms.</li>
-                  <li><strong>Sherwin-Williams Harmony</strong> — Zero VOC, anti-microbial, helps reduce VOCs from carpet and cabinets. Good for kitchens and bathrooms.</li>
-                  <li><strong>ECOS Paints</strong> — Zero VOC, zero solvents. Specialty option for chemically sensitive clients.</li>
-                  <li><strong>Benjamin Moore Aura Exterior</strong> — Premium exterior with very low VOC for outdoor use.</li>
-                </ul>
-            """),
-            ("Lead-Safe Work in Older Grand Rapids Homes", """
-                <p>Grand Rapids has thousands of pre-1978 homes — Heritage Hill, East Hills, Eastown, Creston, parts of West Side and Alger Heights — many of which still have lead-based paint under newer layers. Disturbing that paint without proper containment scatters lead dust through the home, which is a serious health hazard, especially for kids under 6.</p>
-                <p>We follow EPA Renovation, Repair and Painting (RRP) work practices on pre-1978 homes: full surface containment, HEPA vacuums, wet sanding, and proper waste disposal. If you're not sure whether your home has lead paint, we can recommend a certified inspector.</p>
-            """),
-            ("Why This Matters in Grand Rapids", """
-                <p>Most painters in Grand Rapids will <em>mention</em> low-VOC as an option if you ask. Almost nobody specializes in it. Go Green Painters does — it's literally in our name. If indoor air quality, your children's health, or chemical sensitivity is a real concern, this is what we do every day.</p>
-            """),
-        ],
-        "faqs": [
-            ("What is low-VOC paint?", "Low-VOC paint contains less than 50 grams per liter of volatile organic compounds — the chemicals responsible for the strong smell of fresh paint. Zero-VOC paint contains under 5 g/L. Lower VOCs mean less indoor air pollution, faster room re-occupancy, and a safer environment for kids, pets, and chemically sensitive people."),
-            ("Is zero-VOC paint really safer than regular paint?", "Yes. Independent testing by Greenguard, the Asthma & Allergy Foundation, and the EPA all confirm that zero-VOC paints significantly reduce indoor air pollutants compared to standard paint. Rooms can typically be reoccupied within hours instead of days."),
-            ("What eco-friendly paint brands do you recommend?", "We recommend Benjamin Moore Natura for nurseries and kids' rooms (Greenguard Gold certified, zero VOC), Sherwin-Williams Harmony for kitchens and bathrooms (zero VOC, anti-microbial), and ECOS Paints for clients with severe chemical sensitivities. For exteriors we use Benjamin Moore Aura Exterior which is also very low VOC."),
-            ("Does eco-friendly paint cost more?", "Slightly — typically 5-10% more per gallon than equivalent standard paint. On a full-home repaint that's usually a small fraction of total project cost, and modern zero-VOC paints perform as well or better than standard paint."),
-            ("Are you certified lead-safe (EPA RRP) for older Grand Rapids homes?", "We follow EPA Renovation, Repair and Painting (RRP) work practices on every pre-1978 home — containment, HEPA vacuums, wet methods, proper waste disposal. If your home is older and you have specific lead concerns, please mention it when booking your estimate."),
-            ("Can I use eco-friendly paint for a custom mural or accent wall?", "Yes — all of our eco-friendly paint lines are available in custom-tinted colors and work great for accent walls and murals. Evelyn often uses Benjamin Moore Natura for kids' room murals so the room is safe to use immediately."),
-            ("How soon can I use the room after eco-friendly paint?", "With zero-VOC paint, most rooms are usable within 2-4 hours of the last coat — no lingering smell or off-gassing. Standard paint can take days to weeks for full off-gassing."),
-        ],
-        "related": [
-            ("Interior Painting", "/services/interior-painting/"),
-            ("Custom Murals", "/services/custom-murals/"),
+            ("Deck Staining", "/services/deck-staining/"),
             ("Exterior Painting", "/services/exterior-painting/"),
         ],
     },
@@ -366,7 +318,6 @@ FOOTER_HTML = """  <footer>
           <li><a href="/services/interior-painting/">Interior Painting</a></li>
           <li><a href="/services/deck-staining/">Deck Staining</a></li>
           <li><a href="/services/custom-murals/">Custom Murals</a></li>
-          <li><a href="/eco-friendly-painting/">Eco-Friendly Painting</a></li>
         </ul>
       </div>
       <div class="footer-col">
