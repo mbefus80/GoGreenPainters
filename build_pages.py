@@ -35,6 +35,11 @@ HERO_CLASS_MAP = {
     "/hero-bg.jpg": "hero-default",
 }
 
+def og_image(slug):
+    """Deterministic OG social-card path from a page slug (matches build_og_images.py)."""
+    key = slug.strip("/").replace("/", "-") or "home"
+    return f"{SITE}/og/og-{key}.jpg"
+
 # -------- shared LocalBusiness block (kept identical across pages, same @id) --------
 LOCAL_BUSINESS = {
     "@type": ["LocalBusiness", "HousePainter"],
@@ -845,18 +850,17 @@ def build_page(page):
   <meta name="description" content="{html_lib.escape(page['description'])}" />
   <link rel="canonical" href="{canonical}" />
 
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="{html_lib.escape(page['title'])}" />
   <meta property="og:description" content="{html_lib.escape(page['description'])}" />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE}{page['hero_img']}" />
+  <meta property="og:image" content="{og_image(page['slug'])}" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{og_image(page['slug'])}" />
 
   <meta name="geo.region" content="US-MI" />
   <meta name="geo.placename" content="Grand Rapids, Michigan" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="{page['hero_img']}" />
 
   <script type="application/ld+json">
@@ -1001,8 +1005,9 @@ def build_blog_post(post):
   <meta property="og:title" content="{html_lib.escape(post['title'])}" />
   <meta property="og:description" content="{html_lib.escape(post['description'])}" />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE}{post['hero_img']}" />
+  <meta property="og:image" content="{og_image(post['slug'])}" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{og_image(post['slug'])}" />
   <meta property="article:published_time" content="{post['date_published']}" />
   <meta property="article:modified_time" content="{post['date_modified']}" />
 
@@ -1103,8 +1108,9 @@ def build_blog_index(posts):
   <meta property="og:title" content="Go Green College Painters Blog" />
   <meta property="og:description" content="Painting guides, cost breakdowns, and tips for Grand Rapids homeowners." />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE}/logo.png" />
+  <meta property="og:image" content="{SITE}/og/og-blog.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{SITE}/og/og-blog.jpg" />
   <meta name="geo.region" content="US-MI" />
   <meta name="geo.placename" content="Grand Rapids, Michigan" />
   <script type="application/ld+json">
@@ -1192,8 +1198,9 @@ def build_about_page():
   <meta property="og:title" content="About Go Green College Painters" />
   <meta property="og:description" content="Student-owned, owner-operated painting company in Greater Grand Rapids. Meet founders Jackson and Evelyn Befus." />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE}/jackson-photo.jpg" />
+  <meta property="og:image" content="{SITE}/og/og-about.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{SITE}/og/og-about.jpg" />
   <meta name="geo.region" content="US-MI" />
   <meta name="geo.placename" content="Grand Rapids, Michigan" />
   <link rel="preload" as="image" href="/exterior-after.jpg" />
@@ -1355,8 +1362,9 @@ def build_contact_page():
   <meta property="og:title" content="Contact Go Green College Painters" />
   <meta property="og:description" content="Free, fixed-price painting estimates in Greater Grand Rapids. Call (616) 264-2119." />
   <meta property="og:url" content="{canonical}" />
-  <meta property="og:image" content="{SITE}/logo.png" />
+  <meta property="og:image" content="{SITE}/og/og-contact.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{SITE}/og/og-contact.jpg" />
   <meta name="geo.region" content="US-MI" />
   <meta name="geo.placename" content="Grand Rapids, Michigan" />
   <script type="application/ld+json">
