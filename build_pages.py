@@ -78,6 +78,17 @@ LOCAL_BUSINESS = {
     },
 }
 
+# WebSite node — referenced by every WebPage's isPartOf. Defined once, included in each graph.
+WEBSITE_NODE = {
+    "@type": "WebSite",
+    "@id": f"{SITE}/#website",
+    "url": f"{SITE}/",
+    "name": "Go Green College Painters",
+    "description": "Student-owned house painting company serving Greater Grand Rapids, Michigan — exterior, interior, deck staining, and custom murals.",
+    "publisher": {"@id": BUSINESS_ID},
+    "inLanguage": "en-US",
+}
+
 # -------- per-page configs --------
 PAGES = [
     {
@@ -784,6 +795,7 @@ def build_jsonld(page):
     canonical = f"{SITE}/{page['slug']}"
     graph = [
         LOCAL_BUSINESS,
+        WEBSITE_NODE,
         {
             "@type": "Person", "@id": f"{SITE}/#jackson",
             "name": "Jackson Befus", "jobTitle": "Co-Owner & Project Manager",
@@ -914,6 +926,7 @@ def build_blog_jsonld(post):
     canonical = f"{SITE}/{post['slug']}"
     graph = [
         LOCAL_BUSINESS,
+        WEBSITE_NODE,
         {
             "@type": "Person", "@id": f"{SITE}/#jackson",
             "name": "Jackson Befus", "jobTitle": "Co-Owner & Project Manager",
@@ -1074,6 +1087,7 @@ def build_blog_index(posts):
         "@context": "https://schema.org",
         "@graph": [
             LOCAL_BUSINESS,
+            WEBSITE_NODE,
             {
                 "@type": "Blog",
                 "@id": f"{canonical}#blog",
@@ -1151,6 +1165,7 @@ def build_about_page():
         "@context": "https://schema.org",
         "@graph": [
             LOCAL_BUSINESS,
+            WEBSITE_NODE,
             {
                 "@type": "Person", "@id": f"{SITE}/#jackson",
                 "name": "Jackson Befus", "jobTitle": "Co-Owner & Project Manager",
@@ -1318,6 +1333,7 @@ def build_contact_page():
         "@context": "https://schema.org",
         "@graph": [
             LOCAL_BUSINESS,
+            WEBSITE_NODE,
             {
                 "@type": "ContactPage",
                 "@id": f"{canonical}#webpage",
@@ -1409,6 +1425,55 @@ def build_contact_page():
   </main>"""
     return f"{head}\n{NAV_HTML}\n{hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
 
+# -------- standalone: branded 404 --------
+def build_404_page():
+    head = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Go Green College Painters</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="That page couldn't be found. Explore Go Green College Painters' services, service areas, and contact options." />
+{FONT_LINKS}
+</head>
+<body>"""
+    hero = """  <section class="page-hero hero-default" style="min-height: 380px;">
+    <div class="page-hero-inner">
+      <h1>404 &mdash; Page Not Found</h1>
+      <p class="lead">Looks like that page got painted over. Let's get you back to something useful.</p>
+      <a href="/" class="btn-primary">Back to Home</a>
+    </div>
+  </section>"""
+    main = """  <main class="page-main">
+    <div class="container">
+      <div class="page-section">
+        <h2>Popular Pages</h2>
+        <ul>
+          <li><a href="/services/exterior-painting/">Exterior House Painting</a></li>
+          <li><a href="/services/interior-painting/">Interior Painting</a></li>
+          <li><a href="/services/deck-staining/">Deck Staining</a></li>
+          <li><a href="/services/custom-murals/">Custom Murals &amp; Accent Walls</a></li>
+          <li><a href="/blog/cost-to-paint-a-house-in-grand-rapids/">How Much Does It Cost to Paint a House in Grand Rapids?</a></li>
+        </ul>
+      </div>
+      <div class="page-section">
+        <h2>Service Areas</h2>
+        <ul>
+          <li><a href="/grand-rapids/cascade/">Cascade</a></li>
+          <li><a href="/grand-rapids/forest-hills/">Forest Hills</a></li>
+          <li><a href="/grand-rapids/ada/">Ada</a></li>
+          <li><a href="/grand-rapids/east-grand-rapids/">East Grand Rapids</a></li>
+        </ul>
+      </div>
+      <div class="related-services">
+        <h2>Still Stuck?</h2>
+        <ul><li><a href="/contact/">Contact Us</a></li><li><a href="tel:+16162642119">Call (616) 264-2119</a></li></ul>
+      </div>
+    </div>
+  </main>"""
+    return f"{head}\n{NAV_HTML}\n{hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+
 # -------- write pages --------
 written = []
 for page in PAGES:
@@ -1418,6 +1483,12 @@ for page in PAGES:
     with open(path, "w") as f:
         f.write(html_out)
     written.append((path, len(html_out)))
+
+# 404 — Netlify auto-serves /404.html for unmatched routes
+_404 = build_404_page()
+with open("404.html", "w") as f:
+    f.write(_404)
+written.append(("404.html", len(_404)))
 
 # -------- write About & Contact --------
 for slug, builder in [("about/", build_about_page), ("contact/", build_contact_page)]:
