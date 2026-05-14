@@ -978,11 +978,8 @@ GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
   </script>"""
 
 FONT_LINKS = GA_SNIPPET + """
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" /></noscript>
+  <link rel="preload" href="/fonts/oswald.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />"""
 
 def fmt_date(iso):

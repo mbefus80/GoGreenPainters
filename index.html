@@ -31,9 +31,9 @@
     gtag('config', 'G-R6ZG6CC6M6');
   </script>
 
-  <!-- Performance: preconnect to font CDN, responsive preload for hero -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Performance: preload self-hosted fonts + responsive hero -->
+  <link rel="preload" href="/fonts/oswald.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" as="image" href="hero-bg-800.jpg" media="(max-width: 899px)" />
   <link rel="preload" as="image" href="hero-bg.jpg" media="(min-width: 900px)" />
 
@@ -149,10 +149,6 @@
   }
   </script>
 
-  <!-- Non-blocking Google Fonts: preload + swap from media=print to all once loaded -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
