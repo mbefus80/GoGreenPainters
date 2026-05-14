@@ -21,10 +21,11 @@
   <meta name="geo.region" content="US-MI" />
   <meta name="geo.placename" content="Grand Rapids, Michigan" />
 
-  <!-- Performance: preconnect to font CDN, preload hero -->
+  <!-- Performance: preconnect to font CDN, responsive preload for hero -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="hero-bg.jpg" />
+  <link rel="preload" as="image" href="hero-bg-800.jpg" media="(max-width: 899px)" />
+  <link rel="preload" as="image" href="hero-bg.jpg" media="(min-width: 900px)" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -138,7 +139,10 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Non-blocking Google Fonts: preload + swap from media=print to all once loaded -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -287,8 +291,8 @@
       <div class="portfolio-grid">
         <div class="ba-card">
           <div class="ba-slider">
-            <img class="ba-img after"  src="exterior-after.jpg"  alt="Exterior painting after Grand Rapids" />
-            <img class="ba-img before" src="exterior-before.jpg" alt="Exterior painting before Grand Rapids" />
+            <img class="ba-img after" loading="lazy"  src="exterior-after.jpg"  alt="Exterior painting after Grand Rapids" />
+            <img class="ba-img before" loading="lazy" src="exterior-before.jpg" alt="Exterior painting before Grand Rapids" />
             <div class="ba-ph"><svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span>Add Photos</span></div>
             <div class="ba-line"><div class="ba-btn"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div></div>
             <span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
@@ -297,8 +301,8 @@
         </div>
         <div class="ba-card">
           <div class="ba-slider">
-            <img class="ba-img after"  src="interior-after.jpg"  alt="Interior painting after Grand Rapids" />
-            <img class="ba-img before" src="interior-before.jpg" alt="Interior painting before Grand Rapids" />
+            <img class="ba-img after" loading="lazy"  src="interior-after.jpg"  alt="Interior painting after Grand Rapids" />
+            <img class="ba-img before" loading="lazy" src="interior-before.jpg" alt="Interior painting before Grand Rapids" />
             <div class="ba-ph"><svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span>Add Photos</span></div>
             <div class="ba-line"><div class="ba-btn"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div></div>
             <span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
@@ -307,8 +311,8 @@
         </div>
         <div class="ba-card">
           <div class="ba-slider">
-            <img class="ba-img after"  src="stain-after.jpg"  alt="Deck stain after Grand Rapids" />
-            <img class="ba-img before" src="stain-before.jpg" alt="Deck stain before Grand Rapids" />
+            <img class="ba-img after" loading="lazy"  src="stain-after.jpg"  alt="Deck stain after Grand Rapids" />
+            <img class="ba-img before" loading="lazy" src="stain-before.jpg" alt="Deck stain before Grand Rapids" />
             <div class="ba-ph"><svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span>Add Photos</span></div>
             <div class="ba-line"><div class="ba-btn"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div></div>
             <span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
@@ -317,8 +321,8 @@
         </div>
         <div class="ba-card">
           <div class="ba-slider">
-            <img class="ba-img after"  src="bathroom-after.jpg"  alt="Bathroom after custom mural stripe walls and refinished blue vanity, Grand Rapids" />
-            <img class="ba-img before" src="bathroom-before.jpg" alt="Bathroom before custom painting, Grand Rapids" />
+            <img class="ba-img after" loading="lazy"  src="bathroom-after.jpg"  alt="Bathroom after custom mural stripe walls and refinished blue vanity, Grand Rapids" />
+            <img class="ba-img before" loading="lazy" src="bathroom-before.jpg" alt="Bathroom before custom painting, Grand Rapids" />
             <div class="ba-ph"><svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span>Add Photos</span></div>
             <div class="ba-line"><div class="ba-btn"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div></div>
             <span class="ba-tag before">Before</span><span class="ba-tag after">After</span>
