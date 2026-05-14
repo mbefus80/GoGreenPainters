@@ -26,6 +26,15 @@ import json, os, html as html_lib, textwrap, datetime
 SITE = "https://gogreenpainters.com"
 BUSINESS_ID = f"{SITE}/#business"
 
+# hero_img path -> responsive CSS class (defined in styles.css). Falls back to hero-default.
+HERO_CLASS_MAP = {
+    "/exterior-after.jpg": "hero-exterior",
+    "/interior-after.jpg": "hero-interior",
+    "/stain-after.jpg": "hero-stain",
+    "/custom-designs.jpg": "hero-murals",
+    "/hero-bg.jpg": "hero-default",
+}
+
 # -------- shared LocalBusiness block (kept identical across pages, same @id) --------
 LOCAL_BUSINESS = {
     "@type": ["LocalBusiness", "HousePainter"],
@@ -854,20 +863,17 @@ def build_page(page):
 {build_jsonld(page)}
   </script>
 
-  <!-- Non-blocking Google Fonts -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" /></noscript>
-  <link rel="stylesheet" href="/styles.css" />
+{FONT_LINKS}
 </head>
 <body>"""
 
-    page_hero = f"""  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.78) 0%, rgba(0,0,0,0.55) 100%), url('{page['hero_img']}');">
+    hero_class = HERO_CLASS_MAP.get(page["hero_img"], "hero-default")
+    page_hero = f"""  <section class="page-hero {hero_class}">
     <div class="page-hero-inner">
       <nav class="breadcrumb">{render_breadcrumb_html(page['breadcrumb'])}</nav>
       <h1>{html_lib.escape(page['h1'])}</h1>
       <p class="lead">{page['lead']}</p>
-      <a href="/#contact" class="btn-primary">Get a Free Estimate</a>
+      <a href="/contact/" class="btn-primary">Get a Free Estimate</a>
     </div>
   </section>"""
 
@@ -957,7 +963,18 @@ def build_blog_jsonld(post):
     ]
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2)
 
-FONT_LINKS = """  <link rel="preconnect" href="https://fonts.googleapis.com" />
+# Google Analytics 4 — loaded async so it never blocks render. Injected into every page head.
+GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6ZG6CC6M6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R6ZG6CC6M6');
+  </script>"""
+
+FONT_LINKS = GA_SNIPPET + """
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
@@ -1002,7 +1019,8 @@ def build_blog_post(post):
 </head>
 <body>"""
 
-    page_hero = f"""  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('{post['hero_img']}');">
+    hero_class = HERO_CLASS_MAP.get(post["hero_img"], "hero-default")
+    page_hero = f"""  <section class="page-hero {hero_class}">
     <div class="page-hero-inner">
       <nav class="breadcrumb">{render_breadcrumb_html(post['breadcrumb'])}</nav>
       <h1>{html_lib.escape(post['h1'])}</h1>
@@ -1096,7 +1114,7 @@ def build_blog_index(posts):
 </head>
 <body>
 {NAV_HTML}
-  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.85) 0%, rgba(0,0,0,0.7) 100%), url('/hero-bg.jpg'); min-height: 340px;">
+  <section class="page-hero hero-default" style="min-height: 340px;">
     <div class="page-hero-inner">
       <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">Blog</span></nav>
       <h1>Painting Tips &amp; Cost Guides</h1>
@@ -1185,7 +1203,7 @@ def build_about_page():
 {FONT_LINKS}
 </head>
 <body>"""
-    hero = """  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.6) 100%), url('/exterior-after.jpg');">
+    hero = """  <section class="page-hero hero-exterior">
     <div class="page-hero-inner">
       <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">About</span></nav>
       <h1>About Go Green College Painters</h1>
@@ -1347,7 +1365,7 @@ def build_contact_page():
 {FONT_LINKS}
 </head>
 <body>"""
-    hero = """  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.88) 0%, rgba(0,0,0,0.7) 100%), url('/hero-bg.jpg'); min-height: 320px;">
+    hero = """  <section class="page-hero hero-default" style="min-height: 320px;">
     <div class="page-hero-inner">
       <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">Contact</span></nav>
       <h1>Contact Go Green College Painters</h1>

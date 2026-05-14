@@ -466,3 +466,60 @@ a.service-card:hover .service-link { color: var(--gold); }
   .about-founder { grid-template-columns: 1fr; }
   .about-founder img { width: 100%; height: 260px; }
 }
+
+/* ============================================================
+   RESPONSIVE SUBPAGE HERO BACKGROUNDS
+   Mobile-first: 800w WebP/JPG; desktop variant at >=900px.
+   ============================================================ */
+.page-hero.hero-exterior {
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/exterior-after-800.jpg');
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/exterior-after-800.webp') type('image/webp'), url('/exterior-after-800.jpg') type('image/jpeg'));
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/exterior-after-800.webp') type('image/webp'), url('/exterior-after-800.jpg') type('image/jpeg'));
+}
+.page-hero.hero-interior {
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/interior-after-800.jpg');
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/interior-after-800.webp') type('image/webp'), url('/interior-after-800.jpg') type('image/jpeg'));
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/interior-after-800.webp') type('image/webp'), url('/interior-after-800.jpg') type('image/jpeg'));
+}
+.page-hero.hero-stain {
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/stain-after-800.jpg');
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/stain-after-800.webp') type('image/webp'), url('/stain-after-800.jpg') type('image/jpeg'));
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/stain-after-800.webp') type('image/webp'), url('/stain-after-800.jpg') type('image/jpeg'));
+}
+.page-hero.hero-murals {
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/custom-designs-800.jpg');
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/custom-designs-800.webp') type('image/webp'), url('/custom-designs-800.jpg') type('image/jpeg'));
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/custom-designs-800.webp') type('image/webp'), url('/custom-designs-800.jpg') type('image/jpeg'));
+}
+.page-hero.hero-default {
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/hero-bg-800.jpg');
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/hero-bg-800.webp') type('image/webp'), url('/hero-bg-800.jpg') type('image/jpeg'));
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/hero-bg-800.webp') type('image/webp'), url('/hero-bg-800.jpg') type('image/jpeg'));
+}
+@media (min-width: 900px) {
+  .page-hero.hero-exterior {
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/exterior-after.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/exterior-after.webp') type('image/webp'), url('/exterior-after.jpg') type('image/jpeg'));
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/exterior-after.webp') type('image/webp'), url('/exterior-after.jpg') type('image/jpeg'));
+  }
+  .page-hero.hero-interior {
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/interior-after.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/interior-after.webp') type('image/webp'), url('/interior-after.jpg') type('image/jpeg'));
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/interior-after.webp') type('image/webp'), url('/interior-after.jpg') type('image/jpeg'));
+  }
+  .page-hero.hero-stain {
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/stain-after.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/stain-after.webp') type('image/webp'), url('/stain-after.jpg') type('image/jpeg'));
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/stain-after.webp') type('image/webp'), url('/stain-after.jpg') type('image/jpeg'));
+  }
+  .page-hero.hero-murals {
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/custom-designs.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/custom-designs.webp') type('image/webp'), url('/custom-designs.jpg') type('image/jpeg'));
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/custom-designs.webp') type('image/webp'), url('/custom-designs.jpg') type('image/jpeg'));
+  }
+  .page-hero.hero-default {
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/hero-bg.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/hero-bg.webp') type('image/webp'), url('/hero-bg.jpg') type('image/jpeg'));
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/hero-bg.webp') type('image/webp'), url('/hero-bg.jpg') type('image/jpeg'));
+  }
+}

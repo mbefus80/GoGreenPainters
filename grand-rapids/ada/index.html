@@ -212,7 +212,16 @@
 }
   </script>
 
-  <!-- Non-blocking Google Fonts -->
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6ZG6CC6M6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R6ZG6CC6M6');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" /></noscript>
@@ -240,12 +249,12 @@
       <span></span><span></span><span></span>
     </div>
   </nav>
-  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.78) 0%, rgba(0,0,0,0.55) 100%), url('/exterior-after.jpg');">
+  <section class="page-hero hero-exterior">
     <div class="page-hero-inner">
       <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <a href="/#service-areas">Service Areas</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">Ada</span></nav>
       <h1>House Painters in Ada, Michigan</h1>
       <p class="lead">Ada Township sits just east of Grand Rapids — home to Amway HQ, the redeveloped Ada Village downtown, and some of the most cedar-heavy homes in the region. We paint exteriors, interiors, decks, and cabinets across Ada with the same owner-operated approach we use in Cascade and Forest Hills.</p>
-      <a href="/#contact" class="btn-primary">Get a Free Estimate</a>
+      <a href="/contact/" class="btn-primary">Get a Free Estimate</a>
     </div>
   </section>
   <main class="page-main">
