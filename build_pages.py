@@ -550,6 +550,99 @@ PAGES = [
     },
 ]
 
+# ============================================================
+# BLOG POSTS
+# Each post renders with Article + FAQPage + BreadcrumbList schema.
+# To add a post: append a dict here and rerun build_pages.py.
+# ============================================================
+BLOG_POSTS = [
+    {
+        "slug": "blog/cost-to-paint-a-house-in-grand-rapids/",
+        "title": "How Much Does It Cost to Paint a House in Grand Rapids? (2026 Guide)",
+        "description": "A 2026 breakdown of interior, exterior, cabinet, and deck painting costs in Grand Rapids, MI — what's included at each price point, what drives a quote up or down, and how to get an accurate estimate.",
+        "h1": "How Much Does It Cost to Paint a House in Grand Rapids?",
+        "hero_img": "/exterior-after.jpg",
+        "date_published": "2026-05-13",
+        "date_modified": "2026-05-13",
+        "author_id": f"{SITE}/#jackson",
+        "author_name": "Jackson Befus",
+        "breadcrumb": [("Home", "/"), ("Blog", "/blog/"), ("Cost to Paint a House in Grand Rapids", "/blog/cost-to-paint-a-house-in-grand-rapids/")],
+        "lead": "Most house painting projects in Grand Rapids fall between $700 and $9,500 depending on what you're painting. Interior repaints run roughly $700–$1,700 per room or $4,700–$8,500 for a whole house; exterior repaints run $3,000–$7,000 for a typical home; kitchen cabinet refinishing runs $2,500–$6,000; and deck staining runs $700–$2,500. Here's the full 2026 breakdown — what's included at each price point, and what pushes a quote higher or lower.",
+        "sections": [
+            ("Interior Painting Costs in Grand Rapids", """
+                <p>Interior painting is usually priced per room or as a whole-home package. As a 2026 guide for the Grand Rapids area:</p>
+                <ul>
+                  <li><strong>Single room (bedroom, office):</strong> $700–$1,200</li>
+                  <li><strong>Living room or large room with vaulted ceiling:</strong> $1,000–$1,700</li>
+                  <li><strong>Whole-home interior repaint:</strong> $4,700–$8,500</li>
+                  <li><strong>Trim, doors, and baseboards (per room):</strong> $200–$500 on top of wall pricing</li>
+                  <li><strong>Ceilings:</strong> $150–$400 per room depending on height and condition</li>
+                </ul>
+                <p>That pricing assumes two coats, standard 8–9 ft ceilings, minor wall prep (nail holes, small dings), and quality acrylic latex paint. Heavily damaged walls, dark-to-light color changes, and tall or detailed rooms push the number up.</p>
+            """),
+            ("Exterior Painting Costs in Grand Rapids", """
+                <p>Exterior repaints in the Grand Rapids area generally run <strong>$3,000–$7,000</strong> for a typical one- or two-story home. The biggest cost drivers are:</p>
+                <ul>
+                  <li><strong>Home size and story count</strong> — more square footage and height means more labor and access equipment.</li>
+                  <li><strong>Siding type</strong> — vinyl and fiber-cement are quicker; cedar siding takes significantly more prep (tannin-blocking primer, knot priming) and runs at the higher end.</li>
+                  <li><strong>Current paint condition</strong> — peeling and failing paint needs scraping and spot-priming, which adds labor.</li>
+                  <li><strong>Detail elements</strong> — shutters, trim, dormers, railings, and multi-color schemes add time.</li>
+                </ul>
+                <p>Larger executive homes — common in Cascade, Ada, and the Forest Hills area — frequently run $5,000–$9,000 because of size, cedar siding, and multi-story access.</p>
+            """),
+            ("Kitchen Cabinet Refinishing Costs", """
+                <p>Refinishing kitchen cabinets is one of the highest-value painting projects you can do — a fraction of the cost of replacement, with results that look factory-applied when done correctly. In Grand Rapids, cabinet refinishing typically runs <strong>$2,500–$6,000</strong> depending on:</p>
+                <ul>
+                  <li>Number of doors and drawer fronts</li>
+                  <li>Whether you're painting the boxes as well as the doors</li>
+                  <li>Current finish (raw wood, stained, or previously painted)</li>
+                  <li>Color change complexity</li>
+                </ul>
+                <p>The process matters more than the paint here: doors removed and labeled, surfaces degreased and scuff-sanded, a bonding primer, and two coats of cabinet-grade enamel. A typical kitchen takes 4–6 days.</p>
+            """),
+            ("Deck and Fence Staining Costs", """
+                <p>Deck and fence staining in Grand Rapids generally runs <strong>$700–$2,500</strong>, depending on the size of the deck, the surface condition, and the type of stain. A standard 200–400 sq ft deck usually falls in the $900–$1,800 range. Transparent and semi-transparent stains cost less than solid stains, and a badly weathered deck needs more cleaning and sanding labor.</p>
+                <p>Note: this is refinishing and staining only. Board replacement and structural carpentry aren't part of a staining quote — those are a separate carpentry job.</p>
+            """),
+            ("What Drives a Painting Quote Up or Down", """
+                <p>Two homes the same size can get very different quotes. The main factors:</p>
+                <ul>
+                  <li><strong>Prep work needed</strong> — the single biggest variable. Sound surfaces paint fast; failing paint, water damage, or heavy cracking adds hours.</li>
+                  <li><strong>Surface material</strong> — cedar siding, stucco, and rough-sawn wood take more time and specialty primers than vinyl or smooth drywall.</li>
+                  <li><strong>Number of coats</strong> — dramatic color changes and deep colors often need an extra coat.</li>
+                  <li><strong>Height and access</strong> — second and third stories, steep lots, and complex rooflines require more equipment and time.</li>
+                  <li><strong>Detail and trim</strong> — lots of trim, shutters, railings, and multi-color schemes increase labor.</li>
+                  <li><strong>Paint quality</strong> — premium paints cost more per gallon but last years longer; we don't recommend cutting this corner.</li>
+                  <li><strong>Season</strong> — spring and fall are peak; booking in the shoulder season sometimes means more scheduling flexibility.</li>
+                </ul>
+            """),
+            ("Does Your Neighborhood Affect the Price?", """
+                <p>Indirectly, yes — not because painters charge more by ZIP code, but because home characteristics vary by area. Cascade, Ada, and Forest Hills have larger homes and far more cedar siding, so exterior quotes there tend to run higher. East Grand Rapids has older established homes with detailed trim and plaster walls, which adds prep time. The price tracks the house, not the address.</p>
+            """),
+            ("How to Get an Accurate Painting Quote", """
+                <p>Online calculators and per-square-foot averages are a starting point, but the only way to get a real number is an in-person walk-through. At Go Green College Painters, every estimate is <strong>free, fixed-price, and in writing</strong> — we walk the home, identify the prep that's actually needed, and quote a number that won't change unless the scope does.</p>
+                <p>We're a student-owned, owner-operated company — Jackson and Evelyn Befus do every job themselves. Call <a href="tel:+16162642119">(616) 264-2119</a> or <a href="/#contact">request a free estimate</a> and we'll get you a number within 24 hours.</p>
+            """),
+        ],
+        "faqs": [
+            ("How much does it cost to paint the interior of a house in Grand Rapids?", "A whole-home interior repaint in Grand Rapids typically runs $4,700–$8,500, or about $700–$1,700 per room. Pricing assumes two coats, standard ceiling height, minor wall prep, and quality acrylic latex paint. Damaged walls, tall rooms, and dramatic color changes push the cost higher."),
+            ("How much does it cost to paint the exterior of a house in Grand Rapids?", "Exterior repaints in Grand Rapids generally run $3,000–$7,000 for a typical one- or two-story home. Cedar siding, multi-story access, failing paint that needs scraping, and detailed trim all push the price toward the higher end. Larger executive homes in Cascade, Ada, and Forest Hills often run $5,000–$9,000."),
+            ("How much does cabinet refinishing cost in Grand Rapids?", "Kitchen cabinet refinishing in Grand Rapids typically runs $2,500–$6,000, depending on the number of doors and drawers, whether the boxes are painted too, and the complexity of the color change. It's a fraction of the cost of cabinet replacement."),
+            ("How much does it cost to stain a deck in Grand Rapids?", "Deck staining in Grand Rapids generally runs $700–$2,500, with a standard 200–400 sq ft deck usually falling in the $900–$1,800 range. Solid stains cost more than transparent stains, and a heavily weathered deck needs more cleaning and sanding labor. This is refinishing only — board replacement is a separate carpentry job."),
+            ("Why are painting quotes so different from one company to another?", "The biggest variable is prep work — a quote that skips proper scraping, priming, and caulking will look cheaper but won't last. Other differences come from paint quality, number of coats, and whether the company is owner-operated or carries higher overhead. Always compare what's actually included, not just the bottom-line number."),
+            ("Does Go Green College Painters give free estimates?", "Yes — every estimate is free, fixed-price, and provided in writing. We walk the home, identify the prep that's genuinely needed, and quote a number that won't change unless the scope does. Call (616) 264-2119 or request an estimate through our website."),
+            ("Is it cheaper to paint in a certain season?", "Exterior painting in Grand Rapids runs roughly May through mid-October when temperatures cooperate, and spring and fall are peak demand. Interior painting is a year-round service, and scheduling interior work in late fall or winter often means more flexibility on dates."),
+        ],
+        "related": [
+            ("Interior Painting", "/services/interior-painting/"),
+            ("Exterior Painting", "/services/exterior-painting/"),
+            ("Deck Staining", "/services/deck-staining/"),
+            ("Custom Murals", "/services/custom-murals/"),
+        ],
+        "related_heading": "Our Services",
+    },
+]
+
 # -------- shared template --------
 NAV_HTML = """  <nav>
     <a href="/" class="nav-logo">
@@ -564,6 +657,7 @@ NAV_HTML = """  <nav>
       <li><a href="/services/interior-painting/">Interior</a></li>
       <li><a href="/services/deck-staining/">Deck Staining</a></li>
       <li><a href="/services/custom-murals/">Murals</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="/#contact" class="nav-cta">Free Quote</a></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -594,6 +688,7 @@ FOOTER_HTML = """  <footer>
         <ul>
           <li><a href="tel:+16162642119">(616) 264-2119</a></li>
           <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
+          <li><a href="/blog/">Blog</a></li>
           <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
           <li><a href="/#contact">Free Quote</a></li>
         </ul>
@@ -802,6 +897,230 @@ def build_page(page):
 
     return f"{head}\n{NAV_HTML}\n{page_hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
 
+# -------- blog rendering --------
+def build_blog_jsonld(post):
+    canonical = f"{SITE}/{post['slug']}"
+    graph = [
+        LOCAL_BUSINESS,
+        {
+            "@type": "Person", "@id": f"{SITE}/#jackson",
+            "name": "Jackson Befus", "jobTitle": "Co-Owner & Project Manager",
+            "worksFor": {"@id": BUSINESS_ID}, "alumniOf": "Michigan State University",
+        },
+        {
+            "@type": "Person", "@id": f"{SITE}/#evelyn",
+            "name": "Evelyn Befus", "jobTitle": "Co-Owner & Creative Director",
+            "worksFor": {"@id": BUSINESS_ID}, "alumniOf": "Wayne State University",
+        },
+        {
+            "@type": "BlogPosting",
+            "@id": f"{canonical}#article",
+            "headline": post["title"],
+            "description": post["description"],
+            "image": f"{SITE}{post['hero_img']}",
+            "datePublished": post["date_published"],
+            "dateModified": post["date_modified"],
+            "author": {"@id": post["author_id"]},
+            "publisher": {"@id": BUSINESS_ID},
+            "mainEntityOfPage": {"@id": f"{canonical}#webpage"},
+            "url": canonical,
+        },
+        {
+            "@type": "WebPage",
+            "@id": f"{canonical}#webpage",
+            "url": canonical,
+            "name": post["title"],
+            "description": post["description"],
+            "isPartOf": {"@id": f"{SITE}/#website"},
+            "breadcrumb": {"@id": f"{canonical}#breadcrumb"},
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": f"{canonical}#breadcrumb",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": name,
+                 "item": (url if url.startswith("http") else f"{SITE}{url}")}
+                for i, (name, url) in enumerate(post["breadcrumb"])
+            ],
+        },
+        {
+            "@type": "FAQPage",
+            "@id": f"{canonical}#faq",
+            "mainEntity": [
+                {"@type": "Question", "name": q,
+                 "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in post["faqs"]
+            ],
+        },
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2)
+
+FONT_LINKS = """  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" /></noscript>
+  <link rel="stylesheet" href="/styles.css" />"""
+
+def fmt_date(iso):
+    dt = datetime.datetime.strptime(iso, "%Y-%m-%d")
+    return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
+
+def build_blog_post(post):
+    canonical = f"{SITE}/{post['slug']}"
+    display_date = fmt_date(post["date_published"])
+    head = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{html_lib.escape(post['title'])}</title>
+  <meta name="description" content="{html_lib.escape(post['description'])}" />
+  <link rel="canonical" href="{canonical}" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{html_lib.escape(post['title'])}" />
+  <meta property="og:description" content="{html_lib.escape(post['description'])}" />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:image" content="{SITE}{post['hero_img']}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="article:published_time" content="{post['date_published']}" />
+  <meta property="article:modified_time" content="{post['date_modified']}" />
+
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Grand Rapids, Michigan" />
+
+  <link rel="preload" as="image" href="{post['hero_img']}" />
+
+  <script type="application/ld+json">
+{build_blog_jsonld(post)}
+  </script>
+
+{FONT_LINKS}
+</head>
+<body>"""
+
+    page_hero = f"""  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('{post['hero_img']}');">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb">{render_breadcrumb_html(post['breadcrumb'])}</nav>
+      <h1>{html_lib.escape(post['h1'])}</h1>
+      <p class="post-meta">By {html_lib.escape(post['author_name'])} &middot; {display_date}</p>
+    </div>
+  </section>"""
+
+    sections_html = render_sections_html(post["sections"])
+    faq_html = render_faq_html(post["faqs"])
+    related_html = render_related_html(post["related"], post.get("related_heading", "Our Services"))
+
+    main = f"""  <main class="page-main">
+    <div class="container">
+      <p class="post-lead">{post['lead']}</p>
+
+{sections_html}
+
+      <div class="page-faq">
+        <h2>Frequently Asked Questions</h2>
+{faq_html}
+      </div>
+
+{related_html}
+    </div>
+  </main>
+
+  <div id="cta-banner">
+    <div class="container">
+      <h2>Want a Real Number for Your Home?</h2>
+      <p>Free, fixed-price written estimates &mdash; serving Greater Grand Rapids.</p>
+      <a href="/#contact" class="btn-dark">Get My Free Quote</a>
+    </div>
+  </div>"""
+
+    return f"{head}\n{NAV_HTML}\n{page_hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+
+def build_blog_index(posts):
+    canonical = f"{SITE}/blog/"
+    cards = []
+    for post in posts:
+        cards.append(f"""        <a href="/{post['slug']}" class="blog-card">
+          <span class="blog-card-date">{fmt_date(post['date_published'])}</span>
+          <h2>{html_lib.escape(post['title'])}</h2>
+          <p>{html_lib.escape(post['description'])}</p>
+          <span class="service-link">Read more &rarr;</span>
+        </a>""")
+    cards_html = "\n".join(cards)
+    blog_jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            LOCAL_BUSINESS,
+            {
+                "@type": "Blog",
+                "@id": f"{canonical}#blog",
+                "url": canonical,
+                "name": "Go Green College Painters Blog",
+                "description": "Painting guides, cost breakdowns, and tips for Grand Rapids homeowners.",
+                "publisher": {"@id": BUSINESS_ID},
+                "blogPost": [{"@id": f"{SITE}/{p['slug']}#article"} for p in posts],
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{canonical}#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                    {"@type": "ListItem", "position": 2, "name": "Blog", "item": canonical},
+                ],
+            },
+        ],
+    }, indent=2)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painting Tips &amp; Cost Guides for Grand Rapids Homeowners | Go Green College Painters</title>
+  <meta name="description" content="Painting guides, cost breakdowns, and practical tips for Grand Rapids homeowners from Go Green College Painters." />
+  <link rel="canonical" href="{canonical}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Go Green College Painters Blog" />
+  <meta property="og:description" content="Painting guides, cost breakdowns, and tips for Grand Rapids homeowners." />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:image" content="{SITE}/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Grand Rapids, Michigan" />
+  <script type="application/ld+json">
+{blog_jsonld}
+  </script>
+{FONT_LINKS}
+</head>
+<body>
+{NAV_HTML}
+  <section class="page-hero" style="background-image: linear-gradient(to bottom, rgba(0,79,57,0.85) 0%, rgba(0,0,0,0.7) 100%), url('/hero-bg.jpg'); min-height: 340px;">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">Blog</span></nav>
+      <h1>Painting Tips &amp; Cost Guides</h1>
+      <p class="lead">Straight answers for Grand Rapids homeowners — what projects cost, how we work, and how to get it done right.</p>
+    </div>
+  </section>
+  <main class="page-main">
+    <div class="container">
+      <div class="blog-grid">
+{cards_html}
+      </div>
+    </div>
+  </main>
+  <div id="cta-banner">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Free, no-obligation estimates &mdash; serving Greater Grand Rapids.</p>
+      <a href="/#contact" class="btn-dark">Get My Free Quote</a>
+    </div>
+  </div>
+{FOOTER_HTML}
+{SCRIPTS_HTML}
+</body>
+</html>
+"""
+
 # -------- write pages --------
 written = []
 for page in PAGES:
@@ -811,6 +1130,22 @@ for page in PAGES:
     with open(path, "w") as f:
         f.write(html_out)
     written.append((path, len(html_out)))
+
+# -------- write blog --------
+for post in BLOG_POSTS:
+    path = post["slug"] + "index.html"
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    html_out = build_blog_post(post)
+    with open(path, "w") as f:
+        f.write(html_out)
+    written.append((path, len(html_out)))
+
+if BLOG_POSTS:
+    os.makedirs("blog", exist_ok=True)
+    blog_index_html = build_blog_index(BLOG_POSTS)
+    with open("blog/index.html", "w") as f:
+        f.write(blog_index_html)
+    written.append(("blog/index.html", len(blog_index_html)))
 
 # -------- validate JSON-LD on every page --------
 import re
