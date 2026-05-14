@@ -69,7 +69,10 @@ LOCAL_BUSINESS = {
         "postalCode": "49503",
         "addressCountry": "US",
     },
-    "sameAs": ["https://www.yelp.com/biz/go-green-painters-grand-rapids"],
+    "sameAs": [
+        "https://www.yelp.com/biz/go-green-painters-grand-rapids",
+        "https://www.facebook.com/profile.php?id=61589807997680",
+    ],
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
@@ -718,6 +721,7 @@ FOOTER_HTML = """  <footer>
           <li><a href="tel:+16162642119">(616) 264-2119</a></li>
           <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
           <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61589807997680" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
     </div>
