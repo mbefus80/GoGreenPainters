@@ -546,3 +546,15 @@ a.service-card:hover .service-link { color: var(--gold); }
     background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/hero-bg.webp') type('image/webp'), url('/hero-bg.jpg') type('image/jpeg'));
   }
 }
+
+/* Reviews section — Google CTA */
+.reviews-cta {
+  text-align: center; margin-top: 44px;
+  padding-top: 36px; border-top: 1px solid #e0e6e0;
+}
+.reviews-cta p {
+  font-size: 1rem; color: #555; margin-bottom: 20px;
+}
+.reviews-cta-btns {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+}
