@@ -27,7 +27,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "HousePainter"],
         "@id": "https://gogreenpainters.com/#business",
         "name": "Go Green College Painters",
         "url": "https://gogreenpainters.com",
@@ -38,6 +38,10 @@
         "email": "jack@gogreenpainters.com",
         "foundingDate": "2024",
         "priceRange": "$$",
+        "founder": [
+          { "@id": "https://gogreenpainters.com/#jackson" },
+          { "@id": "https://gogreenpainters.com/#evelyn" }
+        ],
         "areaServed": {
           "@type": "GeoCircle",
           "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 42.9634, "longitude": -85.6681 },
@@ -71,18 +75,21 @@
         "review": [
           {
             "@type": "Review",
-            "author": { "@type": "Person", "name": "Michael B." },
+            "itemReviewed": { "@id": "https://gogreenpainters.com/#business" },
+            "author": { "@type": "Person", "name": "Michael B.", "jobTitle": "Pastor, Vineyard Church" },
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "reviewBody": "Jack & Evelyn did an amazing job refinishing the front of the Vineyard Church. Our church members are always asking who we hired — and we're glad to send business their way."
           },
           {
             "@type": "Review",
+            "itemReviewed": { "@id": "https://gogreenpainters.com/#business" },
             "author": { "@type": "Person", "name": "Matt & Steph E." },
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "reviewBody": "Jack and Evelyn took our dilapidated play structure and deck and gave it new life! Their work was thorough and detail-oriented, and they made sure we were happy with the work. We highly recommend them for any painting project, big or small."
           },
           {
             "@type": "Review",
+            "itemReviewed": { "@id": "https://gogreenpainters.com/#business" },
             "author": { "@type": "Person", "name": "Bill R." },
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "reviewBody": "I hired Go Green for a small paint refresh, but ended up having Evelyn paint an entire mural wall and it turned out beautifully."
@@ -114,7 +121,12 @@
           { "@type": "Question", "name": "Is Go Green College Painters student-owned?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Go Green College Painters was founded in 2024 by Jackson and Evelyn Befus, college students at Michigan State University and Wayne State University respectively. All work is performed by the owners — not subcontracted crews." } },
           { "@type": "Question", "name": "Do you offer free estimates?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Go Green College Painters offers free, no-obligation estimates. Contact us at (616) 264-2119 or jack@gogreenpainters.com." } },
           { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "Go Green College Painters serves the Greater Grand Rapids, Michigan area including surrounding communities." } },
-          { "@type": "Question", "name": "Can you paint murals or custom designs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Co-owner Evelyn Befus specializes in custom murals and creative painted designs for children's rooms, dining rooms, accent walls, and commercial spaces." } }
+          { "@type": "Question", "name": "Can you paint murals or custom designs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Co-owner Evelyn Befus specializes in custom murals and creative painted designs for children's rooms, dining rooms, accent walls, and commercial spaces." } },
+          { "@type": "Question", "name": "How much does interior painting cost in Grand Rapids, Michigan?", "acceptedAnswer": { "@type": "Answer", "text": "Interior painting in Grand Rapids typically runs about $700 to $1,700 per room and $4,700 to $8,500 for a whole-house repaint, depending on square footage, ceiling height, prep work, and trim. Go Green College Painters provides a fixed-price free estimate based on your specific home and project — call (616) 264-2119 or use the request form." } },
+          { "@type": "Question", "name": "How much does exterior house painting cost in Grand Rapids?", "acceptedAnswer": { "@type": "Answer", "text": "Exterior house painting in the Grand Rapids area typically ranges from $3,000 to $7,000 for a one- or two-story home, depending on siding type and condition, prep work, and accessibility. Go Green College Painters provides free, fixed-price estimates after seeing the property." } },
+          { "@type": "Question", "name": "Is Go Green College Painters insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Go Green College Painters carries full liability insurance on every job, with no exceptions. Proof of insurance is available on request." } },
+          { "@type": "Question", "name": "Do you use eco-friendly or low-VOC paint?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Go Green College Painters can use low-VOC and zero-VOC paint options for interior projects to protect indoor air quality and reduce harmful emissions. Just request eco-friendly paint when booking your estimate and we will recommend specific products that fit your project and color choices." } },
+          { "@type": "Question", "name": "How long does a typical painting project take?", "acceptedAnswer": { "@type": "Answer", "text": "Most single-room interior repaints take 1 to 2 days. Whole-home interior repaints typically take 3 to 7 days. Exterior repaints generally take 3 to 6 days depending on home size, prep work, and weather. Go Green College Painters provides a specific timeline as part of every free estimate." } }
         ]
       }
     ]
