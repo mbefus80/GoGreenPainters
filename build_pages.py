@@ -98,7 +98,7 @@ PAGES = [
             ("How long does exterior paint last in Grand Rapids?", "On a properly prepped surface with premium 100% acrylic exterior paint, an exterior repaint in the Grand Rapids area typically lasts 8 to 12 years. South- and west-facing walls fade faster than north sides, and trim usually needs a refresh before siding does."),
             ("When is the best time to paint a house in Michigan?", "Late May through early October is the prime exterior paint window in Grand Rapids. We need consistent overnight temperatures above 50°F, low humidity, and clear weather for 24-48 hours after each coat."),
             ("Do you pressure wash and prep before painting?", "Yes. Every exterior project starts with a full pressure wash, scraping of loose paint, sanding, caulking, and spot priming as needed. Prep is what makes paint last in Michigan's climate — we won't skip it."),
-            ("Do you do siding repairs and carpentry?", "We handle minor siding repairs, board replacement, and rotted-wood patching as part of a normal exterior repaint. For major structural work we'll refer you to a trusted carpenter and coordinate the paint after."),
+            ("Do you patch and prep exterior surfaces before painting?", "We patch small holes, nicks, and minor surface imperfections with wood filler as part of normal exterior prep. We do not replace siding boards, fix rotted wood, or perform carpentry — for that work we'll refer you to a trusted carpenter and coordinate the paint afterward."),
             ("How much does exterior house painting cost in Grand Rapids?", "Exterior house painting in Grand Rapids typically ranges from $3,000 to $7,000 for a one- or two-story home, depending on siding type and condition, prep work, height, and accessibility. We provide a free, fixed-price written estimate after a walk-through."),
         ],
         "related": [
@@ -157,14 +157,14 @@ PAGES = [
     {
         "slug": "services/deck-staining/",
         "title": "Deck Staining & Restoration in Grand Rapids, MI | Go Green College Painters",
-        "description": "Deck staining, fence staining, and wood restoration in Grand Rapids, MI. We clean, sand, repair, and seal weathered decks to protect them through Michigan winters. Free estimates.",
+        "description": "Deck staining and fence staining in Grand Rapids, MI. We clean, sand, prep, and seal weathered decks to protect them through Michigan winters. Free estimates.",
         "h1": "Deck Staining & Restoration in Grand Rapids, MI",
         "hero_img": "/stain-after.jpg",
         "service_name": "Deck Staining and Restoration",
-        "service_desc": "Deck and fence staining and wood restoration in Grand Rapids, MI. Includes cleaning, sanding, repair, and protective stain sealing to withstand Michigan winters.",
+        "service_desc": "Deck and fence staining in Grand Rapids, MI. Includes cleaning, sanding, surface prep, and protective stain sealing to withstand Michigan winters. Refinishing and staining only — board replacement and carpentry are not included.",
         "service_image": f"{SITE}/deck-staining.jpg",
         "breadcrumb": [("Home", "/"), ("Services", "/#services"), ("Deck Staining", "/services/deck-staining/")],
-        "lead": "Michigan winters are brutal on wood. We restore weathered decks, fences, pergolas, and play structures in Grand Rapids — clean, sand, repair, and seal — so they look new and stay protected through the next freeze-thaw cycle.",
+        "lead": "Michigan winters are brutal on wood. We refinish weathered decks, fences, pergolas, and play structures in Grand Rapids — clean, sand, prep, and seal — so they look new and stay protected through the next freeze-thaw cycle. (Surface refinishing only; we don't replace boards or do carpentry.)",
         "sections": [
             ("Stain Types We Offer", """
                 <ul>
@@ -175,11 +175,11 @@ PAGES = [
                 </ul>
                 <p>Not sure which is right for your deck? We'll walk through your wood's condition and color preferences during the estimate.</p>
             """),
-            ("Our Deck Restoration Process", """
+            ("Our Deck Refinishing Process", """
                 <ul>
-                  <li><strong>Inspect</strong> for rot, loose boards, popped nails, and railing issues.</li>
+                  <li><strong>Inspect</strong> the surface for wear, peeling, and prep needs. (If we spot rotted or broken boards we'll flag them and recommend a carpenter — board replacement is outside our scope.)</li>
                   <li><strong>Clean</strong> with the right wood cleaner for the type of staining or mildew present.</li>
-                  <li><strong>Repair</strong> — replace rotted boards, hammer back nails, tighten railing posts.</li>
+                  <li><strong>Patch</strong> small surface imperfections with wood filler as part of prep.</li>
                   <li><strong>Sand</strong> the surface to open up the grain so stain absorbs evenly.</li>
                   <li><strong>Stain</strong> — apply the chosen stain by brush or pad, working with the grain.</li>
                   <li><strong>Final coat</strong> — sealing topcoat where needed for traffic protection.</li>
@@ -190,14 +190,14 @@ PAGES = [
             """),
             ("Timeline and Cost", """
                 <p>A standard 200-400 sq ft deck typically takes <strong>2 to 4 days</strong> from cleaning to final stain coat. Larger decks, multi-level structures, and fence-plus-deck combinations take longer.</p>
-                <p>Deck staining in Grand Rapids generally runs <strong>$700 to $2,500</strong> depending on deck size, condition, repair work needed, and stain type. Every quote is free and fixed-price.</p>
+                <p>Deck staining in Grand Rapids generally runs <strong>$700 to $2,500</strong> depending on deck size, surface condition, and stain type. Every quote is free and fixed-price.</p>
             """),
         ],
         "faqs": [
             ("How often should I re-stain my deck in Michigan?", "Most decks in Grand Rapids need re-staining every 2 to 4 years. Semi-transparent stains fade faster than solid stains. South- and west-facing decks need attention sooner. We can inspect yours and tell you honestly whether it's due."),
             ("Should I stain or paint my deck?", "Stain is almost always the right call for decks. Paint sits on top of the wood and chips and peels as the deck flexes and ages; stain penetrates the wood and wears more gracefully. The exception is solid stain, which has paint-like coverage but still bonds with the wood."),
             ("What stain brands do you use?", "We use premium oil-based and waterborne stains from Sherwin-Williams (SuperDeck, DeckScapes) and Benjamin Moore (Arborcoat) — both lines hold up well to Michigan freeze-thaw and UV."),
-            ("Can you bring back a really weathered deck?", "Usually yes. With a strong cleaner, a good sanding, board replacement where needed, and the right stain, most weathered decks come back to looking new. We'll be honest if a deck is past restoration — sometimes the boards are too far gone."),
+            ("Can you bring back a really weathered deck?", "Often yes — a thorough cleaning, sanding, and the right stain can bring most weathered decks back to looking new. We focus on refinishing and staining only; if your deck has rotted, cracked, or broken boards, we'll point that out and recommend a carpenter for board replacement first. We don't do board replacement or structural repair ourselves."),
             ("How long does deck staining take?", "A typical 200-400 sq ft deck takes 2 to 4 days from initial cleaning through final stain coat. Weather can extend the timeline — stain needs dry conditions and surface temperatures in the right range."),
             ("Can you stain fences and pergolas too?", "Yes. Fences, pergolas, gazebos, and play structures all use the same process. We can do them at the same time as your deck or as standalone projects."),
         ],
