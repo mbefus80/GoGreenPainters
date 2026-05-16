@@ -998,7 +998,12 @@ GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
 # (Belt-and-suspenders with the must-revalidate header in _headers.)
 CSS_VERSION = "20260514"
 
-FONT_LINKS = GA_SNIPPET + f"""
+FAVICON_LINKS = """  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />"""
+
+FONT_LINKS = GA_SNIPPET + "\n" + FAVICON_LINKS + f"""
   <link rel="preload" href="/fonts/oswald.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css?v={CSS_VERSION}" />"""
