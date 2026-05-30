@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garbage Bin Cleaning | Go Green Painters | Grand Rapids, MI</title>
+  <meta name="description" content="High-pressure, eco-friendly garbage bin cleaning in Grand Rapids, MI. Kills 99.9% of germs, eliminates odors and pests. $20 for one bin, $30 for two, or monthly service." />
+  <link rel="canonical" href="https://gogreenpainters.com/bins/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Garbage Bin Cleaning | Go Green Painters" />
+  <meta property="og:description" content="High-pressure, eco-friendly bin cleaning that kills 99.9% of germs and eliminates odors. Serving Grand Rapids, MI." />
+  <meta property="og:url" content="https://gogreenpainters.com/bins/" />
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6ZG6CC6M6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R6ZG6CC6M6');
+  </script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preload" href="/fonts/oswald.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles.css?v=20260514" />
+  <style>
+    /* Bin page specific styles */
+    .bins-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0;
+    }
+    @media (max-width: 768px) {
+      .bins-grid { grid-template-columns: 1fr; }
+    }
+    .bin-card {
+      background: #fff;
+      border: 2px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+    .bin-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .bin-card.featured {
+      border-color: var(--green-mid, #2d7a2d);
+      background: linear-gradient(135deg, #f0f9f0 0%, #fff 100%);
+    }
+    .bin-card.featured::before {
+      content: "BEST VALUE";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold, #c8a400);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 16px;
+      border-radius: 20px;
+    }
+    .bin-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+    .bin-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--green-dark, #1a4f1a);
+      margin: 0 0 8px;
+    }
+    .bin-card .price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--green-mid, #2d7a2d);
+      line-height: 1;
+      margin: 12px 0 4px;
+    }
+    .bin-card .price-note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 16px;
+    }
+    .bin-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .bins-perks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0;
+    }
+    @media (max-width: 768px) {
+      .bins-perks { grid-template-columns: 1fr; }
+    }
+    .perk {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .perk-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--green-mid, #2d7a2d);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .perk-icon svg { width: 24px; height: 24px; fill: #fff; }
+    .perk-text h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--green-dark, #1a4f1a);
+      margin: 0 0 4px;
+    }
+    .perk-text p { font-size: 0.9rem; color: #555; margin: 0; }
+
+    /* Henry section */
+    .henry-section {
+      background: #f8faf8;
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 48px 0;
+    }
+    @media (max-width: 768px) {
+      .henry-section { flex-direction: column; text-align: center; padding: 28px 20px; gap: 24px; }
+    }
+    .henry-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      border: 4px solid var(--green-mid, #2d7a2d);
+      flex-shrink: 0;
+    }
+    .henry-info h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: var(--green-dark, #1a4f1a);
+      margin: 0 0 4px;
+    }
+    .henry-info .henry-title {
+      font-size: 0.95rem;
+      color: var(--gold, #c8a400);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .henry-info p { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 16px; }
+    .henry-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green-mid, #2d7a2d);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .henry-contact a:hover { text-decoration: underline; }
+    .henry-contact svg { width: 18px; height: 18px; fill: var(--green-mid, #2d7a2d); }
+
+    /* Bins contact form */
+    .bins-contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .bins-contact-wrap { grid-template-columns: 1fr; }
+    }
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold, #c8a400);
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="/logo.png" alt="Go Green College Painters" onerror="this.style.display='none'" />
+      <div class="nav-logo-text">
+        <span>Go Green Painters</span>
+        <span>Greater Grand Rapids</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/services/exterior-painting/">Exterior</a></li>
+      <li><a href="/services/interior-painting/">Interior</a></li>
+      <li><a href="/services/deck-staining/">Deck Staining</a></li>
+      <li><a href="/services/custom-murals/">Murals</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Free Quote</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <section class="page-hero hero-default" style="min-height: 320px;">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">&rsaquo;</span> <span aria-current="page">Bin Cleaning</span></nav>
+      <h1>Garbage Bin Cleaning</h1>
+      <p class="lead">Eco-friendly, high-pressure cleaning that kills 99.9% of germs, eliminates odors, and keeps pests away &mdash; serving Greater Grand Rapids.</p>
+    </div>
+  </section>
+
+  <main class="page-main">
+    <div class="container">
+
+      <!-- What We Do -->
+      <div style="max-width:760px;margin:0 auto 16px;">
+        <div class="section-label">The Service</div>
+        <h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--green-dark);font-size:2rem;margin:0 0 16px;">High-Pressure. Eco-Friendly. Spotless.</h2>
+        <p style="font-size:1.05rem;color:#444;line-height:1.8;">Your garbage bins are one of the dirtiest things on your property &mdash; harboring bacteria, odors, and pests that no ordinary rinse can fix. Our professional bin cleaning service uses high-pressure, eco-friendly cleaning that <strong>kills 99.9% of germs and bacteria</strong>, eliminates foul odors, and drives away pests. We come to you, clean on-site, and leave your bins looking and smelling fresh.</p>
+      </div>
+
+      <!-- Perks -->
+      <div class="bins-perks">
+        <div class="perk">
+          <div class="perk-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div class="perk-text">
+            <h4>99.9% Germ-Free</h4>
+            <p>High-pressure hot water eliminates bacteria, mold, and pathogens that cause illness and odors.</p>
+          </div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2-8 2 0-1 0-3-3-3-4 0-4 4-4 4s.26 1.5 1 2c0-1 1-3 3-3z"/></svg>
+          </div>
+          <div class="perk-text">
+            <h4>Eco-Friendly</h4>
+            <p>Biodegradable, non-toxic cleaning solutions that are safe for your family, pets, and the environment.</p>
+          </div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 10l-9 7z"/></svg>
+          </div>
+          <div class="perk-text">
+            <h4>Pest Deterrent</h4>
+            <p>Removes food residue and odors that attract flies, maggots, raccoons, and other pests to your bins.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div style="margin:48px 0 16px;">
+        <div class="section-label" style="text-align:center;">Pricing</div>
+        <h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--green-dark);font-size:2rem;text-align:center;margin:0 0 32px;">Simple, Affordable Rates</h2>
+      </div>
+      <div class="bins-grid">
+        <div class="bin-card">
+          <div class="bin-card-icon">🗑️</div>
+          <h3>One Bin</h3>
+          <div class="price">$20</div>
+          <div class="price-note">one-time cleaning</div>
+          <p>Perfect for a single garbage or recycling bin. Deep cleaned, sanitized, and deodorized.</p>
+        </div>
+        <div class="bin-card">
+          <div class="bin-card-icon">🗑️🗑️</div>
+          <h3>Two Bins</h3>
+          <div class="price">$30</div>
+          <div class="price-note">one-time cleaning</div>
+          <p>Clean two bins in one visit. Great for garbage &amp; recycling together.</p>
+        </div>
+        <div class="bin-card featured">
+          <div class="bin-card-icon">🔄</div>
+          <h3>Monthly Service</h3>
+          <div class="price">$20</div>
+          <div class="price-note">per month &mdash; two bins</div>
+          <p>Set it and forget it. We come back every month to keep both bins fresh and germ-free all year long.</p>
+        </div>
+      </div>
+
+      <!-- Henry Section -->
+      <div class="henry-section">
+        <img src="/henry-photo.jpg" alt="Henry Befus — Bin Cleaning" class="henry-photo" />
+        <div class="henry-info">
+          <h2>Henry Befus</h2>
+          <div class="henry-title">Bin Cleaning Specialist</div>
+          <p>Henry runs our bin cleaning operation and takes pride in delivering a thorough, reliable clean every time. Have a question or ready to book? Reach out to him directly.</p>
+          <div class="henry-contact">
+            <a href="tel:+16163159291">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              (616) 315-9291
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div style="margin-bottom: 64px;">
+        <div class="section-label" style="text-align:center;">Book a Cleaning</div>
+        <h2 style="font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--green-dark);font-size:2rem;text-align:center;margin:0 0 40px;">Schedule Your Bin Cleaning</h2>
+        <div class="bins-contact-wrap">
+          <div>
+            <h3 style="font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--green-dark);font-size:1.3rem;border-bottom:3px solid var(--gold);padding-bottom:10px;margin-bottom:18px;">Contact Henry</h3>
+            <p style="font-size:1rem;color:#444;line-height:1.8;">Fill out the form and Henry will get back to you within 24 hours to confirm your booking. You can also call or text him directly at <a href="tel:+16163159291" style="color:var(--green-mid);font-weight:600;">(616) 315-9291</a>.</p>
+            <div class="contact-details" style="margin-top:24px;">
+              <div class="contact-item">
+                <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+                <div class="contact-item-text"><strong>Phone / Text</strong><span><a href="tel:+16163159291">(616) 315-9291</a></span></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+                <div class="contact-item-text"><strong>Email</strong><span><a href="mailto:henrybefus@gmail.com">henrybefus@gmail.com</a></span></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+                <div class="contact-item-text"><strong>Service Area</strong><span>Greater Grand Rapids, MI</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!--
+            FORM SETUP INSTRUCTIONS:
+            This form uses Formspree (formspree.io) to send submissions to henrybefus@gmail.com.
+            To activate:
+            1. Go to https://formspree.io and create a free account with henrybefus@gmail.com
+            2. Create a new form and copy the form endpoint URL (looks like https://formspree.io/f/xxxxxxxx)
+            3. Replace "YOUR_FORMSPREE_ID" in the form action below with your actual form ID
+          -->
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="bins-form">
+            <input type="hidden" name="_subject" value="New Bin Cleaning Request — GoGreenPainters.com" />
+            <input type="hidden" name="_replyto" value="henrybefus@gmail.com" />
+            <h3>Request a Cleaning</h3>
+            <div class="form-row">
+              <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="first_name" placeholder="Jane" required /></div>
+              <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="last_name" placeholder="Smith" required /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="jane@email.com" required /></div>
+              <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(616) 555-5555" /></div>
+            </div>
+            <div class="form-group"><label for="address">Street Address</label><input type="text" id="address" name="address" placeholder="123 Main St, Grand Rapids, MI" /></div>
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a plan...</option>
+                <option value="1 Bin — $20">1 Bin &mdash; $20 (one-time)</option>
+                <option value="2 Bins — $30">2 Bins &mdash; $30 (one-time)</option>
+                <option value="Monthly Service — $20/mo (2 bins)">Monthly Service &mdash; $20/mo (2 bins)</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Anything else?</label><textarea id="message" name="message" placeholder="Best time to reach you, special instructions, etc."></textarea></div>
+            <button type="submit" class="form-submit">Book My Cleaning &rarr;</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/logo.png" alt="Go Green College Painters" onerror="this.style.display='none'" />
+          <span class="footer-logo-text">Go Green College Painters</span>
+        </div>
+        <p>Professional painting services delivered by motivated college students. Quality work, honest prices, and guaranteed satisfaction &mdash; serving Greater Grand Rapids since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/exterior-painting/">Exterior Painting</a></li>
+          <li><a href="/services/interior-painting/">Interior Painting</a></li>
+          <li><a href="/services/deck-staining/">Deck Staining</a></li>
+          <li><a href="/services/custom-murals/">Custom Murals</a></li>
+          <li><a href="/bins/">Bin Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="tel:+16162642119">(616) 264-2119</a></li>
+          <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
+          <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61589807997680" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Go Green College Painters. All rights reserved.</span>
+      <span>Greater Grand Rapids, MI</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    document.querySelectorAll('.nav-links a').forEach(function (l) {
+      l.addEventListener('click', function () { document.getElementById('navLinks').classList.remove('open'); });
+    });
+    window.addEventListener('scroll', function () {
+      var n = document.querySelector('nav');
+      if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
+    });
+
+    // Form submission feedback
+    document.getElementById('bins-form').addEventListener('submit', function(e) {
+      var btn = this.querySelector('.form-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+    });
+  </script>
+</body>
+</html>
