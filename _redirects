@@ -1,0 +1,11 @@
+# Netlify _redirects — vanity shortlinks
+# https://docs.netlify.com/routing/redirects/
+#
+# Format: source  destination  [status_code]
+# Status 302 = temporary redirect — appropriate for external destinations
+# whose URLs may change (don't pass SEO link equity, browsers won't cache forever).
+
+# /review — go straight to the Google Business Profile "leave a review" prompt.
+# Convenient for business cards, invoices, QR codes, in-person asks.
+/review   https://www.google.com/maps/place//data=!4m3!3m2!1s0x22656dcc7b3fddb1:0x9edb176ddbc462d7!12e1?source=g.page.m._&laa=merchant-review-solicitation   302
+/reviews  https://www.google.com/maps/place//data=!4m3!3m2!1s0x22656dcc7b3fddb1:0x9edb176ddbc462d7!12e1?source=g.page.m._&laa=merchant-review-solicitation   302
