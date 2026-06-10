@@ -669,6 +669,192 @@ BLOG_POSTS = [
         ],
         "related_heading": "Our Services",
     },
+
+    {
+        "slug": "blog/cedar-siding-paint-or-stain-grand-rapids/",
+        "title": "Cedar Siding in Grand Rapids: Should You Paint or Stain? (2026 Guide)",
+        "description": "Paint vs. stain on cedar siding in Grand Rapids, MI: when each makes sense, lifespan, cost, common failure modes in our climate, and what we recommend. From owner-operated cedar specialists serving Cascade, Forest Hills, Ada, and East Grand Rapids.",
+        "h1": "Cedar Siding in Grand Rapids: Should You Paint or Stain?",
+        "hero_img": "/exterior-after.jpg",
+        "date_published": "2026-06-10",
+        "date_modified": "2026-06-10",
+        "author_id": f"{SITE}/#jackson",
+        "author_name": "Jackson Befus",
+        "breadcrumb": [("Home", "/"), ("Blog", "/blog/"), ("Cedar Siding: Paint or Stain", "/blog/cedar-siding-paint-or-stain-grand-rapids/")],
+        "lead": "Cedar is one of the most beautiful — and most demanding — exterior surfaces in West Michigan. If your home in Cascade, Ada, Forest Hills, or anywhere on the east side of Grand Rapids has cedar lap, shake, or shingle siding, you've probably wondered whether to paint it or stain it next time around. Here's an honest walk-through: when each makes sense, what they actually cost, how long they last, and the prep mistakes that cause most cedar finishes to fail in our climate.",
+        "sections": [
+            ("Why Grand Rapids Has So Much Cedar", """
+                <p>Cedar siding hit its peak in West Michigan residential building between roughly 1970 and the mid-2000s. Builders favored it for its natural rot resistance, the warmth it gave executive homes and ranch builds, and the way it weathered into a silvery patina when left unfinished. The eastern Grand Rapids neighborhoods — <a href="/grand-rapids/cascade/">Cascade</a>, the <a href="/grand-rapids/forest-hills/">Forest Hills</a> school corridor, <a href="/grand-rapids/ada/">Ada</a>, and the newer Reeds Lake-area builds in <a href="/grand-rapids/east-grand-rapids/">East Grand Rapids</a> — have more cedar per square block than almost anywhere else in West Michigan.</p>
+                <p>That history matters because the finish decisions you make today have to respect what's already on the wall. A 1985 cedar ranch in Cascade that's been painted three times has different needs than a 2008 Forest Hills custom build that's been stained twice.</p>
+            """),
+            ("What Paint Actually Does on Cedar", """
+                <p>Paint forms a film on the surface of the wood. It seals the cedar from moisture, blocks UV from fading the substrate, and gives you a near-unlimited color palette. Done right, an exterior paint job on cedar in Grand Rapids will last 8 to 12 years on the protected sides of the home, and 5 to 8 years on the brutally-exposed south and west walls.</p>
+                <p>But paint also has failure modes that stain doesn't. When water gets behind a paint film — through a missed caulk gap, a knot that wasn't spot-primed, or sun cycling — it lifts the paint from the wood. That's where the peeling and flaking comes from. Once paint starts failing on cedar, the repair work to get a sound substrate again is significant.</p>
+            """),
+            ("What Stain Actually Does on Cedar", """
+                <p>Stain penetrates the wood instead of coating it. There's no film to lift. As the stain ages, it fades and erodes rather than peeling, so the next maintenance cycle is a wash, sometimes a light sand, and a fresh coat — not a full strip-back.</p>
+                <p>Stain comes in three transparencies, each with very different effects on cedar:</p>
+                <ul>
+                  <li><strong>Transparent</strong> — barely tinted, full grain visible. Best for newer cedar in great shape. Shortest lifespan (2-4 years on exposed walls).</li>
+                  <li><strong>Semi-transparent</strong> — tinted, grain still reads through. The most popular choice for residential cedar. 4-6 year cycle.</li>
+                  <li><strong>Solid stain</strong> — paint-like opacity, hides the grain almost entirely while still penetrating the wood. 6-8 year cycle. The middle path when paint failures have you nervous but you want consistent color.</li>
+                </ul>
+            """),
+            ("Which Should You Choose?", """
+                <p>Quick decision framework:</p>
+                <p><strong>Lean toward stain if:</strong></p>
+                <ul>
+                  <li>Your cedar is in good shape and you like the grain showing</li>
+                  <li>You want lower-friction maintenance (sand and recoat, no scrape-and-prime)</li>
+                  <li>The home has already been stained — switching to paint adds significant prep cost</li>
+                  <li>You're in a wooded lot with mildew pressure (stain breathes more, less likely to trap moisture)</li>
+                </ul>
+                <p><strong>Lean toward paint if:</strong></p>
+                <ul>
+                  <li>Your cedar has already been painted multiple times — switching to stain requires stripping back to bare wood, which is rarely cost-effective</li>
+                  <li>You want a specific bold or unusual color that stain can't deliver</li>
+                  <li>The cedar grain is no longer particularly attractive (heavily weathered, repaired in patches, mismatched ages)</li>
+                  <li>Architectural style calls for a uniform painted finish (Colonial, traditional two-story, certain historic styles)</li>
+                </ul>
+            """),
+            ("Four Cedar Failure Modes We See Every Spring in Grand Rapids", """
+                <p>Almost every cedar exterior repaint or restain we walk in Grand Rapids has at least one of these problems. Knowing them helps you understand why prep cost varies so much between honest estimates:</p>
+                <ul>
+                  <li><strong>Tannin bleed-through.</strong> Cedar's natural tannins migrate up through fresh paint or stain on bare wood, leaving pinkish or amber streaks. Caused by skipping a tannin-blocking primer. Fix: oil-based or pigmented shellac primer on bare cedar before the topcoat.</li>
+                  <li><strong>Knot bleed.</strong> Cedar knots ooze sap that bleeds through coatings within a season. Caused by not spot-priming knots. Fix: shellac-based primer on every visible knot, individually, before the field paint or stain goes on.</li>
+                  <li><strong>South- and west-wall peeling.</strong> UV and freeze-thaw cycles attack south and west exposures hardest. North walls can hold paint twice as long. Caused by both the climate and inadequate prep on the worst-hit walls. Fix: strip failing paint back to a sound substrate, prime, then topcoat — even if the rest of the home only needs a single coat.</li>
+                  <li><strong>Mildew under the shaded eaves.</strong> Wooded Cascade and Ada lots see persistent shade and high humidity on north sides. Mildew grows on the existing finish and feeds on dust. New paint over mildew will fail. Fix: wash with a mildewcide cleaner before any other prep.</li>
+                </ul>
+            """),
+            ("Products We Recommend for Cedar in Michigan's Climate", """
+                <p>For <strong>paint</strong>, we use 100% acrylic premium exterior lines: Sherwin-Williams Duration or Emerald Exterior, or Benjamin Moore Aura Exterior or Regal Select. These are formulated for film flexibility (important for Michigan freeze-thaw) and UV resistance.</p>
+                <p>For <strong>stain</strong>, our default is Benjamin Moore Arborcoat (the semi-transparent and solid lines both perform exceptionally well on cedar in our climate). Sherwin-Williams SuperDeck and DeckScapes are also solid choices.</p>
+                <p>For <strong>primer</strong> on bare cedar: an oil-based stain-blocker (Zinsser Cover-Stain) or a pigmented shellac (BIN) for the worst tannin and knot work. Latex primers don't reliably block cedar tannins.</p>
+            """),
+            ("Cost in Grand Rapids", """
+                <p>A few realistic ranges for an average two-story Cascade or Forest Hills home with mostly cedar siding:</p>
+                <ul>
+                  <li><strong>Stain (semi-transparent or solid)</strong>: roughly $4,500 to $8,500</li>
+                  <li><strong>Repaint (sound paint, minor prep)</strong>: roughly $5,000 to $8,000</li>
+                  <li><strong>Repaint with significant peeling and tannin/knot issues</strong>: roughly $7,500 to $12,000</li>
+                </ul>
+                <p>Stain projects on cedar are usually a bit less expensive than paint projects on the same home because there's no film to scrape back. The wide ranges come from how much prep is genuinely needed — that's why a fixed-price walk-through estimate is worth more than a per-square-foot number from a website.</p>
+            """),
+            ("Lifespan and Maintenance", """
+                <p>Honest expectations for cedar in Grand Rapids:</p>
+                <ul>
+                  <li><strong>Transparent stain</strong>: 2-4 years between coats</li>
+                  <li><strong>Semi-transparent stain</strong>: 4-6 years</li>
+                  <li><strong>Solid stain</strong>: 6-8 years</li>
+                  <li><strong>Premium acrylic paint</strong>: 8-12 years (less on south/west walls)</li>
+                </ul>
+                <p>The maintenance work itself is also different. Re-staining is a wash and a recoat — generally a few days, much lower cost than a full repaint. Repainting a previously-painted cedar home, even when the existing paint is sound, involves more prep, primer, and finish coats. That difference is why some homeowners switch from paint to stain over time, even though the upfront change costs more.</p>
+            """),
+        ],
+        "faqs": [
+            ("Can I switch from paint to stain on cedar that's already painted?", "Yes, but it's not cheap. The existing paint film has to be stripped back to bare wood before stain will penetrate — otherwise you're just putting tinted stain on top of paint, which looks bad and behaves like paint. Stripping a previously-painted home for stain typically adds 30-50% to the project cost. Most homeowners who want to switch do it during a major exterior refresh, not in the middle of a normal recoat cycle."),
+            ("How often will I need to re-stain cedar in Grand Rapids?", "Transparent stain: every 2-4 years. Semi-transparent: 4-6 years. Solid stain: 6-8 years. South- and west-facing walls fade fastest, north walls last longest, and shaded north walls with mildew pressure can need more frequent washing even between recoats."),
+            ("Will solid stain show the wood grain?", "Solid stain hides most of the grain — it looks much more like paint than transparent or semi-transparent stain. The advantage over actual paint is that it still penetrates the wood, so it ages by fading rather than peeling, and the next maintenance cycle is much simpler. If you want the grain visible, you want semi-transparent or transparent."),
+            ("What's the best time of year to stain cedar in Grand Rapids?", "Late May through early October. We need surface temperatures above 50°F overnight, dry weather for 24-48 hours after each coat, and ideally low humidity. Late spring and early fall are gentlest on fresh stain — peak summer heat can cause the stain to dry too fast, which leaves lap marks."),
+            ("Why is my cedar peeling on the south side but not the north?", "UV intensity. South and west walls get hours more direct sun than north walls in Michigan, and the temperature cycling on a sunny December day can be 60°F or more between the surface and the air. That cycling stresses the paint film until it fails. Stain doesn't have this problem because there's no film to fail — it just fades a bit faster on the sunny sides."),
+            ("Do you prep cedar differently than other siding?", "Yes — significantly. Cedar gets a tannin-blocking primer on any bare wood, individual shellac-based spot-priming on every visible knot, and a mildewcide wash on shaded exposures. Vinyl and fiber-cement need none of that. The extra cedar prep is why cedar exterior quotes run higher than vinyl quotes on similarly-sized homes — and it's the difference between a finish that lasts and one that fails in three years."),
+            ("Does Go Green do both paint and stain projects?", "Yes — and we'll give you an honest recommendation based on what's already on your cedar and what you're trying to accomplish. Sometimes the answer is paint, sometimes it's stain, and sometimes it's a phased switch over two maintenance cycles. Every estimate is free and fixed-price."),
+        ],
+        "related": [
+            ("Exterior House Painting", "/services/exterior-painting/"),
+            ("House Painters in Cascade", "/grand-rapids/cascade/"),
+            ("House Painters in Forest Hills", "/grand-rapids/forest-hills/"),
+            ("House Painters in Ada", "/grand-rapids/ada/"),
+        ],
+        "related_heading": "Related Reading & Services",
+    },
+
+    {
+        "slug": "blog/owner-operated-vs-college-painting-franchises-grand-rapids/",
+        "title": "Owner-Operated vs. College Painting Franchises in Grand Rapids: What's the Difference?",
+        "description": "Choosing between an owner-operated painter and a college painting franchise in Grand Rapids? Here's how the two business models actually work, what public reviews show, and the questions to ask before hiring either.",
+        "h1": "Owner-Operated vs. College Painting Franchises in Grand Rapids",
+        "hero_img": "/exterior-after.jpg",
+        "date_published": "2026-06-10",
+        "date_modified": "2026-06-10",
+        "author_id": f"{SITE}/#jackson",
+        "author_name": "Jackson Befus",
+        "breadcrumb": [("Home", "/"), ("Blog", "/blog/"), ("Owner-Operated vs. College Franchises", "/blog/owner-operated-vs-college-painting-franchises-grand-rapids/")],
+        "lead": "Search \"house painters Grand Rapids\" and you'll see two very different kinds of companies. On one side: nationwide college-painter franchises — College Pro, College Works, Student Painters, and their cousins — each with regional branches staffed mostly by summer hires. On the other: small, owner-operated outfits where the same person quotes the job, paints it, and is on the hook if anything goes sideways. We're the second kind, so we have an obvious bias. But the two models are genuinely different in ways that matter, and the public record on each is easy to look up. Here's an honest comparison so you can make a real decision either way.",
+        "sections": [
+            ("How College Painting Franchises Actually Work", """
+                <p>The college painting franchise model is roughly forty years old. The structure is consistent across the major brands:</p>
+                <ul>
+                  <li>A corporate parent owns the brand, the marketing, the training materials, and the lead-generation pipeline.</li>
+                  <li>Each region has a local branch — often run by a student or recent grad on a one- or two-year contract — that operates as a franchisee.</li>
+                  <li>The branch manager hires summer paint crews, usually college students, often with little or no prior painting experience.</li>
+                  <li>Corporate takes a cut of every job for marketing, brand, training, and lead generation.</li>
+                </ul>
+                <p>None of that is sinister. Franchises exist because the model scales — they can drop a branded operation into a new city quickly, hand the manager a pipeline of leads, and turn a regional brand recognition advantage into volume. The trade-off is that the people on your job site are usually new to painting, the manager is usually new to managing, and the company you're hiring this summer may be a totally different operating team next summer.</p>
+            """),
+            ("What the Public Reviews Show", """
+                <p>You don't have to take our word for any of this. The reviews are public.</p>
+                <p>College Pro Painters, one of the largest, holds an average of <strong>1.6 stars across 221+ aggregated consumer reviews</strong> on PissedConsumer (as of 2026). Complaints cluster around damage to homes, incomplete jobs, missed appointments, and difficulty reaching anyone after the deposit is paid. College Works Painting has a wider review spread — some genuinely positive, some echoing the same concerns. Local Grand Rapids reviews on these brands are mixed-to-negative on HomeAdvisor and BBB.</p>
+                <p>This isn't a blanket indictment. Some college franchise crews do excellent work, and we know individual managers who genuinely care about quality. But the model has structural pressure points that the reviews reflect — and a discerning homeowner should look at the actual review distribution for any company, franchise or not, before signing a contract.</p>
+            """),
+            ("How the Owner-Operated Model Works", """
+                <p>Owner-operated painting companies have a different shape:</p>
+                <ul>
+                  <li>The people who own the business do the painting.</li>
+                  <li>The person who quotes your job is the person who does your job.</li>
+                  <li>There's no corporate marketing budget baked into pricing — overhead is lower.</li>
+                  <li>Accountability is personal. If you have a problem in November on work done in June, the people who painted it are still the people who answer the phone.</li>
+                  <li>The trade-off is scale: a true owner-operated outfit takes fewer jobs per season than a franchise crew.</li>
+                </ul>
+                <p>Go Green College Painters is owner-operated. Jackson and Evelyn Befus do the work themselves, and the brand has \"College\" in the name because Jackson goes to Michigan State and Evelyn goes to Wayne State — not because we're a franchise.</p>
+            """),
+            ("What Actually Changes on the Job Site", """
+                <p>The differences between the two models show up in three concrete places:</p>
+                <ul>
+                  <li><strong>Prep work.</strong> Franchise crews are paid by piece-rate or hourly, and there's pressure to move quickly. Prep is the easiest thing to shortcut. Owner-operated painters have personal long-term reputation on every job, which usually means more time on prep and less of it visible in the finished result.</li>
+                  <li><strong>Scheduling reliability.</strong> When a franchise crew gets pulled to a higher-priority job mid-week, the homeowner finds out at 5pm that nobody's coming tomorrow. Owner-operators have a much smaller calendar and tend to honor it.</li>
+                  <li><strong>Communication.</strong> One throat to choke, in both directions. You're not bouncing between the salesperson, the branch manager, and the crew lead trying to figure out who decided to paint your front door the wrong sheen.</li>
+                </ul>
+            """),
+            ("Are Franchises Cheaper?", """
+                <p>Sometimes — but not as often as you might assume.</p>
+                <p>Franchises absorb corporate marketing, training, and brand fees into their pricing. Owner-operated companies don't carry that overhead, so on average the underlying labor cost is similar and franchise pricing can run slightly higher to cover the corporate cut. Where franchises do come in cheaper, it's often because they're cutting prep time or using lower-grade paint — both of which show up two or three years later in failed finishes.</p>
+                <p>That said, every quote should compete on what's actually being delivered, not on brand. A franchise quote that includes the same paint, the same prep, the same coats, and a real warranty is a real competitor. The thing to scrutinize is what's <em>not</em> in the quote.</p>
+            """),
+            ("How to Evaluate Any Painter in Grand Rapids", """
+                <p>Whether you hire a franchise, an owner-operator, or anything in between, ask these eight questions before signing:</p>
+                <ul>
+                  <li><strong>Who specifically will be on my property?</strong> Get a real name, not a job title.</li>
+                  <li><strong>Are you fully insured? Can you email me a current certificate of insurance before we start?</strong></li>
+                  <li><strong>What paint brand and product line are you using, and how many coats?</strong> Premium 100% acrylic exterior paint vs. a builder-grade contractor line is a big lifespan difference.</li>
+                  <li><strong>Walk me through your prep. What do you do when paint is failing? When wood is bare? When you find rot?</strong></li>
+                  <li><strong>What's your warranty, and who honors it if the company changes hands or the branch closes?</strong></li>
+                  <li><strong>Can I see two or three local recent project addresses where I can drive by?</strong></li>
+                  <li><strong>What happens if it rains during my project? What's your scheduling backup plan?</strong></li>
+                  <li><strong>How do you handle change orders mid-project?</strong></li>
+                </ul>
+                <p>An honest contractor of either model will answer all eight without hesitation.</p>
+            """),
+            ("Why We Built Go Green This Way", """
+                <p>Jackson and Evelyn started Go Green because they wanted to put themselves through MSU and Wayne State doing work they were proud of. That's a different starting point than \"how do I scale a franchise.\" It means we'd rather book fewer projects per season and do every one of them with our own hands than turn the business into something we're managing instead of building. Whether that's the right fit for your project is your call to make. But that's the shape of the company you're hiring when you call us, and we think the difference shows up where it matters.</p>
+            """),
+        ],
+        "faqs": [
+            ("Is Go Green College Painters a franchise?", "No. Go Green is independent and locally owned by Jackson and Evelyn Befus. The name reflects that the founders are college students — Jackson at Michigan State, Evelyn at Wayne State — not that we're affiliated with a national brand or franchise system."),
+            ("Why do college painting franchises tend to have mixed reviews?", "The model puts new managers and new crews together every summer under time pressure to hit a corporate revenue target. Even with the best intentions, that combination creates inconsistent quality across jobs and across years. Some franchise crews do excellent work — but the structural variance is real, and the public review distribution reflects it."),
+            ("Are owner-operated painters more expensive than franchises?", "Often comparable, sometimes less. Franchises pass corporate marketing and brand overhead into their pricing; owner-operators don't. Where franchise quotes come in significantly cheaper, the usual reason is shorter prep time or lower-grade paint, which costs the homeowner more in the long run."),
+            ("What's the single most important question to ask a painter before hiring?", "\"Walk me through your prep work in detail.\" Prep is the largest variable in how long a paint job lasts, and it's also the easiest place to cut corners invisibly. An honest contractor will spend 5–10 minutes on this question. A weak one will give you 30 seconds and change the subject."),
+            ("Who actually shows up on the day at Go Green?", "Jackson and Evelyn. There are no subcontractors, no rotating summer crews, and no separate \"sales rep then crew\" handoff. The people who quoted your job are the people doing your job."),
+            ("How can I verify a painter's insurance?", "Ask for a current Certificate of Insurance (COI) and have the painter's agent email it directly to you before work starts. Don't accept a verbal \"we're insured\" — and don't accept a COI that's expired or doesn't name your project. Any reputable painter, franchise or owner-operated, will produce one within a day."),
+        ],
+        "related": [
+            ("About Go Green College Painters", "/about/"),
+            ("Exterior House Painting", "/services/exterior-painting/"),
+            ("Interior Painting", "/services/interior-painting/"),
+            ("Cost to Paint a House in Grand Rapids", "/blog/cost-to-paint-a-house-in-grand-rapids/"),
+        ],
+        "related_heading": "Related Reading & Pages",
+    },
 ]
 
 # -------- shared template --------
