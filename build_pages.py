@@ -322,8 +322,8 @@ PAGES = [
     # ============================================================
     {
         "slug": "grand-rapids/cascade/",
-        "title": "House Painters in Cascade, MI | Cedar Siding Specialists | Go Green College Painters",
-        "description": "Owner-operated exterior and interior painting in Cascade, Michigan. Cedar siding specialists with tannin-blocking prep, premium primer, and finishes built to last. Free estimates from Go Green College Painters.",
+        "title": "Cascade, MI House Painters | Cedar Siding Specialists",
+        "description": "Owner-operated cedar siding specialists serving Cascade, MI. Tannin-blocking prep, premium acrylic finish, 8–12 year lifespan. Free fixed-price estimate.",
         "h1": "House Painters in Cascade, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in Cascade, Michigan",
@@ -389,8 +389,8 @@ PAGES = [
 
     {
         "slug": "grand-rapids/forest-hills/",
-        "title": "House Painters in Forest Hills, MI | Cedar Siding Specialists | Go Green College Painters",
-        "description": "Owner-operated house painting in the Forest Hills area of Greater Grand Rapids. Cedar siding specialists, interior repaints, and custom mural work. Free estimates from Go Green College Painters.",
+        "title": "Forest Hills House Painters | Cedar Specialists, Free Quote",
+        "description": "Owner-operated cedar siding specialists serving the Forest Hills schools area. Exterior cedar, interior repaints, cabinet refinishing. Free fixed-price quote.",
         "h1": "House Painters in Forest Hills, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in the Forest Hills Area, Michigan",
@@ -455,8 +455,8 @@ PAGES = [
 
     {
         "slug": "grand-rapids/ada/",
-        "title": "House Painters in Ada, MI | Cedar Siding Specialists | Go Green College Painters",
-        "description": "Owner-operated house painting in Ada, Michigan. Cedar siding specialists serving Ada Township and Ada Village. Free, fixed-price estimates from Go Green College Painters.",
+        "title": "Ada, MI House Painters | Cedar Siding Specialists",
+        "description": "Owner-operated cedar siding specialists in Ada — Ada Village, Bostwick Lake, and the wooded estates south of Fulton. Free fixed-price written estimate.",
         "h1": "House Painters in Ada, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in Ada, Michigan",
@@ -519,8 +519,8 @@ PAGES = [
 
     {
         "slug": "grand-rapids/east-grand-rapids/",
-        "title": "House Painters in East Grand Rapids, MI | Go Green College Painters",
-        "description": "Owner-operated house painters serving East Grand Rapids, Michigan. Reeds Lake area exteriors, interior repaints, cabinet refinishing, and custom mural work. Free estimates.",
+        "title": "East Grand Rapids House Painters | Established Homes",
+        "description": "Owner-operated painters serving East Grand Rapids. Established 1920s–1950s homes, Reeds Lake custom builds, cedar trim, plaster walls. Free fixed-price quote.",
         "h1": "House Painters in East Grand Rapids, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in East Grand Rapids, Michigan",
@@ -586,8 +586,8 @@ PAGES = [
 BLOG_POSTS = [
     {
         "slug": "blog/cost-to-paint-a-house-in-grand-rapids/",
-        "title": "How Much Does It Cost to Paint a House in Grand Rapids? (2026 Guide)",
-        "description": "A 2026 breakdown of interior, exterior, cabinet, and deck painting costs in Grand Rapids, MI — what's included at each price point, what drives a quote up or down, and how to get an accurate estimate.",
+        "title": "Grand Rapids House Painting Cost in 2026: Real Numbers",
+        "description": "Interior $4,700–$8,500. Exterior $3,000–$7,000. Cabinets $2,500–$6,000. What drives Grand Rapids painting costs up or down — plus how to get a real quote.",
         "h1": "How Much Does It Cost to Paint a House in Grand Rapids?",
         "hero_img": "/exterior-after.jpg",
         "date_published": "2026-05-13",
@@ -925,6 +925,13 @@ SCRIPTS_HTML = """  <script>
     window.addEventListener('scroll', function () {
       var n = document.querySelector('nav');
       if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
+    });
+    // Track tel: link clicks as a GA4 'phone_click' event
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="tel:"]');
+      if (a && typeof window.gtag === 'function') {
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+      }
     });
   </script>
   <!-- Zoho SalesIQ - deferred to first interaction or 5s -->
@@ -1490,7 +1497,7 @@ def build_about_page():
 
 CONTACT_FORM_HTML = """        <form class="contact-form" action="https://forms.zohopublic.com/jackgogreen1/form/WebsiteContact/formperma/8Js26cdu-6qrbCBK5668ufHpo_DCyQw8r5azScg3bV8/htmlRecords/submit" name="form" id="zoho-contact-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
           <input type="hidden" name="zf_referrer_name" value="" />
-          <input type="hidden" name="zf_redirect_url" value="" />
+          <input type="hidden" name="zf_redirect_url" value="https://gogreenpainters.com/contact/thank-you/" />
           <input type="hidden" name="zc_gad" value="" />
           <h3>Tell Us About Your Project</h3>
           <div class="form-row">
@@ -1673,6 +1680,52 @@ def build_404_page():
   </main>"""
     return f"{head}\n{NAV_HTML}\n{hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
 
+# -------- standalone: thank-you (form submission landing) --------
+def build_thank_you_page():
+    canonical = f"{SITE}/contact/thank-you/"
+    head = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanks — We Got Your Message | Go Green College Painters</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="Thanks for reaching out to Go Green College Painters. We'll respond within 24 hours with a free, fixed-price estimate." />
+  <link rel="canonical" href="{canonical}" />
+{FAVICON_LINKS}
+{FONT_LINKS}
+</head>
+<body>"""
+    hero = """  <section class="page-hero hero-default" style="min-height: 380px;">
+    <div class="page-hero-inner">
+      <h1>Thanks — We Got Your Message</h1>
+      <p class="lead">Jackson or Evelyn will get back to you within 24 hours with a free, fixed-price estimate. If you'd rather talk now, call <a href="tel:+16162642119" style="color:var(--gold);font-weight:700;">(616) 264-2119</a>.</p>
+      <a href="/" class="btn-primary">Back to Home</a>
+    </div>
+  </section>"""
+    main = """  <main class="page-main">
+    <div class="container">
+      <div class="page-section">
+        <h2>What Happens Next</h2>
+        <ul>
+          <li>We read every message personally — no chatbot, no overseas inbox.</li>
+          <li>We'll reach out within 24 hours (often faster) to schedule a walk-through.</li>
+          <li>You'll get a free, fixed-price written estimate after the walk-through — no pressure, no commitment.</li>
+        </ul>
+      </div>
+      <div class="page-section">
+        <h2>While You Wait</h2>
+        <ul>
+          <li><a href="/blog/cost-to-paint-a-house-in-grand-rapids/">What house painting actually costs in Grand Rapids</a></li>
+          <li><a href="/blog/cedar-siding-paint-or-stain-grand-rapids/">Cedar siding: paint or stain?</a></li>
+          <li><a href="/about/">More about Jackson and Evelyn</a></li>
+          <li><a href="https://g.page/r/CddixNttF9ueEBM" target="_blank" rel="noopener">Read our Google reviews</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>"""
+    return f"{head}\n{NAV_HTML}\n{hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+
 # -------- write pages --------
 written = []
 for page in PAGES:
@@ -1688,6 +1741,13 @@ _404 = build_404_page()
 with open("404.html", "w") as f:
     f.write(_404)
 written.append(("404.html", len(_404)))
+
+# Thank-you landing page for form submissions (noindex; triggers GA4 form_submit event via page_view)
+os.makedirs("contact/thank-you", exist_ok=True)
+_ty = build_thank_you_page()
+with open("contact/thank-you/index.html", "w") as f:
+    f.write(_ty)
+written.append(("contact/thank-you/index.html", len(_ty)))
 
 # -------- write About & Contact --------
 for slug, builder in [("about/", build_about_page), ("contact/", build_contact_page)]:

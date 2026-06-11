@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>House Painters in Ada, MI | Cedar Siding Specialists | Go Green College Painters</title>
-  <meta name="description" content="Owner-operated house painting in Ada, Michigan. Cedar siding specialists serving Ada Township and Ada Village. Free, fixed-price estimates from Go Green College Painters." />
+  <title>Ada, MI House Painters | Cedar Siding Specialists</title>
+  <meta name="description" content="Owner-operated cedar siding specialists in Ada — Ada Village, Bostwick Lake, and the wooded estates south of Fulton. Free fixed-price written estimate." />
   <link rel="canonical" href="https://gogreenpainters.com/grand-rapids/ada/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="House Painters in Ada, MI | Cedar Siding Specialists | Go Green College Painters" />
-  <meta property="og:description" content="Owner-operated house painting in Ada, Michigan. Cedar siding specialists serving Ada Township and Ada Village. Free, fixed-price estimates from Go Green College Painters." />
+  <meta property="og:title" content="Ada, MI House Painters | Cedar Siding Specialists" />
+  <meta property="og:description" content="Owner-operated cedar siding specialists in Ada — Ada Village, Bostwick Lake, and the wooded estates south of Fulton. Free fixed-price written estimate." />
   <meta property="og:url" content="https://gogreenpainters.com/grand-rapids/ada/" />
   <meta property="og:image" content="https://gogreenpainters.com/og/og-grand-rapids-ada.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -109,8 +109,8 @@
       "@type": "WebPage",
       "@id": "https://gogreenpainters.com/grand-rapids/ada/#webpage",
       "url": "https://gogreenpainters.com/grand-rapids/ada/",
-      "name": "House Painters in Ada, MI | Cedar Siding Specialists | Go Green College Painters",
-      "description": "Owner-operated house painting in Ada, Michigan. Cedar siding specialists serving Ada Township and Ada Village. Free, fixed-price estimates from Go Green College Painters.",
+      "name": "Ada, MI House Painters | Cedar Siding Specialists",
+      "description": "Owner-operated cedar siding specialists in Ada \u2014 Ada Village, Bostwick Lake, and the wooded estates south of Fulton. Free fixed-price written estimate.",
       "isPartOf": {
         "@id": "https://gogreenpainters.com/#website"
       },
@@ -393,6 +393,13 @@
     window.addEventListener('scroll', function () {
       var n = document.querySelector('nav');
       if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
+    });
+    // Track tel: link clicks as a GA4 'phone_click' event
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="tel:"]');
+      if (a && typeof window.gtag === 'function') {
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+      }
     });
   </script>
   <!-- Zoho SalesIQ - deferred to first interaction or 5s -->

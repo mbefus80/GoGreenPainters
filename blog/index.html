@@ -172,8 +172,8 @@
       <div class="blog-grid">
         <a href="/blog/cost-to-paint-a-house-in-grand-rapids/" class="blog-card">
           <span class="blog-card-date">May 13, 2026</span>
-          <h2>How Much Does It Cost to Paint a House in Grand Rapids? (2026 Guide)</h2>
-          <p>A 2026 breakdown of interior, exterior, cabinet, and deck painting costs in Grand Rapids, MI — what&#x27;s included at each price point, what drives a quote up or down, and how to get an accurate estimate.</p>
+          <h2>Grand Rapids House Painting Cost in 2026: Real Numbers</h2>
+          <p>Interior $4,700–$8,500. Exterior $3,000–$7,000. Cabinets $2,500–$6,000. What drives Grand Rapids painting costs up or down — plus how to get a real quote.</p>
           <span class="service-link">Read more &rarr;</span>
         </a>
         <a href="/blog/cedar-siding-paint-or-stain-grand-rapids/" class="blog-card">
@@ -242,6 +242,13 @@
     window.addEventListener('scroll', function () {
       var n = document.querySelector('nav');
       if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
+    });
+    // Track tel: link clicks as a GA4 'phone_click' event
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="tel:"]');
+      if (a && typeof window.gtag === 'function') {
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+      }
     });
   </script>
   <!-- Zoho SalesIQ - deferred to first interaction or 5s -->

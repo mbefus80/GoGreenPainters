@@ -223,7 +223,7 @@
         </div>
         <form class="contact-form" action="https://forms.zohopublic.com/jackgogreen1/form/WebsiteContact/formperma/8Js26cdu-6qrbCBK5668ufHpo_DCyQw8r5azScg3bV8/htmlRecords/submit" name="form" id="zoho-contact-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
           <input type="hidden" name="zf_referrer_name" value="" />
-          <input type="hidden" name="zf_redirect_url" value="" />
+          <input type="hidden" name="zf_redirect_url" value="https://gogreenpainters.com/contact/thank-you/" />
           <input type="hidden" name="zc_gad" value="" />
           <h3>Tell Us About Your Project</h3>
           <div class="form-row">
@@ -319,6 +319,13 @@
     window.addEventListener('scroll', function () {
       var n = document.querySelector('nav');
       if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
+    });
+    // Track tel: link clicks as a GA4 'phone_click' event
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="tel:"]');
+      if (a && typeof window.gtag === 'function') {
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+      }
     });
   </script>
   <!-- Zoho SalesIQ - deferred to first interaction or 5s -->
