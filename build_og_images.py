@@ -35,6 +35,8 @@ SPECS = [
      "Deck Staining & Restoration in Grand Rapids"),
     ("og-services-custom-murals.jpg", "custom-designs.jpg", "GO GREEN COLLEGE PAINTERS",
      "Custom Murals & Accent Walls in Grand Rapids"),
+    ("og-services-power-washing.jpg", "stain-after.jpg", "GO GREEN COLLEGE PAINTERS",
+     "Power Washing in Grand Rapids — Decks, Siding, Driveways"),
     ("og-grand-rapids-cascade.jpg", "exterior-after.jpg", "GO GREEN  ·  CASCADE, MI",
      "House Painters in Cascade — Cedar Siding Specialists"),
     ("og-grand-rapids-forest-hills.jpg", "exterior-after.jpg", "GO GREEN  ·  FOREST HILLS, MI",

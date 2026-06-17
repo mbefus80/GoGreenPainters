@@ -315,6 +315,84 @@ PAGES = [
         ],
     },
 
+    {
+        "slug": "services/power-washing/",
+        "title": "Power Washing in Grand Rapids, MI | Decks, Siding, Driveways",
+        "description": "Residential power washing in Grand Rapids — deck, fence, siding, driveway, and concrete cleaning. Soft wash for delicate surfaces. Run by Go Green Painters. Free fixed-price quotes.",
+        "h1": "Power Washing in Grand Rapids, MI",
+        "hero_img": "/stain-after.jpg",
+        "service_name": "Residential Power Washing",
+        "service_desc": "Residential power washing in Grand Rapids, MI — decks, fences, vinyl and fiber-cement siding, brick, driveways, patios, and concrete. Soft-wash for delicate finishes. Owner-operated under the Go Green Painters family brand.",
+        "service_image": f"{SITE}/exterior-painting.jpg",
+        "breadcrumb": [("Home", "/"), ("Services", "/#services"), ("Power Washing", "/services/power-washing/")],
+        "lead": "Power washing is the most underrated home-maintenance service in Michigan. A single visit strips a season's worth of dirt, mildew, algae, and chalking off your siding, deck, fence, driveway, and patio — instantly restoring curb appeal and meaningfully extending the life of paint, stain, and the underlying materials. Henry Befus, the youngest of the Befus siblings behind Go Green, runs our power washing service. Same family work ethic — show up on time, do the job carefully, leave the property cleaner than we found it — applied to outdoor cleaning across Cascade, Forest Hills, Ada, and East Grand Rapids.",
+        "sections": [
+            ("Surfaces We Clean", """
+                <p>A single power washing visit can handle most of the outdoor cleaning a home accumulates over a season. Surfaces we routinely clean:</p>
+                <ul>
+                  <li><strong>Decks</strong> — wood and composite, including the prep wash before a restain</li>
+                  <li><strong>Fences</strong> — wood and vinyl, by linear foot or whole-fence</li>
+                  <li><strong>Siding</strong> — vinyl, fiber-cement, brick, and stone</li>
+                  <li><strong>Driveways and walkways</strong> — concrete, asphalt, and paver surfaces</li>
+                  <li><strong>Patios and pool decks</strong> — concrete and stone</li>
+                  <li><strong>Exterior concrete walls and foundations</strong></li>
+                  <li><strong>Outdoor furniture, garage doors, and exterior trim</strong> as add-ons</li>
+                </ul>
+                <p>Most homeowners bundle two or three surfaces on a single visit — a deck plus driveway plus one side of the home is a common combination — for a meaningful discount versus booking each separately.</p>
+            """),
+            ("Power Washing vs. Soft Washing — When Each Is Right", """
+                <p>"Power washing" gets used as a catch-all, but the right technique depends entirely on the surface. We use both:</p>
+                <ul>
+                  <li><strong>Power washing</strong> uses high water pressure (typically 2,000–4,000 PSI) to physically blast off heavy buildup. It's the right tool for concrete, brick, paver patios, and tough industrial-grade surfaces. Wrong for vinyl siding, painted wood, or any aged surface — high pressure can drive water behind siding, tear fibers, or strip paint.</li>
+                  <li><strong>Soft washing</strong> uses lower pressure (under 500 PSI) combined with biodegradable cleaning solutions that lift dirt, mildew, and algae chemically rather than by force. It's the right tool for vinyl siding, painted wood, fiber-cement, asphalt shingles, and any older or delicate surface.</li>
+                </ul>
+                <p>Most residential exteriors need a combination on the same visit — soft wash on the siding and trim, full power wash on the concrete and pavers. We pick the right approach for each surface, not the other way around. When in doubt, we test in an inconspicuous spot before committing to a full surface.</p>
+            """),
+            ("Power Washing as Painting Prep", """
+                <p>Proper exterior prep is the single biggest factor in how long a paint or stain job lasts. Mildew, chalking, and biological growth left on a surface will cause fresh paint or stain to fail within a year or two. We always include exterior wash as part of our painting and deck staining projects — but a standalone power wash is also a smart move if your paint is otherwise sound and you just want to extend its life without a full repaint yet.</p>
+                <p>If you're planning to paint or stain this season, schedule the power wash <strong>4–6 weeks ahead</strong>. That gives the surfaces full time to dry — applying paint or stain to damp wood is the most common reason finishes fail prematurely.</p>
+            """),
+            ("Cost of Power Washing in Grand Rapids", """
+                <p>Realistic pricing for Greater Grand Rapids residential power washing:</p>
+                <ul>
+                  <li><strong>Standard deck</strong> (200–400 sq ft): $150–$300</li>
+                  <li><strong>Full siding wash</strong> (one- or two-story home): $300–$600</li>
+                  <li><strong>Driveway</strong>: $100–$250</li>
+                  <li><strong>Concrete patio or walkway</strong>: $80–$200</li>
+                  <li><strong>Fence</strong> (residential, typical perimeter): $200–$500</li>
+                  <li><strong>Whole-property bundle</strong> (siding + driveway + deck): $500–$1,200, usually 15–25% less than booking separately</li>
+                </ul>
+                <p>Every quote is free, fixed-price, and based on a walk-through. Bundled visits beat individual bookings on price and on scheduling.</p>
+            """),
+            ("When to Schedule in Michigan", """
+                <p>The Grand Rapids power washing season runs <strong>April through mid-October</strong>. A few timing notes worth knowing:</p>
+                <ul>
+                  <li><strong>Spring (April–May)</strong> is our busiest window — winter leaves a season of biological buildup that homeowners want gone. Book 2–4 weeks ahead in peak spring.</li>
+                  <li><strong>Pre-painting</strong>: schedule 4–6 weeks before your painting/staining project to give surfaces time to fully dry.</li>
+                  <li><strong>Fall (September–October)</strong>: a fall power wash removes summer pollen, mildew, and algae before they overwinter on your surfaces. Decks and siding both benefit from a pre-winter clean.</li>
+                  <li><strong>Mid-summer</strong>: faster scheduling typically available, plus great weather for drying.</li>
+                </ul>
+            """),
+        ],
+        "faqs": [
+            ("How much does power washing cost in Grand Rapids?", "Residential power washing in Grand Rapids generally runs $150–$600 depending on surface and size. A standard deck runs $150–$300; full siding wash on a typical home runs $300–$600; driveways $100–$250; fences $200–$500. Bundling multiple surfaces on one visit usually saves 15–25%. Every quote is free and fixed-price."),
+            ("Will power washing damage my deck or siding?", "Done wrong, yes — that's why technique matters more than equipment. The risk on wood and delicate surfaces is too much pressure tearing fibers, driving water behind siding, or stripping finish. We size pressure and nozzle to the specific surface, and use soft-wash (low-pressure plus cleaning solution) on materials that can't tolerate high pressure: vinyl siding, painted wood, older shake, asphalt shingles. We always test in an inconspicuous spot first."),
+            ("What's the difference between power washing and soft washing?", "Power washing uses high water pressure (typically 2,000–4,000 PSI) to physically blast off buildup. It's right for concrete, brick, and durable surfaces. Soft washing uses lower pressure (under 500 PSI) combined with biodegradable cleaning solutions to lift dirt and biological growth chemically rather than by force. It's right for vinyl siding, painted wood, fiber-cement, and any aged surface where high pressure would cause damage. Most residential exteriors need a combination on the same visit."),
+            ("Should I power wash my house before painting?", "Yes — proper exterior prep is the single biggest factor in how long a paint job lasts. Power washing removes dirt, mildew, chalking, and loose paint that would otherwise cause new paint to peel within a year or two. We include exterior wash as part of our painting projects, but you can also book a standalone power wash 4–6 weeks before painting day to let surfaces dry fully."),
+            ("How often should I power wash my deck?", "Most Grand Rapids decks benefit from a power wash once a year — typically in spring after winter buildup. If you're restraining the deck, plan to power wash 4–6 weeks ahead so the wood dries completely before stain goes on. Decks under heavy tree cover or in shaded north-side positions may need a wash twice a year due to faster mildew accumulation."),
+            ("Do you clean fences, driveways, and patios too?", "Yes. Wood and vinyl fences, concrete and paver driveways, walkways, patios, and exterior concrete walls are all standard surfaces. Most homeowners bundle 2–3 of these onto a single visit for a meaningful discount versus booking each separately."),
+            ("Can power washing remove paint or stain?", "Yes — high-pressure water strips both. That's actually useful when removing failing paint or weathered stain as part of prep for a repaint or restain. It's a problem when you have a sound finish you want to preserve. We always assess existing finish condition first and adjust technique accordingly: soft wash to preserve, full power wash when stripping is the goal."),
+            ("Who actually does the power washing work at Go Green?", "Henry Befus, the youngest of the Befus siblings behind Go Green. Power washing is his dedicated focus on the team. He grew into the work from his earlier bin-cleaning route and is being mentored by his older siblings into the broader trade — typical of how our family business operates."),
+        ],
+        "related": [
+            ("Exterior House Painting", "/services/exterior-painting/"),
+            ("Deck Staining", "/services/deck-staining/"),
+            ("Cost to Paint a House in Grand Rapids", "/blog/cost-to-paint-a-house-in-grand-rapids/"),
+            ("House Painters in Cascade", "/grand-rapids/cascade/"),
+        ],
+        "related_heading": "Related Services",
+    },
+
     # ============================================================
     # NEIGHBORHOOD PAGES
     # Cedar-siding expertise is the through-line for Cascade,
@@ -896,6 +974,7 @@ FOOTER_HTML = """  <footer>
           <li><a href="/services/interior-painting/">Interior Painting</a></li>
           <li><a href="/services/deck-staining/">Deck Staining</a></li>
           <li><a href="/services/custom-murals/">Custom Murals</a></li>
+          <li><a href="/services/power-washing/">Power Washing</a></li>
         </ul>
       </div>
       <div class="footer-col">
