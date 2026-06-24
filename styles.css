@@ -515,6 +515,10 @@ a.service-card:hover .service-link { color: var(--gold); }
   background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/custom-designs-800.webp') type('image/webp'), url('/custom-designs-800.jpg') type('image/jpeg'));
   background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/custom-designs-800.webp') type('image/webp'), url('/custom-designs-800.jpg') type('image/jpeg'));
 }
+.page-hero.hero-banners {
+  background-image: linear-gradient(to bottom, rgba(0,79,57,0.82) 0%, rgba(0,0,0,0.65) 100%), url('/banners/event_grad_party-800.jpg');
+  background-position: center 40%;
+}
 .page-hero.hero-default {
   background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/hero-bg-800.jpg');
   background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/hero-bg-800.webp') type('image/webp'), url('/hero-bg-800.jpg') type('image/jpeg'));
@@ -540,6 +544,9 @@ a.service-card:hover .service-link { color: var(--gold); }
     background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/custom-designs.jpg');
     background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), -webkit-image-set(url('/custom-designs.webp') type('image/webp'), url('/custom-designs.jpg') type('image/jpeg'));
     background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), image-set(url('/custom-designs.webp') type('image/webp'), url('/custom-designs.jpg') type('image/jpeg'));
+  }
+  .page-hero.hero-banners {
+    background-image: linear-gradient(to bottom, rgba(0,79,57,0.82) 0%, rgba(0,0,0,0.65) 100%), url('/banners/event_grad_party.JPG');
   }
   .page-hero.hero-default {
     background-image: linear-gradient(to bottom, rgba(0,79,57,0.80) 0%, rgba(0,0,0,0.62) 100%), url('/hero-bg.jpg');
