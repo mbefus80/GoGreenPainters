@@ -1834,7 +1834,7 @@ CONTACT_FORM_HTML = """        <form class="contact-form" action="https://forms.
               <option value="Exterior Painting">Exterior Painting</option>
               <option value="Interior Painting">Interior Painting</option>
               <option value="Deck Staining">Deck Staining</option>
-              <option value="Custom Designs">Custom Designs</option>
+              <option value="Custom Banner or Mural">Custom Banner or Mural</option>
               <option value="Multiple Services">Multiple Services</option>
             </select>
           </div>
