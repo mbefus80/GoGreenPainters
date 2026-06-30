@@ -657,23 +657,29 @@ a.service-card:hover .service-link { color: var(--gold); }
   .nav-phone-li { display: none; }
 }
 
-/* Founder bio aside — small italic mention used for Evelyn's banner-painting cross-sell. */
+/* Founder bio aside — small italic mention used for Evelyn's banner-painting cross-sell.
+   Inherits parent text color so it stays readable on whatever background the bio uses
+   (dark green card, white card, anything in between). */
 .founder-aside {
   margin-top: 14px !important;
   padding-top: 14px;
-  border-top: 1px dashed rgba(0,79,57,0.18);
+  border-top: 1px dashed currentColor;
   font-size: 0.88rem !important;
-  color: #6a7a72 !important;
+  color: inherit !important;
+  opacity: 0.92;
   font-style: italic;
 }
+/* Constrain just the dashed border opacity, not the text */
+.founder-aside { border-top-color: rgba(238, 203, 48, 0.45); }
 .founder-aside a {
-  color: var(--green-mid);
-  font-weight: 600;
+  color: var(--gold) !important;
+  font-weight: 700;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 3px;
+  opacity: 1;
 }
-.founder-aside a:hover { color: var(--green-dark); }
+.founder-aside a:hover { color: var(--gold-light) !important; }
 
 /* CTA banner — two-button layout (form + phone) */
 .cta-banner-btns {
@@ -759,10 +765,11 @@ a.service-card:hover .service-link { color: var(--gold); }
 }
 
 /* Press strip — "As Seen On Fox 17" trust band, immediately below the hero.
-   Thin, dark, full-width, with a gold bottom-border to feel like a trust marker, not nav. */
+   White background so it visually separates from the dark green hero above. */
 #press {
-  background: linear-gradient(180deg, #00382A 0%, #003526 100%);
-  padding: 18px 24px;
+  background: #ffffff;
+  padding: 20px 24px;
+  border-top: 1px solid #e8eced;
   border-bottom: 3px solid var(--gold);
 }
 .press-strip {
@@ -779,7 +786,7 @@ a.service-card:hover .service-link { color: var(--gold); }
   font-size: 0.78rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green-dark);
   font-weight: 700;
 }
 .press-logo {
@@ -801,7 +808,8 @@ a.service-card:hover .service-link { color: var(--gold); }
 .press-logo-17 {
   color: #1d3a7a;
   background: #fff;
-  padding: 5px 9px 5px 9px;
+  border: 1px solid #1d3a7a;
+  padding: 4px 9px 4px 9px;
   border-radius: 0 3px 3px 0;
   font-size: 1.05rem;
   font-weight: 900;
@@ -810,26 +818,26 @@ a.service-card:hover .service-link { color: var(--gold); }
   display: flex;
   align-items: center;
   gap: 18px;
-  color: rgba(255,255,255,0.88);
+  color: #3a4744;
   font-size: 0.9rem;
 }
 .press-show {
-  color: rgba(255,255,255,0.82);
+  color: #5a6863;
   font-weight: 500;
   letter-spacing: 0.3px;
 }
 .press-link {
-  color: var(--gold);
+  color: var(--green-mid);
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px dotted var(--gold);
+  border-bottom: 1px dotted var(--green-mid);
   padding-bottom: 1px;
   transition: color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
 .press-link:hover {
-  color: var(--gold-light);
-  border-color: var(--gold-light);
+  color: var(--green-dark);
+  border-color: var(--green-dark);
 }
 @media (max-width: 640px) {
   #press { padding: 16px 16px; }
