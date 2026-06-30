@@ -70,13 +70,12 @@ LOCAL_BUSINESS = {
         "addressCountry": "US",
     },
     "sameAs": [
-        "https://www.yelp.com/biz/go-green-painters-grand-rapids",
         "https://www.facebook.com/profile.php?id=61589807997680",
     ],
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "3",
+        "reviewCount": "11",
         "bestRating": "5",
     },
 }
@@ -244,6 +243,10 @@ PAGES = [
     },
     {
         "slug": "services/custom-murals/",
+        # Page lives in the sitemap as a deep specialty page for "custom murals" queries,
+        # but canonical points at /services/custom-painting/ (the broader hub) so Google
+        # consolidates ranking signals on a single primary destination.
+        "canonical_override": f"{SITE}/services/custom-painting/",
         "title": "Custom Murals & Accent Walls in Grand Rapids, MI | Go Green Painters",
         "description": "Hand-painted custom murals and accent walls in Grand Rapids, MI. Kids' rooms, nurseries, dining rooms, commercial spaces. Designed and painted by Evelyn Befus, Industrial Design student at Wayne State. Free design consultation.",
         "h1": "Custom Murals & Accent Walls in Grand Rapids, MI",
@@ -1184,9 +1187,10 @@ NAV_HTML = """  <nav>
       <li><a href="/services/exterior-painting/">Exterior</a></li>
       <li><a href="/services/interior-painting/">Interior</a></li>
       <li><a href="/services/deck-staining/">Deck Staining</a></li>
-      <li><a href="/services/custom-murals/">Murals</a></li>
+      <li><a href="/services/custom-painting/">Custom Painting</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/about/">About</a></li>
+      <li class="nav-phone-li"><a href="tel:+16162642119" class="nav-phone">(616) 264-2119</a></li>
       <li><a href="/contact/" class="nav-cta">Free Quote</a></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -1209,8 +1213,11 @@ FOOTER_HTML = """  <footer>
           <li><a href="/services/exterior-painting/">Exterior Painting</a></li>
           <li><a href="/services/interior-painting/">Interior Painting</a></li>
           <li><a href="/services/deck-staining/">Deck Staining</a></li>
-          <li><a href="/services/custom-murals/">Custom Murals</a></li>
+          <li><a href="/services/custom-painting/">Custom Painting</a></li>
+          <li><a href="/services/custom-murals/">Custom Murals &amp; Accent Walls</a></li>
+          <li><a href="/services/custom-banners/">Hand-Painted Banners</a></li>
           <li><a href="/services/power-washing/">Power Washing</a></li>
+          <li><a href="/plants-and-pets/">Plants &amp; Pets (Vacation Care)</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1221,18 +1228,22 @@ FOOTER_HTML = """  <footer>
           <li><a href="/contact/">Contact</a></li>
           <li><a href="tel:+16162642119">(616) 264-2119</a></li>
           <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
-          <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61589807997680" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2024 Go Green College Painters. All rights reserved.</span>
+      <span>&copy; 2024&ndash;2026 Go Green College Painters. All rights reserved.</span>
       <span>Greater Grand Rapids, MI</span>
     </div>
   </footer>"""
 
-SCRIPTS_HTML = """  <script>
+SCRIPTS_HTML = """  <!-- Sticky mobile Call Now button (replaces Zoho SalesIQ widget) -->
+  <a href="tel:+16162642119" class="sticky-call-btn" aria-label="Call (616) 264-2119">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <span>Call (616) 264-2119</span>
+  </a>
+  <script>
     function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
     document.querySelectorAll('.nav-links a').forEach(function (l) {
       l.addEventListener('click', function () { document.getElementById('navLinks').classList.remove('open'); });
@@ -1241,30 +1252,34 @@ SCRIPTS_HTML = """  <script>
       var n = document.querySelector('nav');
       if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
     });
-    // Track tel: link clicks as a GA4 'phone_click' event
+    // Track tel: link clicks as a GA4 'phone_click' event (works for nav phone, hero phone, sticky button, footer phone)
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href^="tel:"]');
       if (a && typeof window.gtag === 'function') {
-        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+        var loc = a.closest('.sticky-call-btn') ? 'sticky_mobile'
+                : a.closest('nav') ? 'nav'
+                : a.closest('footer') ? 'footer'
+                : 'inline';
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', ''), location: loc });
       }
     });
-  </script>
-  <!-- Zoho SalesIQ - deferred to first interaction or 5s -->
-  <script>
+    // Scroll-depth tracking (fires at 25/50/75/100% — once per page load)
     (function () {
-      var loaded = false;
-      function loadZoho() {
-        if (loaded) return; loaded = true;
-        window.$zoho = window.$zoho || {};
-        window.$zoho.salesiq = window.$zoho.salesiq || { widgetcode: "siq3aa97abd7397b8e8fb6a7a41ff2162ec1e63e93450f9cbd1e76dac3ef46afd90", values: {}, ready: function () {} };
-        var s = document.createElement("script");
-        s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget";
-        document.head.appendChild(s);
+      if (typeof window.gtag !== 'function') return;
+      var marks = [25, 50, 75, 100], fired = {};
+      function onScroll() {
+        var h = document.documentElement, b = document.body;
+        var total = Math.max(h.scrollHeight, b.scrollHeight) - window.innerHeight;
+        if (total <= 0) return;
+        var pct = ((window.pageYOffset || h.scrollTop) / total) * 100;
+        marks.forEach(function (m) {
+          if (!fired[m] && pct >= m) {
+            fired[m] = true;
+            gtag('event', 'scroll_depth', { percent: m, page_path: location.pathname });
+          }
+        });
       }
-      ["scroll", "click", "keydown", "mousemove", "touchstart"].forEach(function (ev) {
-        window.addEventListener(ev, loadZoho, { once: true, passive: true });
-      });
-      setTimeout(loadZoho, 5000);
+      window.addEventListener('scroll', onScroll, { passive: true });
     })();
   </script>"""
 
@@ -1365,6 +1380,9 @@ def build_jsonld(page):
 
 def build_page(page):
     canonical = f"{SITE}/{page['slug']}"
+    # Canonical override: pages can declare canonical_override to point Google at a different
+    # primary version (used for Custom Murals → Custom Painting consolidation).
+    canonical_link = page.get("canonical_override", canonical)
     head = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1372,7 +1390,7 @@ def build_page(page):
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{html_lib.escape(page['title'])}</title>
   <meta name="description" content="{html_lib.escape(page['description'])}" />
-  <link rel="canonical" href="{canonical}" />
+  <link rel="canonical" href="{canonical_link}" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{html_lib.escape(page['title'])}" />
@@ -1504,7 +1522,7 @@ GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
 
 # Bump CSS_VERSION whenever styles.css changes — busts browser caches via the ?v= query.
 # (Belt-and-suspenders with the must-revalidate header in _headers.)
-CSS_VERSION = "20260514"
+CSS_VERSION = "20260630"
 
 FAVICON_LINKS = """  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />

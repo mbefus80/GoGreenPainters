@@ -77,7 +77,6 @@
           "addressCountry": "US"
         },
         "sameAs": [
-          "https://www.yelp.com/biz/go-green-painters-grand-rapids",
           "https://www.facebook.com/profile.php?id=61589807997680"
         ],
         "hasOfferCatalog": {
@@ -93,7 +92,7 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5",
-          "reviewCount": "3",
+          "reviewCount": "11",
           "bestRating": "5"
         },
         "review": [
@@ -117,6 +116,20 @@
             "author": { "@type": "Person", "name": "Bill R." },
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
             "reviewBody": "I hired Go Green for a small paint refresh, but ended up having Evelyn paint an entire mural wall and it turned out beautifully."
+          },
+          {
+            "@type": "Review",
+            "itemReviewed": { "@id": "https://gogreenpainters.com/#business" },
+            "author": { "@type": "Person", "name": "Carolyn" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "We had an excellent experience with Go Green Painters. They painted all of the exterior trim on our house — they were efficient, highly skilled and reasonably priced. And their communication before, during, and after the project was great. Can't recommend them enough!"
+          },
+          {
+            "@type": "Review",
+            "itemReviewed": { "@id": "https://gogreenpainters.com/#business" },
+            "author": { "@type": "Person", "name": "Alyson" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Go Green Painters did an excellent job painting the exterior of our home. They are hardworking, professional, precise and timely. We highly recommend their work and will stay loyal to their business whenever we have a painting job."
           }
         ]
       },
@@ -165,7 +178,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/styles.css?v=20260514" />
+  <link rel="stylesheet" href="/styles.css?v=20260630" />
 </head>
 <body>
 
@@ -185,6 +198,7 @@
       <li><a href="/services/custom-painting/">Custom Painting</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/about/">About</a></li>
+      <li class="nav-phone-li"><a href="tel:+16162642119" class="nav-phone">(616) 264-2119</a></li>
       <li><a href="#contact" class="nav-cta">Free Quote</a></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -197,10 +211,27 @@
     <div class="hero-inner">
       <img src="logo.png" alt="Go Green College Painters" class="hero-logo" onerror="this.style.display='none'" />
       <h1>Student Owned.<br><span>Professional Results.</span></h1>
-      <p>Good quality, affordable painting — owner-operated exterior, interior, deck staining, and custom designs across Greater Grand Rapids. Honest pricing without franchise overhead.</p>
+      <p>Affordable, owner-operated painting across Greater Grand Rapids. Honest pricing, no franchise overhead. Free estimates.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Get a Free Quote</a>
-        <a href="#portfolio" class="btn-outline">See Our Work</a>
+        <a href="#contact" class="btn-primary">Free Painting Quote</a>
+        <a href="/services/power-washing/" class="btn-outline">Power Washing</a>
+        <a href="/plants-and-pets/" class="btn-outline">Plants &amp; Pets</a>
+      </div>
+      <p class="hero-tenure">Family-owned in Grand Rapids since 2024 · Fully insured · 5-star Google reviews</p>
+    </div>
+  </section>
+
+  <!-- PRESS STRIP — Fox 17 Morning Mix segment (filmed June 30, 2026; aired July 1, 2026) -->
+  <!-- TODO when segment link is live: replace href="https://www.fox17online.com" with the specific segment URL -->
+  <section id="press" aria-label="As seen on Fox 17">
+    <div class="press-strip">
+      <span class="press-label">As Seen On</span>
+      <div class="press-logo" aria-label="Fox 17 News">
+        <span class="press-logo-fox">FOX</span><span class="press-logo-17">17</span>
+      </div>
+      <div class="press-details">
+        <span class="press-show">Morning Mix &middot; July 2026</span>
+        <a href="https://www.fox17online.com" target="_blank" rel="noopener" class="press-link">Watch the segment &rarr;</a>
       </div>
     </div>
   </section>
@@ -245,6 +276,7 @@
             <div class="founder-title">Co-Owner &amp; Creative Director</div>
             <div class="founder-divider"></div>
             <p>Evelyn is studying Industrial Design at Wayne State University, and her passion for art &amp; painting began as early as she can remember — illustrating, painting, and creating have always been at the heart of who she is. Go Green Painters has given her the opportunity not only to pay for college, but to bring a creative flair to projects that start as simple one-color refreshes. Got a vision for a children's space, dining room, or mural? Evelyn can bring it to life.</p>
+            <p class="founder-aside">Evelyn also hand-paints custom event banners — graduations, sorority events, birthdays. <a href="/services/custom-banners/">See her banner work &rarr;</a></p>
           </div>
         </div>
       </div>
@@ -298,21 +330,28 @@
             <span class="service-link">Learn more &rarr;</span>
           </div>
         </a>
-        <a href="/services/custom-banners/" class="service-card">
-          <img class="service-img" src="banners/event_grad_party.JPG" alt="Hand-painted custom banner at a graduation party, Grand Rapids MI" loading="lazy" />
-          <div class="service-body">
-            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg></div>
-            <h3>Party Banners</h3>
-            <p>Custom hand-painted banners for graduations, birthdays, sorority events, and celebrations. Made by Evelyn, made to keep. $150–$300.</p>
-            <span class="service-link">Learn more &rarr;</span>
-          </div>
-        </a>
         <a href="/services/power-washing/" class="service-card">
-          <img class="service-img" src="stain-after.jpg" alt="Power washing service Grand Rapids — deck, siding, driveway cleaning" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="powerwashing-henry-800.webp" />
+            <img class="service-img" src="powerwashing-henry-800.jpg" alt="Henry Befus, age 14, power washing a Republic Services bin — Go Green Painters power washing service, Grand Rapids MI" loading="lazy" style="object-position: center top;" />
+          </picture>
           <div class="service-body">
             <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2.5s-6 6.5-6 11c0 3.31 2.69 6 6 6s6-2.69 6-6c0-4.5-6-11-6-11z"/></svg></div>
             <h3>Power Washing</h3>
             <p>Decks, siding, fences, driveways, patios, and concrete. Strip a season's worth of grime, mildew, and algae in a single visit. Bundle multiple surfaces for a discount.</p>
+            <span class="service-link">Learn more &rarr;</span>
+          </div>
+        </a>
+        <a href="/plants-and-pets/" class="service-card service-card-sister">
+          <picture>
+            <source type="image/webp" srcset="plants-and-pets-800.webp" />
+            <img class="service-img" src="plants-and-pets-800.jpg" alt="Go Green Plants &amp; Pets — vacation pet sitting, plant watering, and home watch in Grand Rapids MI" loading="lazy" />
+          </picture>
+          <div class="service-body">
+            <div class="sister-tag">Sister Service · Ella Befus</div>
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-7-5.5-7-12a7 7 0 0114 0c0 6.5-7 12-7 12zm0-9a3 3 0 100-6 3 3 0 000 6z"/></svg></div>
+            <h3>Plants &amp; Pets</h3>
+            <p>Vacation pet sitting, plant watering, and home watch for Grand Rapids homeowners. Daily photo updates, the same trusted Go Green family. From $15 per visit.</p>
             <span class="service-link">Learn more &rarr;</span>
           </div>
         </a>
@@ -430,6 +469,22 @@
             <div class="review-author-info"><strong>Bill R.</strong><span>Condo Owner</span></div>
           </div>
         </div>
+        <div class="review-card">
+          <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="review-text">We had an excellent experience with Go Green Painters. They painted all of the exterior trim on our house &mdash; they were efficient, highly skilled and reasonably priced. And their communication before, during, and after the project was great. Can't recommend them enough!</p>
+          <div class="review-author">
+            <div class="review-avatar"><span>C</span></div>
+            <div class="review-author-info"><strong>Carolyn</strong><span>East Grand Rapids Homeowner</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="review-text">Go Green Painters did an excellent job painting the exterior of our home. They are hardworking, professional, precise and timely. We highly recommend their work and will stay loyal to their business whenever we have a painting job.</p>
+          <div class="review-author">
+            <div class="review-avatar"><span>A</span></div>
+            <div class="review-author-info"><strong>Alyson</strong><span>Ada Homeowner</span></div>
+          </div>
+        </div>
       </div>
       <div class="reviews-cta">
         <p>See more reviews — or share your own — on our Google Business Profile.</p>
@@ -539,6 +594,57 @@
           <summary style="font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; color:var(--green-dark); letter-spacing:0.5px; list-style:none; display:flex; justify-content:space-between; align-items:center;">Can you paint murals or custom designs? <span style="color:var(--gold); font-size:1.4rem; line-height:1;">+</span></summary>
           <p style="margin-top:14px; font-size:0.95rem; color:#555; line-height:1.75;">Yes! Co-owner Evelyn is an industrial design student with a lifelong love of illustration and painting. She specializes in custom murals for children's rooms, dining rooms, accent walls, and commercial spaces. If you can dream it, she can paint it.</p>
         </details>
+        <details style="background:white; border-radius:10px; padding:22px 26px; box-shadow:0 2px 12px rgba(0,0,0,0.06); cursor:pointer;">
+          <summary style="font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; color:var(--green-dark); letter-spacing:0.5px; list-style:none; display:flex; justify-content:space-between; align-items:center;">How much does interior painting cost in Grand Rapids? <span style="color:var(--gold); font-size:1.4rem; line-height:1;">+</span></summary>
+          <p style="margin-top:14px; font-size:0.95rem; color:#555; line-height:1.75;">Interior painting in Grand Rapids typically runs about $700 to $1,700 per room and $4,700 to $8,500 for a whole-house repaint, depending on square footage, ceiling height, prep work, and trim. We provide a fixed-price free estimate based on your specific home and project &mdash; call <a href="tel:+16162642119" style="color:var(--green-mid); font-weight:600;">(616) 264-2119</a> or use the request form.</p>
+        </details>
+        <details style="background:white; border-radius:10px; padding:22px 26px; box-shadow:0 2px 12px rgba(0,0,0,0.06); cursor:pointer;">
+          <summary style="font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; color:var(--green-dark); letter-spacing:0.5px; list-style:none; display:flex; justify-content:space-between; align-items:center;">How much does exterior house painting cost in Grand Rapids? <span style="color:var(--gold); font-size:1.4rem; line-height:1;">+</span></summary>
+          <p style="margin-top:14px; font-size:0.95rem; color:#555; line-height:1.75;">Exterior house painting in the Grand Rapids area typically ranges from $3,000 to $7,000 for a one- or two-story home, depending on siding type and condition, prep work, and accessibility. We provide free, fixed-price estimates after seeing the property.</p>
+        </details>
+        <details style="background:white; border-radius:10px; padding:22px 26px; box-shadow:0 2px 12px rgba(0,0,0,0.06); cursor:pointer;">
+          <summary style="font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; color:var(--green-dark); letter-spacing:0.5px; list-style:none; display:flex; justify-content:space-between; align-items:center;">Are you insured? <span style="color:var(--gold); font-size:1.4rem; line-height:1;">+</span></summary>
+          <p style="margin-top:14px; font-size:0.95rem; color:#555; line-height:1.75;">Yes. Go Green College Painters carries full liability insurance on every job, with no exceptions. Proof of insurance is available on request.</p>
+        </details>
+        <details style="background:white; border-radius:10px; padding:22px 26px; box-shadow:0 2px 12px rgba(0,0,0,0.06); cursor:pointer;">
+          <summary style="font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:700; text-transform:uppercase; color:var(--green-dark); letter-spacing:0.5px; list-style:none; display:flex; justify-content:space-between; align-items:center;">How long does a typical painting project take? <span style="color:var(--gold); font-size:1.4rem; line-height:1;">+</span></summary>
+          <p style="margin-top:14px; font-size:0.95rem; color:#555; line-height:1.75;">Most single-room interior repaints take 1 to 2 days. Whole-home interior repaints typically take 3 to 7 days. Exterior repaints generally take 3 to 6 days depending on home size, prep work, and weather. We provide a specific timeline as part of every free estimate.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM THE BLOG -->
+  <section id="from-the-blog" style="background:#f7f9f7; padding:80px 24px;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <div class="section-tag">From the Blog</div>
+        <h2 class="section-title">Painting <span>Guides &amp; Cost Info</span></h2>
+        <div class="divider" style="margin:14px auto 0;"></div>
+        <p class="section-sub" style="margin-top:16px;">Practical guides written by the owners for Grand Rapids homeowners deciding on a paint project.</p>
+      </div>
+      <div class="blog-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; max-width:1100px; margin:0 auto;">
+        <a href="/blog/cost-to-paint-a-house-in-grand-rapids/" class="blog-card" style="background:white; border-radius:10px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,0.06); text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+          <div class="blog-card-date" style="font-size:0.78rem; color:var(--gold); letter-spacing:1.5px; text-transform:uppercase; font-weight:700; margin-bottom:10px;">Cost Guide</div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:var(--green-dark); margin-bottom:12px; line-height:1.3;">How Much Does It Cost to Paint a House in Grand Rapids?</h3>
+          <p style="font-size:0.92rem; color:#555; line-height:1.65; flex:1;">Real 2026 dollar ranges by job type, what drives price up or down, and what to expect line-by-line on a written quote.</p>
+          <span style="display:inline-block; margin-top:14px; color:var(--green-mid); font-weight:600; font-size:0.9rem;">Read the guide &rarr;</span>
+        </a>
+        <a href="/blog/affordable-painters-grand-rapids/" class="blog-card" style="background:white; border-radius:10px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,0.06); text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+          <div class="blog-card-date" style="font-size:0.78rem; color:var(--gold); letter-spacing:1.5px; text-transform:uppercase; font-weight:700; margin-bottom:10px;">Honest Pricing</div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:var(--green-dark); margin-bottom:12px; line-height:1.3;">How to Find a Good, Affordable Painter in Grand Rapids</h3>
+          <p style="font-size:0.92rem; color:#555; line-height:1.65; flex:1;">What "affordable" should actually mean, the red flags to watch for, and how to compare three painter quotes apples-to-apples.</p>
+          <span style="display:inline-block; margin-top:14px; color:var(--green-mid); font-weight:600; font-size:0.9rem;">Read the guide &rarr;</span>
+        </a>
+        <a href="/blog/owner-operated-vs-college-painting-franchises-grand-rapids/" class="blog-card" style="background:white; border-radius:10px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,0.06); text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+          <div class="blog-card-date" style="font-size:0.78rem; color:var(--gold); letter-spacing:1.5px; text-transform:uppercase; font-weight:700; margin-bottom:10px;">Comparison</div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:var(--green-dark); margin-bottom:12px; line-height:1.3;">Owner-Operated vs. College Painting Franchises in Grand Rapids</h3>
+          <p style="font-size:0.92rem; color:#555; line-height:1.65; flex:1;">Why the difference matters for your project &mdash; pricing, accountability, who actually shows up on day one.</p>
+          <span style="display:inline-block; margin-top:14px; color:var(--green-mid); font-weight:600; font-size:0.9rem;">Read the guide &rarr;</span>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="/blog/" class="btn-dark" style="display:inline-block;">See all painting guides &rarr;</a>
       </div>
     </div>
   </section>
@@ -606,9 +712,12 @@
   <!-- CTA BANNER -->
   <div id="cta-banner">
     <div class="container">
-      <h2>Ready to Go Green?</h2>
-      <p>Serving Greater Grand Rapids — get your free estimate today.</p>
-      <a href="#contact" class="btn-dark">Get My Free Quote</a>
+      <h2>Ready for paint that holds up to Michigan winters?</h2>
+      <p>Free quote in 24 hours &mdash; no pressure, no commitment.</p>
+      <div class="cta-banner-btns">
+        <a href="#contact" class="btn-dark">Get My Free Quote</a>
+        <a href="tel:+16162642119" class="btn-outline btn-phone">📞 (616) 264-2119</a>
+      </div>
     </div>
   </div>
 
@@ -628,7 +737,7 @@
           <li><a href="/services/exterior-painting/">Exterior Painting</a></li>
           <li><a href="/services/interior-painting/">Interior Painting</a></li>
           <li><a href="/services/deck-staining/">Deck Staining</a></li>
-          <li><a href="/services/custom-murals/">Custom Murals</a></li>
+          <li><a href="/services/custom-painting/">Custom Painting</a></li>
           <li><a href="/services/power-washing/">Power Washing</a></li>
         </ul>
       </div>
@@ -649,16 +758,21 @@
           <li><a href="/contact/">Contact</a></li>
           <li><a href="tel:+16162642119">(616) 264-2119</a></li>
           <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
-          <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61589807997680" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 Go Green College Painters. All rights reserved.</span>
+      <span>© 2024–2026 Go Green College Painters. All rights reserved.</span>
       <span>Greater Grand Rapids, MI</span>
     </div>
   </footer>
+
+  <!-- Sticky mobile Call Now button (replaces Zoho SalesIQ widget) -->
+  <a href="tel:+16162642119" class="sticky-call-btn" aria-label="Call (616) 264-2119">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <span>Call (616) 264-2119</span>
+  </a>
 
   <script>
     function toggleMenu() {
@@ -672,13 +786,36 @@
         window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
     });
 
-    // Track tel: link clicks as a GA4 'phone_click' event
+    // Track tel: link clicks as a GA4 'phone_click' event (works for nav phone, hero phone, sticky button, footer phone)
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href^="tel:"]');
       if (a && typeof window.gtag === 'function') {
-        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+        var loc = a.closest('.sticky-call-btn') ? 'sticky_mobile'
+                : a.closest('nav') ? 'nav'
+                : a.closest('footer') ? 'footer'
+                : a.closest('#hero') ? 'hero'
+                : 'inline';
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', ''), location: loc });
       }
     });
+    // Scroll-depth tracking (fires at 25/50/75/100% — once per page load)
+    (function () {
+      if (typeof window.gtag !== 'function') return;
+      var marks = [25, 50, 75, 100], fired = {};
+      function onScroll() {
+        var h = document.documentElement, b = document.body;
+        var total = Math.max(h.scrollHeight, b.scrollHeight) - window.innerHeight;
+        if (total <= 0) return;
+        var pct = ((window.pageYOffset || h.scrollTop) / total) * 100;
+        marks.forEach(function (m) {
+          if (!fired[m] && pct >= m) {
+            fired[m] = true;
+            gtag('event', 'scroll_depth', { percent: m, page_path: location.pathname });
+          }
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
 
     // Service card image placeholders
     (function() {
@@ -734,33 +871,6 @@
     });
   </script>
 
-  <!-- Zoho SalesIQ Live Chat — deferred to first user interaction or 5s, whichever comes first.
-       This keeps Largest Contentful Paint fast on mobile without losing the chat widget. -->
-  <script type="text/javascript">
-    (function () {
-      var loaded = false;
-      function loadZoho() {
-        if (loaded) return;
-        loaded = true;
-        window.$zoho = window.$zoho || {};
-        window.$zoho.salesiq = window.$zoho.salesiq || {
-          widgetcode: "siq3aa97abd7397b8e8fb6a7a41ff2162ec1e63e93450f9cbd1e76dac3ef46afd90",
-          values: {},
-          ready: function () {}
-        };
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.id = "zsiqscript";
-        s.defer = true;
-        s.src = "https://salesiq.zoho.com/widget";
-        document.head.appendChild(s);
-      }
-      ["scroll", "click", "keydown", "mousemove", "touchstart"].forEach(function (ev) {
-        window.addEventListener(ev, loadZoho, { once: true, passive: true });
-      });
-      setTimeout(loadZoho, 5000);
-    })();
-  </script>
 
 </body>
 </html>

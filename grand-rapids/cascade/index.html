@@ -64,13 +64,12 @@
         "addressCountry": "US"
       },
       "sameAs": [
-        "https://www.yelp.com/biz/go-green-painters-grand-rapids",
         "https://www.facebook.com/profile.php?id=61589807997680"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "3",
+        "reviewCount": "11",
         "bestRating": "5"
       }
     },
@@ -237,7 +236,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="preload" href="/fonts/oswald.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/styles.css?v=20260514" />
+  <link rel="stylesheet" href="/styles.css?v=20260630" />
 </head>
 <body>
   <nav>
@@ -255,6 +254,7 @@
       <li><a href="/services/custom-painting/">Custom Painting</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/about/">About</a></li>
+      <li class="nav-phone-li"><a href="tel:+16162642119" class="nav-phone">(616) 264-2119</a></li>
       <li><a href="/contact/" class="nav-cta">Free Quote</a></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -367,8 +367,11 @@
           <li><a href="/services/exterior-painting/">Exterior Painting</a></li>
           <li><a href="/services/interior-painting/">Interior Painting</a></li>
           <li><a href="/services/deck-staining/">Deck Staining</a></li>
-          <li><a href="/services/custom-murals/">Custom Murals</a></li>
+          <li><a href="/services/custom-painting/">Custom Painting</a></li>
+          <li><a href="/services/custom-murals/">Custom Murals &amp; Accent Walls</a></li>
+          <li><a href="/services/custom-banners/">Hand-Painted Banners</a></li>
           <li><a href="/services/power-washing/">Power Washing</a></li>
+          <li><a href="/plants-and-pets/">Plants &amp; Pets (Vacation Care)</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -379,16 +382,20 @@
           <li><a href="/contact/">Contact</a></li>
           <li><a href="tel:+16162642119">(616) 264-2119</a></li>
           <li><a href="mailto:jack@gogreenpainters.com">jack@gogreenpainters.com</a></li>
-          <li><a href="https://www.yelp.com/biz/go-green-painters-grand-rapids" target="_blank" rel="noopener">Yelp Reviews</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61589807997680" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2024 Go Green College Painters. All rights reserved.</span>
+      <span>&copy; 2024&ndash;2026 Go Green College Painters. All rights reserved.</span>
       <span>Greater Grand Rapids, MI</span>
     </div>
   </footer>
+  <!-- Sticky mobile Call Now button (replaces Zoho SalesIQ widget) -->
+  <a href="tel:+16162642119" class="sticky-call-btn" aria-label="Call (616) 264-2119">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <span>Call (616) 264-2119</span>
+  </a>
   <script>
     function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
     document.querySelectorAll('.nav-links a').forEach(function (l) {
@@ -398,30 +405,34 @@
       var n = document.querySelector('nav');
       if (n) n.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.35)' : '0 2px 12px rgba(0,0,0,0.25)';
     });
-    // Track tel: link clicks as a GA4 'phone_click' event
+    // Track tel: link clicks as a GA4 'phone_click' event (works for nav phone, hero phone, sticky button, footer phone)
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href^="tel:"]');
       if (a && typeof window.gtag === 'function') {
-        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', '') });
+        var loc = a.closest('.sticky-call-btn') ? 'sticky_mobile'
+                : a.closest('nav') ? 'nav'
+                : a.closest('footer') ? 'footer'
+                : 'inline';
+        gtag('event', 'phone_click', { phone_number: a.getAttribute('href').replace('tel:', ''), location: loc });
       }
     });
-  </script>
-  <!-- Zoho SalesIQ - deferred to first interaction or 5s -->
-  <script>
+    // Scroll-depth tracking (fires at 25/50/75/100% — once per page load)
     (function () {
-      var loaded = false;
-      function loadZoho() {
-        if (loaded) return; loaded = true;
-        window.$zoho = window.$zoho || {};
-        window.$zoho.salesiq = window.$zoho.salesiq || { widgetcode: "siq3aa97abd7397b8e8fb6a7a41ff2162ec1e63e93450f9cbd1e76dac3ef46afd90", values: {}, ready: function () {} };
-        var s = document.createElement("script");
-        s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget";
-        document.head.appendChild(s);
+      if (typeof window.gtag !== 'function') return;
+      var marks = [25, 50, 75, 100], fired = {};
+      function onScroll() {
+        var h = document.documentElement, b = document.body;
+        var total = Math.max(h.scrollHeight, b.scrollHeight) - window.innerHeight;
+        if (total <= 0) return;
+        var pct = ((window.pageYOffset || h.scrollTop) / total) * 100;
+        marks.forEach(function (m) {
+          if (!fired[m] && pct >= m) {
+            fired[m] = true;
+            gtag('event', 'scroll_depth', { percent: m, page_path: location.pathname });
+          }
+        });
       }
-      ["scroll", "click", "keydown", "mousemove", "touchstart"].forEach(function (ev) {
-        window.addEventListener(ev, loadZoho, { once: true, passive: true });
-      });
-      setTimeout(loadZoho, 5000);
+      window.addEventListener('scroll', onScroll, { passive: true });
     })();
   </script>
 </body>

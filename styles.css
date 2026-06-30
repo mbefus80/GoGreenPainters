@@ -566,3 +566,273 @@ a.service-card:hover .service-link { color: var(--gold); }
 .reviews-cta-btns {
   display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
 }
+
+/* ====================================================================
+   2026-06 design pass — phone-prominence, sticky CTA, FAQ Q/A prefix,
+   tenure micro-signal, banner CTA, founder-aside.
+   ==================================================================== */
+
+/* Nav phone link — distinctive treatment so it reads as a phone number, not another nav item.
+   On desktop it sits between the regular links and the gold "Free Quote" CTA.
+   On mobile it's hidden because the sticky-call-btn replaces it. */
+.nav-phone {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  font-size: 0.92rem !important;
+  white-space: nowrap;
+}
+.nav-phone:hover { color: var(--gold-light) !important; }
+.nav-phone::before {
+  content: "\260E"; /* phone unicode glyph */
+  margin-right: 5px;
+  font-size: 0.95em;
+}
+
+/* Hero tenure micro-signal — small, subtle line beneath the CTAs. */
+.hero-tenure {
+  margin-top: 22px !important;
+  font-size: 0.82rem !important;
+  color: rgba(255,255,255,0.8) !important;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Hero / CTA-banner phone button — variant of btn-outline that uses gold framing
+   so the call CTA stands out as the primary phone affordance. */
+.btn-phone {
+  border-color: var(--gold) !important;
+  color: var(--gold) !important;
+  letter-spacing: 0.5px;
+}
+.btn-phone:hover {
+  background: var(--gold) !important;
+  color: var(--green-dark) !important;
+  border-color: var(--gold) !important;
+}
+
+/* Sticky mobile Call Now button — bottom-anchored, mobile-only.
+   Replaces the Zoho SalesIQ chat widget since phone is the dominant conversion path. */
+.sticky-call-btn {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--green-dark);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.15);
+  display: none; /* hidden on desktop; shown on mobile via media query below */
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.sticky-call-btn:hover,
+.sticky-call-btn:active {
+  background: var(--gold-light);
+  color: var(--green-dark);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3), 0 3px 10px rgba(0,0,0,0.18);
+}
+.sticky-call-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--green-dark);
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .sticky-call-btn { display: inline-flex; }
+  /* leave space at the bottom of the page so the button doesn't cover footer content */
+  body { padding-bottom: 80px; }
+  /* hide nav phone in mobile hamburger menu — sticky button covers the same job */
+  .nav-phone-li { display: none; }
+}
+
+/* Founder bio aside — small italic mention used for Evelyn's banner-painting cross-sell. */
+.founder-aside {
+  margin-top: 14px !important;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(0,79,57,0.18);
+  font-size: 0.88rem !important;
+  color: #6a7a72 !important;
+  font-style: italic;
+}
+.founder-aside a {
+  color: var(--green-mid);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.founder-aside a:hover { color: var(--green-dark); }
+
+/* CTA banner — two-button layout (form + phone) */
+.cta-banner-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.cta-banner-btns .btn-phone {
+  border-color: rgba(255,255,255,0.7) !important;
+  color: var(--white) !important;
+}
+.cta-banner-btns .btn-phone:hover {
+  background: var(--white) !important;
+  color: var(--green-dark) !important;
+  border-color: var(--white) !important;
+}
+
+/* Q/A prefix badges — makes the AI-friendly section-q/section-a pattern visually
+   intentional rather than reading as awkward sub-headers. */
+.section-q::before {
+  content: "Q:";
+  display: inline-block;
+  background: var(--gold);
+  color: var(--green-dark);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: 1px;
+  font-family: 'Oswald', sans-serif;
+}
+.section-a::before {
+  content: "A:";
+  display: inline-block;
+  background: var(--green-mid);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: 1px;
+  font-family: 'Oswald', sans-serif;
+}
+/* on dark-background sections (Service Areas), invert the Q badge */
+#service-areas .section-q::before {
+  background: var(--white);
+  color: var(--green-dark);
+}
+#service-areas .section-a::before {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+/* Sister-service card treatment — used on the Plants & Pets card in the homepage
+   services grid so visitors understand it's a related family-owned service line,
+   not another paint type. Subtle border accent + tag label above the icon. */
+.service-card-sister {
+  border: 2px solid transparent;
+  position: relative;
+}
+.service-card-sister:hover {
+  border-color: var(--gold);
+}
+.sister-tag {
+  display: inline-block;
+  background: rgba(238, 203, 48, 0.18);
+  color: var(--green-dark);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+/* Press strip — "As Seen On Fox 17" trust band, immediately below the hero.
+   Thin, dark, full-width, with a gold bottom-border to feel like a trust marker, not nav. */
+#press {
+  background: linear-gradient(180deg, #00382A 0%, #003526 100%);
+  padding: 18px 24px;
+  border-bottom: 3px solid var(--gold);
+}
+.press-strip {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.press-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+.press-logo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  line-height: 1;
+}
+.press-logo-fox {
+  color: #fff;
+  background: #1d3a7a;
+  padding: 5px 9px 5px 9px;
+  border-radius: 3px 0 0 3px;
+  font-size: 1.05rem;
+}
+.press-logo-17 {
+  color: #1d3a7a;
+  background: #fff;
+  padding: 5px 9px 5px 9px;
+  border-radius: 0 3px 3px 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+.press-details {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
+}
+.press-show {
+  color: rgba(255,255,255,0.82);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.press-link {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.press-link:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+@media (max-width: 640px) {
+  #press { padding: 16px 16px; }
+  .press-strip { gap: 10px; flex-direction: column; }
+  .press-details { flex-direction: column; gap: 6px; text-align: center; }
+}
