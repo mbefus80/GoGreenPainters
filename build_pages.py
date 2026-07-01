@@ -71,6 +71,7 @@ LOCAL_BUSINESS = {
     },
     "sameAs": [
         "https://www.facebook.com/profile.php?id=61589807997680",
+        "https://www.fox17online.com/morning-mix/go-green-college-painters-student-run-family-owned-and-results-that-wow",
     ],
     "aggregateRating": {
         "@type": "AggregateRating",
