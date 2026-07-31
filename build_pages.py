@@ -72,6 +72,7 @@ LOCAL_BUSINESS = {
     "sameAs": [
         "https://www.facebook.com/profile.php?id=61589807997680",
         "https://www.fox17online.com/morning-mix/go-green-college-painters-student-run-family-owned-and-results-that-wow",
+        "https://rapidgrowthmedia.com/how-one-family-instilled-children-with-values-of-hard-work-entrepreneurship/",
     ],
     "aggregateRating": {
         "@type": "AggregateRating",
@@ -1522,7 +1523,7 @@ GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
 
 # Bump CSS_VERSION whenever styles.css changes — busts browser caches via the ?v= query.
 # (Belt-and-suspenders with the must-revalidate header in _headers.)
-CSS_VERSION = "20260630"
+CSS_VERSION = "20260702"
 
 FAVICON_LINKS = """  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />

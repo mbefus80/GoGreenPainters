@@ -839,8 +839,33 @@ a.service-card:hover .service-link { color: var(--gold); }
   color: var(--green-dark);
   border-color: var(--green-dark);
 }
+/* Individual press-item pod so multiple press mentions can sit inline in the strip. */
+.press-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.press-logo-rg {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--green-dark);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--green-dark);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.press-divider {
+  color: #aab5b1;
+  font-size: 1rem;
+  padding: 0 4px;
+}
 @media (max-width: 640px) {
   #press { padding: 16px 16px; }
   .press-strip { gap: 10px; flex-direction: column; }
   .press-details { flex-direction: column; gap: 6px; text-align: center; }
+  .press-item { flex-direction: column; gap: 6px; }
+  .press-divider { display: none; }
 }
