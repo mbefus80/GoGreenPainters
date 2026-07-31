@@ -98,7 +98,7 @@ PAGES = [
     {
         "slug": "services/exterior-painting/",
         "title": "Exterior House Painting in Grand Rapids, MI | Go Green College Painters",
-        "description": "Owner-operated exterior house painting in Grand Rapids, MI. Full prep, premium primer and paint, and a finish built to handle Michigan freeze-thaw and lake-effect humidity. Free estimates.",
+        "description": "Grand Rapids exterior painting done by the owners — not a rotating summer crew. Featured on Fox 17 Morning Mix. Free written estimate in 24 hours. Serving Cascade, Ada, EGR, Forest Hills.",
         "h1": "Exterior House Painting in Grand Rapids, MI",
         "hero_img": "/exterior-after.jpg",
         "service_name": "Exterior House Painting",
@@ -146,7 +146,7 @@ PAGES = [
     {
         "slug": "services/interior-painting/",
         "title": "Interior House Painting in Grand Rapids, MI | Go Green College Painters",
-        "description": "Owner-operated interior painting in Grand Rapids, MI — walls, ceilings, trim, and cabinets. Full furniture and floor protection, clean lines, zero mess. Free estimates.",
+        "description": "Interior painting in Grand Rapids that leaves zero mess — walls, ceilings, trim, cabinets. Featured on Fox 17 Morning Mix. Free 24-hour quote. Cascade, Ada, EGR, Forest Hills.",
         "h1": "Interior Painting in Grand Rapids, MI",
         "hero_img": "/interior-after.jpg",
         "service_name": "Interior House Painting",
@@ -193,7 +193,7 @@ PAGES = [
     {
         "slug": "services/deck-staining/",
         "title": "Deck Staining & Restoration in Grand Rapids, MI | Go Green College Painters",
-        "description": "Deck staining and fence staining in Grand Rapids, MI. We clean, sand, prep, and seal weathered decks to protect them through Michigan winters. Free estimates.",
+        "description": "Deck & fence staining in Grand Rapids — restore weathered wood before Michigan winter. Owner-operated, featured on Fox 17. Free fixed-price quote. Cascade, Ada, EGR, Forest Hills.",
         "h1": "Deck Staining & Restoration in Grand Rapids, MI",
         "hero_img": "/stain-after.jpg",
         "service_name": "Deck Staining and Restoration",
@@ -250,7 +250,7 @@ PAGES = [
         # consolidates ranking signals on a single primary destination.
         "canonical_override": f"{SITE}/services/custom-painting/",
         "title": "Custom Murals & Accent Walls in Grand Rapids, MI | Go Green Painters",
-        "description": "Hand-painted custom murals and accent walls in Grand Rapids, MI. Kids' rooms, nurseries, dining rooms, commercial spaces. Designed and painted by Evelyn Befus, Industrial Design student at Wayne State. Free design consultation.",
+        "description": "Hand-painted custom murals in Grand Rapids — kids' rooms, nurseries, dining rooms, accent walls. Featured on Fox 17 & Rapid Growth Media. Designed by Evelyn Befus, WSU Industrial Design. Free consultation.",
         "h1": "Custom Murals & Accent Walls in Grand Rapids, MI",
         "hero_img": "/custom-designs.jpg",
         "service_name": "Custom Mural Design and Painting",
@@ -323,7 +323,7 @@ PAGES = [
     {
         "slug": "services/power-washing/",
         "title": "Power Washing in Grand Rapids, MI | Decks, Siding, Driveways",
-        "description": "Residential power washing in Grand Rapids — deck, fence, siding, driveway, and concrete cleaning. Soft wash for delicate surfaces. Run by Go Green Painters. Free fixed-price quotes.",
+        "description": "Grand Rapids power washing — decks, siding, driveways, patios, fences. Bundle multiple surfaces & save. Featured on Fox 17. Free fixed-price quote. Cascade, Ada, EGR, Forest Hills.",
         "h1": "Power Washing in Grand Rapids, MI",
         "hero_img": "/stain-after.jpg",
         "service_name": "Residential Power Washing",
@@ -406,7 +406,7 @@ PAGES = [
     {
         "slug": "grand-rapids/cascade/",
         "title": "Cascade, MI House Painters | Cedar Siding Specialists",
-        "description": "Owner-operated cedar siding specialists serving Cascade, MI. Tannin-blocking prep, premium acrylic finish, 8–12 year lifespan. Free fixed-price estimate.",
+        "description": "Cascade painters specializing in cedar siding — tannin-blocking prep, 8-12 year finish life. Owner-operated, featured on Fox 17 Morning Mix. Free written quote in 24 hours.",
         "h1": "House Painters in Cascade, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in Cascade, Michigan",
@@ -473,7 +473,7 @@ PAGES = [
     {
         "slug": "grand-rapids/forest-hills/",
         "title": "Forest Hills House Painters | Cedar Specialists, Free Quote",
-        "description": "Owner-operated cedar siding specialists serving the Forest Hills schools area. Exterior cedar, interior repaints, cabinet refinishing. Free fixed-price quote.",
+        "description": "Forest Hills painters — exterior cedar, interior repaints, cabinet refinishing. Owner-operated, featured on Fox 17 Morning Mix. Free 24-hour written quote. Northern & Central FH.",
         "h1": "House Painters in Forest Hills, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in the Forest Hills Area, Michigan",
@@ -539,7 +539,7 @@ PAGES = [
     {
         "slug": "grand-rapids/ada/",
         "title": "Ada, MI House Painters | Cedar Siding Specialists",
-        "description": "Owner-operated cedar siding specialists in Ada — Ada Village, Bostwick Lake, and the wooded estates south of Fulton. Free fixed-price written estimate.",
+        "description": "Ada painters — Ada Village, Bostwick Lake, estates south of Fulton. Cedar siding specialists. Owner-operated, featured on Fox 17. Free fixed-price quote in 24 hours.",
         "h1": "House Painters in Ada, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in Ada, Michigan",
@@ -603,7 +603,7 @@ PAGES = [
     {
         "slug": "grand-rapids/east-grand-rapids/",
         "title": "East Grand Rapids House Painters | Established Homes",
-        "description": "Owner-operated painters serving East Grand Rapids. Established 1920s–1950s homes, Reeds Lake custom builds, cedar trim, plaster walls. Free fixed-price quote.",
+        "description": "East Grand Rapids painters — 1920s-1950s homes, Reeds Lake builds, cedar trim, plaster walls. Owner-operated, featured on Fox 17 Morning Mix. Free quote in 24 hours.",
         "h1": "House Painters in East Grand Rapids, Michigan",
         "hero_img": "/exterior-after.jpg",
         "service_name": "House Painting in East Grand Rapids, Michigan",
@@ -670,7 +670,7 @@ BLOG_POSTS = [
     {
         "slug": "blog/cost-to-paint-a-house-in-grand-rapids/",
         "title": "Grand Rapids House Painting Cost in 2026: Real Numbers",
-        "description": "Interior $4,700–$8,500. Exterior $3,000–$7,000. Cabinets $2,500–$6,000. What drives Grand Rapids painting costs up or down — plus how to get a real quote.",
+        "description": "Real 2026 painting costs in Grand Rapids: interior $4,700-$8,500, exterior $3,000-$7,000, cabinets $2,500-$6,000. What drives the price — from a painter featured on Fox 17.",
         "h1": "How Much Does It Cost to Paint a House in Grand Rapids?",
         "hero_img": "/exterior-after.jpg",
         "date_published": "2026-05-13",
@@ -756,7 +756,7 @@ BLOG_POSTS = [
     {
         "slug": "blog/cedar-siding-paint-or-stain-grand-rapids/",
         "title": "Cedar Siding in Grand Rapids: Should You Paint or Stain? (2026 Guide)",
-        "description": "Paint vs. stain on cedar siding in Grand Rapids, MI: when each makes sense, lifespan, cost, common failure modes in our climate, and what we recommend. From owner-operated cedar specialists serving Cascade, Forest Hills, Ada, and East Grand Rapids.",
+        "description": "Cedar siding in Grand Rapids: paint or stain? Which lasts longer, what each costs, common failure modes in Michigan weather. From cedar specialists serving Cascade, Ada, Forest Hills, EGR.",
         "h1": "Cedar Siding in Grand Rapids: Should You Paint or Stain?",
         "hero_img": "/exterior-after.jpg",
         "date_published": "2026-06-10",
@@ -855,7 +855,7 @@ BLOG_POSTS = [
     {
         "slug": "blog/owner-operated-vs-college-painting-franchises-grand-rapids/",
         "title": "Owner-Operated vs. College Painting Franchises in Grand Rapids: What's the Difference?",
-        "description": "Choosing between an owner-operated painter and a college painting franchise in Grand Rapids? Here's how the two business models actually work, what public reviews show, and the questions to ask before hiring either.",
+        "description": "Owner-operated painter vs. college painting franchise in Grand Rapids: how each business model actually works, real review data, and 5 questions to ask before you hire either.",
         "h1": "Owner-Operated vs. College Painting Franchises in Grand Rapids",
         "hero_img": "/exterior-after.jpg",
         "date_published": "2026-06-10",
@@ -942,7 +942,7 @@ BLOG_POSTS = [
     {
         "slug": "blog/painting-stucco-brick-cedar-vinyl-grand-rapids/",
         "title": "How to Paint Stucco, Brick, Cedar, Vinyl, and Fiber-Cement Siding: A Grand Rapids Guide",
-        "description": "A field guide for Grand Rapids homeowners with mixed exterior surfaces. What stucco, brick, cedar, vinyl, fiber-cement, and aluminum each need to paint correctly — prep, primer, products, and lifespan.",
+        "description": "Painting mixed exteriors in Grand Rapids? What stucco, brick, cedar, vinyl, fiber-cement, and aluminum each need — prep, primer, products, and lifespan. From an owner-operated painter.",
         "h1": "How to Paint Stucco, Brick, Cedar, Vinyl, and Fiber-Cement Siding",
         "hero_img": "/exterior-after.jpg",
         "date_published": "2026-06-17",
@@ -1056,7 +1056,7 @@ BLOG_POSTS = [
     {
         "slug": "blog/affordable-painters-grand-rapids/",
         "title": "How to Find a Good, Affordable Painter in Grand Rapids (Without Cutting Corners)",
-        "description": "What 'good quality and affordable' actually means in residential painting, where painter pricing really comes from, and how to spot quality work without overpaying for franchise overhead. An honest guide from a Grand Rapids painter.",
+        "description": "How to find a good, affordable painter in Grand Rapids: what fair pricing actually looks like, red flags in quotes, and how to compare 3 painters apples-to-apples. From a Fox 17-featured painter.",
         "h1": "How to Find a Good, Affordable Painter in Grand Rapids",
         "hero_img": "/exterior-after.jpg",
         "date_published": "2026-06-17",
@@ -1238,6 +1238,16 @@ FOOTER_HTML = """  <footer>
       <span>Greater Grand Rapids, MI</span>
     </div>
   </footer>"""
+
+# Compact press strip — injected on every generated inner page (service, blog, neighborhood)
+# right below the hero, so search-driven visitors see the Fox 17 + Rapid Growth Media trust
+# signals immediately without having to bounce back to the homepage.
+PRESS_STRIP_COMPACT = """  <div class="page-press-strip">
+    <span class="page-press-label">Featured On</span>
+    <a href="https://www.fox17online.com/morning-mix/go-green-college-painters-student-run-family-owned-and-results-that-wow" target="_blank" rel="noopener">Fox 17 Morning Mix</a>
+    <span class="page-press-sep" aria-hidden="true">&middot;</span>
+    <a href="https://rapidgrowthmedia.com/how-one-family-instilled-children-with-values-of-hard-work-entrepreneurship/" target="_blank" rel="noopener">Rapid Growth Media</a>
+  </div>"""
 
 SCRIPTS_HTML = """  <!-- Sticky mobile Call Now button (replaces Zoho SalesIQ widget) -->
   <a href="tel:+16162642119" class="sticky-call-btn" aria-label="Call (616) 264-2119">
@@ -1450,7 +1460,7 @@ def build_page(page):
     </div>
   </div>"""
 
-    return f"{head}\n{NAV_HTML}\n{page_hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+    return f"{head}\n{NAV_HTML}\n{page_hero}\n{PRESS_STRIP_COMPACT}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
 
 # -------- blog rendering --------
 def build_blog_jsonld(post):
@@ -1523,7 +1533,7 @@ GA_SNIPPET = """  <!-- Google Analytics (GA4) -->
 
 # Bump CSS_VERSION whenever styles.css changes — busts browser caches via the ?v= query.
 # (Belt-and-suspenders with the must-revalidate header in _headers.)
-CSS_VERSION = "20260702"
+CSS_VERSION = "20260730"
 
 FAVICON_LINKS = """  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -1610,7 +1620,7 @@ def build_blog_post(post):
     </div>
   </div>"""
 
-    return f"{head}\n{NAV_HTML}\n{page_hero}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
+    return f"{head}\n{NAV_HTML}\n{page_hero}\n{PRESS_STRIP_COMPACT}\n{main}\n{FOOTER_HTML}\n{SCRIPTS_HTML}\n</body>\n</html>\n"
 
 def build_blog_index(posts):
     canonical = f"{SITE}/blog/"

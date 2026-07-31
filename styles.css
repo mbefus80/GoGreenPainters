@@ -839,6 +839,46 @@ a.service-card:hover .service-link { color: var(--gold); }
   color: var(--green-dark);
   border-color: var(--green-dark);
 }
+/* Compact press strip — injected on service pages, blog posts, and neighborhood pages
+   right below the hero. Same visual trust signal as the homepage strip, smaller footprint. */
+.page-press-strip {
+  background: #fafbfa;
+  border-bottom: 2px solid var(--gold);
+  padding: 12px 24px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--green-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.page-press-label {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  font-size: 0.72rem;
+}
+.page-press-strip a {
+  color: var(--green-mid);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--green-mid);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+}
+.page-press-strip a:hover {
+  color: var(--green-dark);
+  border-color: var(--green-dark);
+}
+.page-press-sep {
+  color: #b0bab5;
+  font-weight: 700;
+}
+
 /* Individual press-item pod so multiple press mentions can sit inline in the strip. */
 .press-item {
   display: inline-flex;
