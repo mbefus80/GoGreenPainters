@@ -2043,7 +2043,7 @@ def build_thank_you_page():
     hero = """  <section class="page-hero hero-default" style="min-height: 380px;">
     <div class="page-hero-inner">
       <h1>Thanks — We Got Your Message</h1>
-      <p class="lead">Jackson or Evelyn will get back to you within 24 hours with a free, fixed-price estimate. If you'd rather talk now, call <a href="tel:+16162642119" style="color:var(--gold);font-weight:700;">(616) 264-2119</a>.</p>
+      <p class="lead">A Go Green rep will be in touch shortly &mdash; usually within 24 hours. If you'd rather talk now, call <a href="tel:+16162642119" style="color:var(--gold);font-weight:700;">(616) 264-2119</a> for painting inquiries or <a href="tel:+16165004693" style="color:var(--gold);font-weight:700;">(616) 500-4693</a> for Plants &amp; Pets.</p>
       <a href="/" class="btn-primary">Back to Home</a>
     </div>
   </section>"""
