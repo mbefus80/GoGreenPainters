@@ -97,7 +97,7 @@ WEBSITE_NODE = {
 PAGES = [
     {
         "slug": "services/exterior-painting/",
-        "title": "Exterior House Painting in Grand Rapids, MI | Go Green College Painters",
+        "title": "Grand Rapids Exterior Painters | Owner-Operated · Free 24-Hr Quote",
         "description": "Grand Rapids exterior painting done by the owners — not a rotating summer crew. Featured on Fox 17 Morning Mix. Free written estimate in 24 hours. Serving Cascade, Ada, EGR, Forest Hills.",
         "h1": "Exterior House Painting in Grand Rapids, MI",
         "hero_img": "/exterior-after.jpg",
@@ -145,7 +145,7 @@ PAGES = [
     },
     {
         "slug": "services/interior-painting/",
-        "title": "Interior House Painting in Grand Rapids, MI | Go Green College Painters",
+        "title": "Grand Rapids Interior Painters | Owner-Operated · Free 24-Hr Quote",
         "description": "Interior painting in Grand Rapids that leaves zero mess — walls, ceilings, trim, cabinets. Featured on Fox 17 Morning Mix. Free 24-hour quote. Cascade, Ada, EGR, Forest Hills.",
         "h1": "Interior Painting in Grand Rapids, MI",
         "hero_img": "/interior-after.jpg",
@@ -192,7 +192,7 @@ PAGES = [
     },
     {
         "slug": "services/deck-staining/",
-        "title": "Deck Staining & Restoration in Grand Rapids, MI | Go Green College Painters",
+        "title": "Deck & Fence Staining in Grand Rapids | Owner-Operated · Free Quote",
         "description": "Deck & fence staining in Grand Rapids — restore weathered wood before Michigan winter. Owner-operated, featured on Fox 17. Free fixed-price quote. Cascade, Ada, EGR, Forest Hills.",
         "h1": "Deck Staining & Restoration in Grand Rapids, MI",
         "hero_img": "/stain-after.jpg",
@@ -322,7 +322,7 @@ PAGES = [
 
     {
         "slug": "services/power-washing/",
-        "title": "Power Washing in Grand Rapids, MI | Decks, Siding, Driveways",
+        "title": "Power Washing Grand Rapids | Decks, Siding, Driveways · Free Quote",
         "description": "Grand Rapids power washing — decks, siding, driveways, patios, fences. Bundle multiple surfaces & save. Featured on Fox 17. Free fixed-price quote. Cascade, Ada, EGR, Forest Hills.",
         "h1": "Power Washing in Grand Rapids, MI",
         "hero_img": "/stain-after.jpg",
@@ -669,7 +669,7 @@ PAGES = [
 BLOG_POSTS = [
     {
         "slug": "blog/cost-to-paint-a-house-in-grand-rapids/",
-        "title": "Grand Rapids House Painting Cost in 2026: Real Numbers",
+        "title": "House Painting Cost in Grand Rapids 2026 | $3,000–$8,500 Real Prices",
         "description": "Real 2026 painting costs in Grand Rapids: interior $4,700-$8,500, exterior $3,000-$7,000, cabinets $2,500-$6,000. What drives the price — from a painter featured on Fox 17.",
         "h1": "How Much Does It Cost to Paint a House in Grand Rapids?",
         "hero_img": "/exterior-after.jpg",
@@ -854,7 +854,7 @@ BLOG_POSTS = [
 
     {
         "slug": "blog/owner-operated-vs-college-painting-franchises-grand-rapids/",
-        "title": "Owner-Operated vs. College Painting Franchises in Grand Rapids: What's the Difference?",
+        "title": "Owner-Operated vs. College Painter Franchises | Grand Rapids Guide",
         "description": "Owner-operated painter vs. college painting franchise in Grand Rapids: how each business model actually works, real review data, and 5 questions to ask before you hire either.",
         "h1": "Owner-Operated vs. College Painting Franchises in Grand Rapids",
         "hero_img": "/exterior-after.jpg",
